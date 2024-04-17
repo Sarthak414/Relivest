@@ -10,86 +10,46 @@
 </head>
 <body>
   <div class="loader">
-    <!-- Your loading animation code goes here -->
   </div>
-  <header class="header-inner">
-    <div class="brand-panel"> 
-      <a href="index.html" class="brand js-target-scroll"> 
-        <img src="img/LOGO.PNG.png" width="112" height="112" alt="Logo">
-      </a> 
+  <header class="header">
+    <div class="brand">
+      <a href="index.html" class="logo">
+        <img src="img/LOGO.PNG.png" width="150" height="150" alt="Logo">
+      </a>
     </div>
-    <div class="header-phone">+91 26 5298 9201</div>
-    <div class="vertical-panel-content">
-      <div class="vertical-panel-info">
-        <!-- You can add additional header information here -->
+    <div class="header-info">
+      <div class="company-name">
+        Relivest Partners - Invest into the Future
       </div>
       <ul class="social-list">
-        <!-- Add social media links here -->
       </ul>
     </div>
-    <nav class="navbar-desctop visible-md visible-lg">
-      <div class="container"> 
-        <a href="index.html" class="brand js-target-scroll"> 
-          <img src="img/LOGO.PNG.png" width="112" height="112" alt="Logo">
-        </a>
-        <ul class="navbar-desctop-menu">
-          <!-- Add navigation links here -->
-        </ul>
-      </div>
-    </nav>
-    <nav class="navbar-mobile"> 
-      <a href="index.html" class="brand js-target-scroll"> 
-        <img src="img/LOGO.PNG.png" width="112" height="112" alt="Logo">
-      </a>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile"> 
-        <span class="sr-only">Toggle navigation</span> 
-        <span class="icon-bar"></span> 
-        <span class="icon-bar"></span> 
-        <span class="icon-bar"></span> 
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-mobile">
-        <ul class="navbar-nav-mobile">
-          <!-- Add mobile navigation links here -->
-        </ul>
-      </div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </nav>
   </header>
-  <div class="layout">
-    <main class="main main-inner bg-about" data-stellar-background-ratio="0.6">
-      <!-- Your main content goes here -->
-    </main>
-    <div class="content">
-      <section id="about" class="about section">
-        <div class="container">
-          <!-- Add about section content here -->
-        </div>
-      </section>
-      <section id="services" class="services section">
-        <div class="container">
-          <!-- Add services section content here -->
-        </div>
-      </section>
-      <section class="contacts section">
-        <div class="container">
-          <!-- Add contact section content here -->
-        </div>
-      </section>
-    </div>
-  </div>
   <footer class="footer">
     <div class="container">
-      <div class="row-base row">
-        <div class="col-base col-md-12">
-          <div class="text-center">
-            <p>&copy; 2024 Relivest Partners. All Rights Reserved.</p>
-          </div>
+      <div class="row">
+        <div class="col">
+          <p>© 2024 Relivest Partners. All Rights Reserved.</p>
+        </div>
+        <div class="col">
+          <p>Thank you for visiting our website</p>
         </div>
       </div>
     </div>
   </footer>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/parallax.min.js"></script>
+  <script>
+    // JavaScript for handling page loading animation
+    document.addEventListener("DOMContentLoaded", function (event) {
+      var loader = document.querySelector('.loader');
+      loader.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
