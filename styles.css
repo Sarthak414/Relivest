@@ -11,7 +11,7 @@ body, html, h1, h2, h3, h4, h5, h6, p, ul, li {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f9f9f9;
+  /* Remove background-color to allow the background image to show */
 }
 
 .container {
@@ -200,6 +200,13 @@ body {
 }
 
 /* Main section styles */
+.home {
+  background-image: url('img/Project_Jarod.jpg'); /* Add the path to your image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Adjust height as needed */
+}
+
 .about,
 .services,
 .contact {
