@@ -1,88 +1,59 @@
-/* Reset styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Reset styles (optional, using Normalize.css) */
+/* Consider including Normalize.css for a baseline across browsers */
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f9f9f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Light background */
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1024px; /* Adjust as needed */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 40px 20px;
+  display: flex; /* Allow for future sections side-by-side */
+  flex-direction: column; /* Stack sections vertically by default */
 }
 
 /* Header styles */
-.header-inner {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+.header {
+  background-color: #f5f5f5; /* Light gray header */
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.brand img {
-  width: 100px;
-  height: auto;
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Dark text */
 }
 
-.header-phone {
-  font-size: 16px;
-  color: #333;
-  margin-right: 20px;
-}
-
-.social-list {
-  display: flex;
-  gap: 10px;
-}
-
-.social-list li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #333;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-.social-list li a:hover {
-  background-color: #666;
-}
-
-/* Navigation styles */
-.navbar-desctop-menu {
-  list-style-type: none;
+.navigation {
+  list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-desctop-menu li a {
+.navigation li a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.navbar-desctop-menu li a:hover {
+.navigation li a:hover {
   color: #666;
 }
 
 /* Main section styles */
 .main {
+  flex: 1; /* Take up remaining space in the container */
   padding: 40px 0;
-  background-image: url('https://github.com/Sarthak414/Relivest/blob/main/img/Project_Jarod.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.8; /* Adjust opacity as needed */
 }
 
 .section {
@@ -92,11 +63,13 @@ body {
 .section h2 {
   font-size: 28px;
   margin-bottom: 20px;
+  color: #333;
 }
 
 .section p {
   font-size: 16px;
   line-height: 1.6;
+  color: #666; /* Lighter text for better contrast */
 }
 
 /* Footer styles */
@@ -115,4 +88,15 @@ body {
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+}
+
+/* Responsiveness (adjust breakpoints as needed) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack sections on small screens */
+  }
+  .navigation {
+    flex-direction: column; /* Stack navigation items */
+    align-items: center;
+  }
 }
