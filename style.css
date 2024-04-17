@@ -26,6 +26,10 @@ body {
   z-index: 9999;
 }
 
+.logo-container {
+    background-color: transparent; /* Set background to transparent */
+}
+
 .page-lines {
   position: absolute;
   top: 50%;
