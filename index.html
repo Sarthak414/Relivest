@@ -7,13 +7,37 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Montserrat" rel="stylesheet">
   <link href="style.css" rel="stylesheet">  
+  <style>
+    #top-image {
+      position: relative;
+      width: 100%;
+      height: 300px; /* Adjust the height as needed */
+      overflow: hidden;
+    }
+
+    #top-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-panel {
+      position: absolute;
+      top: 20px; /* Adjust the top position as needed */
+      left: 20px; /* Adjust the left position as needed */
+      z-index: 1000; /* Ensure the logo is above the image */
+    }
+  </style>
 </head>
 <body>
   <div id="top-image">
     <img src="https://raw.githubusercontent.com/Sarthak414/Relivest/main/img/Project_Jarod.png" alt="Top Image">
   </div>
   <div class="loader"></div>
-  
+
   <header class="header-inner">
     <div class="brand-panel">
       <a href="index.html" class="brand js-target-scroll">
@@ -31,7 +55,7 @@
       <!-- Mobile navigation menu -->
     </nav>
   </header>
-  
+
   <main class="main main-inner bg-about" data-stellar-background-ratio="0.6">
     <div class="container">
       <h2>About Us</h2>
@@ -43,14 +67,14 @@
       </p>
     </div>
   </main>
-  
-    <nav class="navigation">
-      <ul>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  
+
+  <nav class="navigation">
+    <ul>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -63,7 +87,7 @@
       </div>
     </div>
   </footer>
-  
+
   <script>
     // JavaScript for handling page loading animation
     document.addEventListener("DOMContentLoaded", function (event) {
