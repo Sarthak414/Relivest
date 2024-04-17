@@ -1,24 +1,11 @@
-/* Imported CSS files */
-@import url('bootstrap.min.css');
-@import url('font-awesome.min.css');
-@import url('animate.css');
-@import url('hover.css');
-@import url('magnific-popup.css');
-@import url('owl.carousel.css');
-@import url('owl.transitions.css');
-@import url('settings.css');
-@import url('layers.css');
-@import url('navigation.css');
-
 /* Additional styles for Relivest Partners */
 body {
-  color: white; /* Change font color to white */
-  background-image: url('img/skyline.png'); /* Change to your project image path */
+  background-image: url('img/skyline.png');
   background-size: cover;
   background-repeat: no-repeat;
+  color: white; /* Set font color to white */
 }
 
-/* Loader styles */
 .loader {
   position: fixed;
   top: 0;
@@ -27,6 +14,10 @@ body {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 9999;
+}
+
+.logo-container {
+  background-color: transparent; /* Set background to transparent */
 }
 
 .page-lines {
@@ -39,10 +30,11 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allow flex items to wrap */
 }
 
 .col-line {
-  width: 33.33%;
+  width: 100%; /* Set width to 100% for full width */
 }
 
 .line {
@@ -106,6 +98,3 @@ body {
     transform: perspective(140px) rotateX(-180deg) rotateY(0);
   }
 }
-
-/* Custom styles */
-/* Add your custom styles below this line */
