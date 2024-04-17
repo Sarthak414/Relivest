@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Relivest Partners</title>
   <link rel="shortcut icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Oswald|Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <style>
     /* Loader animation */
     .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      z-index: 9999;
     }
 
     .loading-spinner {
-      border: 5px solid #f3f3f3; /* Light grey */
-      border-top: 5px solid #3498db; /* Blue */
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
       border-radius: 50%;
       width: 50px;
       height: 50px;
@@ -29,17 +35,92 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    /* Additional Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .brand img {
+      border-radius: 50%;
+    }
+
+    .header-phone {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .social-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .social-list li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-list li a {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .navbar-desctop-menu {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    .navbar-desctop-menu li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .navbar-desctop-menu li:last-child {
+      margin-right: 0;
+    }
+
+    .navbar-desctop-menu li a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 <div class="loader">
   <div class="loading-spinner"></div>
 </div>
-
 <header id="top" class="header-inner">
   <div class="brand-panel"> 
     <a href="index.html" class="brand js-target-scroll"> 
-      <img src="https://github.com/Sarthak414/Relivest/blob/main/img/LOGO.PNG.png" width="112" height="112">
+      <img src="img/LOGO.PNG.png" width="112" height="112" alt="Relivest Partners Logo">
     </a> 
   </div>
   <div class="header-phone">+91-8849483704, +1 8064516285 (USA)</div>
@@ -48,7 +129,6 @@
       <div class="line"></div>
     </div>
     <ul class="social-list">
-      <!-- Replace '#' with actual social media URLs -->
       <li><a href="#" target="_blank" class="fa fa-facebook"></a></li>
       <li><a href="#" target="_blank" class="fa fa-instagram"></a></li>
       <li><a href="mailto:relivest.partners@gmail.com" class="fa fa-envelope"></a></li>
@@ -57,11 +137,11 @@
   <nav class="navbar-desctop visible-md visible-lg">
     <div class="container"> 
       <a href="index.html" class="brand js-target-scroll"> 
-        <img src="https://github.com/Sarthak414/Relivest/blob/main/img/LOGO.PNG.png" class="logo-scroll">
+        <img src="img/LOGO.PNG.png" class="logo-scroll" alt="Relivest Partners Logo">
       </a>
       <ul class="navbar-desctop-menu">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Our Services</a></li>
+        <li><a href="about.html" target="_blank">About Us</a></li>
+        <li><a href="services.html" target="_blank">Our Services</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
     </div>
@@ -87,12 +167,10 @@
   <section id="contact" class="contact section">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>Contact information:</p>
-      <ul>
-        <li>Address: Vadodara, Gujarat</li>
-        <li>Phone: +91-8849483704, +1 8064516285 (USA for Internation Investors)</li>
-        <li>Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a></li>
-      </ul>
+      <p>For inquiries or to learn more about our services, please contact us at:</p>
+      <p>Address: [Your Address]</p>
+      <p>Phone: +91-8849483704, +1 8064516285 (USA)</p>
+      <p>Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a></p>
     </div>
   </section>
 </main>
@@ -110,6 +188,18 @@
   </div>
 </footer>
 
-<!-- JavaScript code can be included here if needed -->
+<script>
+  // Smooth scrolling effect
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+</script>
+
 </body>
 </html>
