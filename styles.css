@@ -40,13 +40,13 @@ color:#fff;
 }
 @font-face {
 	font-family: 'montserratlight';
-	src: url('../fonts/montserrat/Montserrat-Light.ttf');
+	src: url('../fonts/Montserrat-Light.ttf');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'montserratsemibold';
-	src: url('../fonts/montserrat/Montserrat-SemiBold.ttf');
+	src: url('../fonts/Montserrat-SemiBold.ttf');
 	font-weight: normal;
 	font-style: normal;
 }
