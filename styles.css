@@ -9,9 +9,11 @@ body, html, h1, h2, h3, h4, h5, h6, p, ul, li {
   vertical-align: baseline;
 }
 
+/* Global styles */
 body {
   font-family: 'Montserrat', sans-serif;
-  /* Remove background-color to allow the background image to show */
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 .container {
@@ -20,137 +22,67 @@ body {
   padding: 0 20px;
 }
 
-.brand-panel {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.brand {
-  display: block;
-  text-decoration: none;
-  color: #333;
-}
-
-.brand img {
-  display: block;
-}
-
-.header-inner {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px 0;
-}
-
-.header-phone {
-  display: inline-block;
-  margin-right: 20px;
-  font-size: 16px;
-  color: #333;
-}
-
-.vertical-panel-content {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.vertical-panel-info {
-  display: inline-block;
-  position: relative;
-}
-
-.line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1px;
-  height: 25px;
-  background-color: #333;
-  transform: translate(-50%, -50%);
-}
-
-.social-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.social-list li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.social-list li a {
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
+/* Header styles */
+.header {
+  background-color: #007bff;
   color: #fff;
-  background-color: #333;
-  border-radius: 50%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
   text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
-.social-list li a:hover {
-  background-color: #666;
-}
-
-.navbar-desctop {
-  margin-top: 20px;
-}
-
-.navbar-desctop-menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-desctop-menu li {
+.nav-links li {
   display: inline-block;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.navbar-desctop-menu li a {
-  color: #333;
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.navbar-desctop-menu li a:hover {
-  color: #666;
+.nav-links li a:hover {
+  color: #f8f9fa;
 }
 
-.main {
-  padding: 40px 0;
-}
-
+/* Main content styles */
 .section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  padding: 60px 0;
 }
 
-.section.active {
-  opacity: 1;
-  transform: translateY(0);
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
+.section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Footer styles */
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #343a40;
+  color: #f8f9fa;
   padding: 20px 0;
+  text-align: center;
 }
 
-.footer p {
-  margin: 0;
-}
-
-.footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
+/* Loader styles */
 .loader {
   display: flex;
   justify-content: center;
@@ -185,66 +117,4 @@ body {
   border: 6px solid #333;
   border-top-color: #666;
   animation: spinner 1s linear infinite;
-}
-
-/* Custom styles */
-
-/* Header styles */
-.brand img {
-  width: 100px; /* Adjust size as needed */
-  height: auto;
-}
-
-.header-phone {
-  font-weight: bold;
-}
-
-/* Main section styles */
-.home {
-  background-image: url('img/Project_Jarod.jpg'); /* Add the path to your image */
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Adjust height as needed */
-}
-
-.about,
-.services,
-.contact {
-  margin-bottom: 60px;
-}
-
-.about h2,
-.services h2,
-.contact h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.about p,
-.services p,
-.contact p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Footer styles */
-.footer {
-  text-align: center;
-}
-
-.footer p {
-  font-size: 14px;
-}
-
-.footer a {
-  font-weight: bold;
-}
-
-/* Loader styles */
-.loader {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.loader:before {
-  border-width: 5px;
 }
