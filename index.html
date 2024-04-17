@@ -4,41 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relivest Partners</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <header>
-        <h1>Welcome to Relivest Partners</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at turpis magna. Duis sit amet risus lacinia, vulputate est ut, dapibus ligula.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
+        <nav>
             <ul>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
-        </section>
-        <section id="contact">
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Relivest Partners</h2>
+            <p>Welcome to Relivest Partners! Our projects are coming soon. Stay tuned for updates.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
             <h2>Contact Us</h2>
-            <p>Email: info@relivestpartners.in</p>
-            <p>Phone: +91-8849483704</p>
-        </section>
-    </main>
+            <div class="contacts">
+                <p>Relivest Partners</p>
+                <p>Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a></p>
+                <p>Phone: +91 8849483704 (India)</p>
+                <p>Phone: +1 8064516285 (USA)</p>
+            </div>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Relivest Partners. All rights reserved.</p>
+        <p>&copy; 2024 Relivest Partners. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
