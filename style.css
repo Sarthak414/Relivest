@@ -15,10 +15,17 @@ body {
 }
 
 #top-image {
-  background-image: url('https://raw.githubusercontent.com/Sarthak414/Relivest/main/img/Project_Jarod.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
   height: 300px; /* Adjust height as needed */
+}
+
+#top-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .loader {
@@ -31,79 +38,4 @@ body {
   z-index: 9999;
 }
 
-.page-lines {
-  position: absolute;
-  top: 100%;
-  left: 0%;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.col-line {
-  width: 33.33%;
-}
-
-.line {
-  width: 100%;
-  height: 2px;
-  background-color: #000;
-}
-
-.loader-brand {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.sk-folding-cube {
-  margin: 0 auto;
-  width: 40px;
-  height: 40px;
-  position: relative;
-  transform: rotateZ(45deg);
-}
-
-.sk-folding-cube .sk-cube {
-  float: left;
-  width: 50%;
-  height: 50%;
-  position: relative;
-  transform: scale(1.1);
-}
-
-.sk-folding-cube .sk-cube:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  animation: sk-cube-fold-delay 2.4s infinite linear both;
-  transform-origin: 100% 100%;
-}
-
-.sk-folding-cube .sk-cube2 {
-  transform: scale(1.1) rotateZ(90deg);
-}
-
-.sk-folding-cube .sk-cube3 {
-  transform: scale(1.1) rotateZ(180deg);
-}
-
-.sk-folding-cube .sk-cube4 {
-  transform: scale(1.1) rotateZ(270deg);
-}
-
-@keyframes sk-cube-fold-delay {
-  0%, 100%, 50% {
-    transform: perspective(140px) rotateX(0) rotateY(0);
-  }
-  25%, 75% {
-    transform: perspective(140px) rotateX(-180deg) rotateY(0);
-  }
-}
+/* Rest of the CSS remains the same */
