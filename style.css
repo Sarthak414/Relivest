@@ -12,6 +12,7 @@
 
 /* Additional styles for Relivest Partners */
 body {
+  color: white; /* Change font color to white */
   background-image: url('img/skyline.png'); /* Change to your project image path */
   background-size: cover;
   background-repeat: no-repeat;
