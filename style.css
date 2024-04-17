@@ -1,3 +1,4 @@
+/* Imported CSS files */
 @import url('bootstrap.min.css');
 @import url('font-awesome.min.css');
 @import url('animate.css');
@@ -11,11 +12,12 @@
 
 /* Additional styles for Relivest Partners */
 body {
-  background-image: url('img/skyline.png');
+  background-image: url('img/skyline.png'); /* Change to your project image path */
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+/* Loader styles */
 .loader {
   position: fixed;
   top: 0;
@@ -24,10 +26,6 @@ body {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 9999;
-}
-
-.logo-container {
-    background-color: transparent; /* Set background to transparent */
 }
 
 .page-lines {
@@ -107,3 +105,6 @@ body {
     transform: perspective(140px) rotateX(-180deg) rotateY(0);
   }
 }
+
+/* Custom styles */
+/* Add your custom styles below this line */
