@@ -1,9 +1,19 @@
+@import url('bootstrap.min.css');
+@import url('font-awesome.min.css');
+@import url('animate.css');
+@import url('hover.css');
+@import url('magnific-popup.css');
+@import url('owl.carousel.css');
+@import url('owl.transitions.css');
+@import url('settings.css');
+@import url('layers.css');
+@import url('navigation.css');
+
 /* Additional styles for Relivest Partners */
 body {
-  background-image: url('img/Jarod_project.png');
+  background-image: url('img/Project_Jarod.png');
   background-size: cover;
   background-repeat: no-repeat;
-  color: white; /* Set font color to white */
 }
 
 .loader {
@@ -16,25 +26,19 @@ body {
   z-index: 9999;
 }
 
-.logo-container {
-  background-color: transparent; /* Set background to transparent */
-}
-
 .page-lines {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 0%;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allow flex items to wrap */
 }
 
 .col-line {
-  width: 100%; /* Set width to 100% for full width */
+  width: 33.33%;
 }
 
 .line {
