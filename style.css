@@ -45,13 +45,14 @@ body {
 
 .project-grid {
   display: flex;
-  justify-content: space-between; /* Adjust as needed */
+  justify-content: space-between;
 }
 
 .project-item {
   width: 23%; /* Adjust the width to fit 4 items in a row */
   margin-bottom: 20px; /* Adjust margin between items */
   text-align: center;
+  overflow: hidden; /* Hide overflow content */
 }
 
 .project-item img {
@@ -77,6 +78,7 @@ body {
 .project-details p {
   font-size: 14px;
 }
+
 
 
 /* Rest of the CSS remains the same */
