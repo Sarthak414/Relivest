@@ -1,5 +1,10 @@
+/* Reset styles (optional, using Normalize.css) */
+/* Consider including Normalize.css for a baseline across browsers */
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: [Nilamber's font family]; /* Replace with similar font */
+  color: #333; /* Adjust based on Nilamber's text color */
+  background-color: #fff; /* Light background (adjust if needed) */
   margin: 0;
   padding: 0;
 }
@@ -12,12 +17,12 @@ body {
 
 /* Specific styles for header, navigation, sections, etc. go here */
 header {
-  background-color: #f5f5f5; /* Light gray header */
+  background-color: [Nilamber's header background color]; /* Replace with actual color */
   padding: 20px 0;
 }
 
 .navigation {
-  /* Styles for navigation elements */
+  /* Styles for navigation elements, using font sizes/weights similar to Nilamber's */
 }
 
 .main {
@@ -25,8 +30,8 @@ header {
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #f5f5f5; /* Light gray footer (adjust if needed) */
+  color: #333; /* Adjust based on Nilamber's text color */
   padding: 20px 0;
   text-align: center;
 }
