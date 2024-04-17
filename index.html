@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relivest Partners</title>
   <link rel="shortcut icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Montserrat" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet"> <!-- Link to the new CSS file -->
-</head>
-
+  <link href="style.css" rel="stylesheet">  </head>
 <body>
   <div class="loader">
-    <!-- Loading animation code goes here -->
-  </div>
-  <header id="top" class="header-inner">
-    <div class="brand-panel">
-      <a href="index.html" class="brand js-target-scroll">
+    </div>
+
+  <header class="header">
+    <div class="brand">
+      <a href="index.html" class="logo">
         <img src="img/LOGO.PNG.png" width="112" height="112" alt="Logo">
       </a>
     </div>
-    <div class="header-phone">Relivest Partners - 
-                                    Invest for Future </div>
-    <div class="vertical-panel-content">
-      <div class="vertical-panel-info">
-        <div class="line"></div>
+    <div class="header-info">
+      <div class="company-name">
+        Relivest Partners - Invest for Future
       </div>
       <ul class="social-list">
-        <li><a href="#" target="_blank" class="fa fa-facebook"></a></li>
-        <li><a href="#" target="_blank" class="fa fa-instagram"></a></li>
-        <li><a href="mailto:relivest.partners@gmail.com" class="fa fa-envelope"></a></li>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="mailto:relivest.partners@gmail.com"><i class="fas fa-envelope"></i></a></li>
       </ul>
     </div>
-    <nav class="navbar-desctop visible-md visible-lg">
-      <div class="container">
-        <ul class="navbar-desctop-menu">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </nav>
   </header>
 
   <main class="main">
-    <section id="home" class="home section">
-      <!-- Home section content goes here -->
-    </section>
+    <section id="home" class="home">
+      </section>
   </main>
 
-  <footer id="footer" class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col">
           <p>© 2024 Relivest Partners. All Rights Reserved.</p>
         </div>
-        <div class="col-md-6">
+        <div class="col">
           <p>Additional footer links or information can go here.</p>
         </div>
       </div>
@@ -66,11 +57,9 @@
   <script>
     // JavaScript for handling page loading animation
     document.addEventListener("DOMContentLoaded", function (event) {
-      // Remove loader when page is fully loaded
       var loader = document.querySelector('.loader');
       loader.style.display = 'none';
     });
   </script>
 </body>
-
 </html>
