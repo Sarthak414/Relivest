@@ -115,6 +115,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  width: 100%; /* Make input fields full width */
 }
 
 .contact-form textarea {
@@ -129,11 +130,13 @@ body {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
+  width: auto; /* Remove width to let button adjust to content */
 }
 
 .contact-form input[type="submit"]:hover {
   background-color: #0056b3;
 }
+
 
 
 /* Rest of the CSS remains the same */
