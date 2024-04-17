@@ -134,28 +134,28 @@
   <h2>Our Experience with Investment in Projects</h2>
   <div class="project-grid">
     <div class="project-item">
-      <img src="img/high-rise-image.jpg" width="200" height="300" alt="High Rise Image">
+      <img src="img/high-rise-image.jpg" width="200" height="250" alt="High Rise Image">
       <div class="project-details">
         <h3>High Rise</h3>
         <p>Nest Realty - Vadsar, Vadodara</p>
       </div>
     </div>
     <div class="project-item">
-      <img src="img/commercial-image.jpg" width="200" height="300" alt="Commercial Image">
+      <img src="img/commercial-image.jpg" width="200" height="250" alt="Commercial Image">
       <div class="project-details">
         <h3>Commercial</h3>
         <p>Aegis Infra - Kotambi, Coming soon</p>
       </div>
     </div>
     <div class="project-item">
-      <img src="img/bungalow-image.jpg" width="200" height="300" alt="Bungalow Image">
+      <img src="img/bungalow-image.jpg" width="200" height="250" alt="Bungalow Image">
       <div class="project-details">
         <h3>2-3 BHK Comfortable</h3>
         <p>Nakshtra Greens, Jarod</p>
       </div>
     </div>
     <div class="project-item">
-      <img src="img/project-image4.jpg" width="200" height="300" alt="Project 4 Image">
+      <img src="img/project-image4.jpg" width="200" height="250" alt="Project 4 Image">
       <div class="project-details">
         <h3>Villa</h3>
         <p>Glan Forest, Paldi Road, Jarod</p>
@@ -217,5 +217,16 @@
     // Change project every 3 seconds (3000 milliseconds)
     setInterval(showNextProject, 3000);
   </script>
+
+  <form action="send_email.php" method="post">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4" required></textarea><br>
+  <input type="submit" value="Submit">
+</form>
+
 </body>
 </html>
