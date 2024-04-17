@@ -9,11 +9,8 @@ body, html, h1, h2, h3, h4, h5, h6, p, ul, li {
   vertical-align: baseline;
 }
 
-/* Global styles */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
 }
 
 .container {
@@ -22,67 +19,137 @@ body {
   padding: 0 20px;
 }
 
-/* Header styles */
-.header {
-  background-color: #007bff;
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  text-decoration: none;
-}
-
-.nav-links li {
+.brand-panel {
   display: inline-block;
-  margin-left: 20px;
+  vertical-align: middle;
 }
 
-.nav-links li:first-child {
-  margin-left: 0;
+.brand {
+  display: block;
+  text-decoration: none;
+  color: #333;
 }
 
-.nav-links li a {
+.brand img {
+  display: block;
+}
+
+.header-inner {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+
+.header-phone {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.vertical-panel-content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.vertical-panel-info {
+  display: inline-block;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 25px;
+  background-color: #333;
+  transform: translate(-50%, -50%);
+}
+
+.social-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-list li a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
   color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-list li a:hover {
+  background-color: #666;
+}
+
+.navbar-desctop {
+  margin-top: 20px;
+}
+
+.navbar-desctop-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-desctop-menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar-desctop-menu li a {
+  color: #333;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  color: #f8f9fa;
+.navbar-desctop-menu li a:hover {
+  color: #666;
 }
 
-/* Main content styles */
+.main {
+  padding: 40px 0;
+}
+
 .section {
-  padding: 60px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.section p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Footer styles */
 .footer {
-  background-color: #343a40;
-  color: #f8f9fa;
+  background-color: #333;
+  color: #fff;
   padding: 20px 0;
-  text-align: center;
 }
 
-/* Loader styles */
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .loader {
   display: flex;
   justify-content: center;
@@ -117,4 +184,28 @@ body {
   border: 6px solid #333;
   border-top-color: #666;
   animation: spinner 1s linear infinite;
+}
+
+/* Custom styles */
+
+/* Header styles */
+.brand img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}
+
+.header-phone {
+  font-weight: bold;
+}
+
+/* Main section styles */
+.home {
+  background-image: url('img/Project_Jarod.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Ensure section covers the viewport height */
+}
+
+.footer {
+  text-align: center;
 }
