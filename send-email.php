@@ -1,24 +1,19 @@
 <?php
-// Replace with 'relivest.partners@gmail.com' (or your desired recipient email)
-$recipientEmail = 'relivest.partners@gmail.com';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+    // Set up the email
+    $to = "relivest.partners@gmail.com"; // Replace with your email address
+    $subject = "New Message from Contact Form";
+    $body = "Name: $name\nEmail: $email\nMessage: $message";
 
-$subject = 'Contact Form Submission from Relivest Partners Website';
-
-$body = "Name: $name\n";
-$body .= "Email: $email\n\n";
-$body .= "Message:\n$message";
-
-$headers = "From: $email\n";
-$headers .= "Reply-To: $email\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8";
-
-if (mail($recipientEmail, $subject, $body, $headers)) {
-  echo 'success'; // Send a success response to JavaScript
-} else {
-  echo 'error'; // Send an error response to JavaScript
+    // Send the email
+    if (mail($to, $subject, $body)) {
+        echo "Message sent successfully!";
+    } else {
+        echo "Error: Message could not be sent.";
+    }
 }
 ?>
