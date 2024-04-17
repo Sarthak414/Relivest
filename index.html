@@ -24,7 +24,6 @@
       <div class="line"></div>
     </div>
     <ul class="social-list">
-      <!-- Replace '#' with actual social media URLs -->
       <li><a href="#" target="_blank" class="fa fa-facebook"></a></li>
       <li><a href="#" target="_blank" class="fa fa-instagram"></a></li>
       <li><a href="mailto:relivest.partners@gmail.com" class="fa fa-envelope"></a></li>
@@ -36,53 +35,22 @@
         <img src="img/LOGO.PNG.png" class="logo-scroll">
       </a>
       <ul class="navbar-desctop-menu">
-        <li><a href="about.html" target="_blank">About Us</a></li>
-        <li><a href="services.html" target="_blank">Our Services</a></li>
-        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
   </nav>
 </header>
 
 <main class="main">
-  <!-- About Us Section -->
-  <section id="about" class="about section">
-    <div class="container">
-      <h2>About Us</h2>
-      <!-- About Us content goes here -->
-      <p>
-        Our vision at Relivest Partners is to be a leading force of innovation and excellence in the investment, consulting, and real estate development sectors. We aspire to shape vibrant communities, drive economic growth, and enhance quality of life through our commitment to sustainable practices and forward-thinking strategies. With a focus on integrity, collaboration, and innovation, we aim to create enduring value for our partners and communities, setting new standards of excellence in every project we undertake.
-      </p>
-      <p>
-        At Relivest Partners, our approach is rooted in strategic collaboration, innovative thinking, and unwavering commitment to our clients' success. We specialize in investment management across various sectors, including real estate development. Currently, we are actively investing in a residential project in Jarod, Gujarat. Leveraging our deep expertise and industry insights, we aim to deliver sustainable growth and value creation for our clients and stakeholders. Through transparent communication, diligent research, and proactive risk management, we strive to exceed expectations and build lasting relationships based on trust and integrity.
-      </p>
-    </div>
-  </section>
-
-  <!-- Our Services Section -->
-  <section id="services" class="services section">
-    <div class="container">
-      <h2>Our Services</h2>
-      <!-- Our Services content goes here -->
-      <p>
-        At Relivest Partners, we offer comprehensive solutions in investment management, real estate development, and strategic consulting. Our services include expert investment guidance, full-cycle real estate development, tailored financial advisory, market analysis, risk management, project management, and sustainable investing strategies. With a commitment to excellence and innovation, we empower our clients to achieve their financial goals and build a sustainable future.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact Us Section -->
-  <section id="contact" class="contact section">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <!-- Contact Us content goes here -->
-      <p>
-        For inquiries, please contact us at:
-        <br>
-        Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a>
-        <br>
-        Phone: +91-8849483704, +1 8064516285 (USA)
-      </p>
-    </div>
+  <section id="home" class="home section">
+.home {
+  background-image: url('Project_Jarod.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Add any additional styles as needed */
+}
   </section>
 </main>
 
@@ -99,40 +67,12 @@
   </div>
 </footer>
 
-<!-- JavaScript code can be included here if needed -->
 <script>
-  // Remove loading spinner when page is fully loaded
-  window.addEventListener('load', function() {
-    document.querySelector('.loader').style.display = 'none';
-  });
-
-  // Smooth scrolling effect
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-          });
-      });
-  });
-
-  // Add fade-in animation to sections when scrolled into view
-  const sections = document.querySelectorAll('.section');
-  const options = {
-    threshold: 0.2
-  };
-
-  const observer = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  }, options);
-
-  sections.forEach(section => {
-    observer.observe(section);
+  // JavaScript for handling page loading animation
+  document.addEventListener("DOMContentLoaded", function(event) {
+    // Remove loader when page is fully loaded
+    var loader = document.querySelector('.loader');
+    loader.style.display = 'none';
   });
 </script>
 </body>
