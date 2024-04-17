@@ -7,6 +7,9 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Montserrat" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <style>
+    /* Add any additional styles here */
+  </style>
 </head>
 <body>
   <div class="loader">
@@ -21,7 +24,7 @@
     </div>
     <div class="header-info">
       <div class="company-name">
-        Relivest Partners - Invest for the Future
+        Relivest Partners - Invest for Future
       </div>
       <ul class="social-list">
         <li><a href="mailto:relivest.partners@gmail.com"><i class="fas fa-envelope"></i></a></li>
@@ -38,25 +41,24 @@
 
   <main class="main">
     <section id="home" class="home">
-      <!-- Home section content goes here -->
     </section>
   </main>
 
   <section id="get-in-touch" class="contact-section">
     <h2>Get in Touch</h2>
     <p>Have a question or project in mind? We'd love to hear from you!</p>
-    <form id="contact-form">
+    <form id="contact-form" autocomplete="on">
       <div class="form-group">
         <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" autocomplete="name" required>
       </div>
       <div class="form-group">
         <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" autocomplete="email" required>
       </div>
       <div class="form-group">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" autocomplete="message" required></textarea>
       </div>
       <button type="submit">Send Message</button>
     </form>
@@ -69,7 +71,6 @@
           <p>© 2024 Relivest Partners. All Rights Reserved.</p>
         </div>
         <div class="col">
-          <!-- Additional footer content can go here -->
         </div>
       </div>
     </div>
