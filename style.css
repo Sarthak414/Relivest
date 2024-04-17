@@ -45,12 +45,13 @@ body {
 
 .project-grid {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between; /* Adjust as needed */
 }
 
 .project-item {
-  width: 200px;
+  width: 23%; /* Adjust the width to fit 4 items in a row */
+  margin-bottom: 20px; /* Adjust margin between items */
+  text-align: center;
 }
 
 .project-item img {
