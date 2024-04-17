@@ -1,74 +1,70 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relivest Partners</title>
-  <link rel="shortcut icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Oswald|Montserrat" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet"> <!-- Link to the new CSS file -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="loader">
-  <!-- Loading animation code goes here -->
-</div>
-<header id="top" class="header-inner">
-  <div class="brand-panel"> 
-    <a href="index.html" class="brand js-target-scroll"> 
-      <img src="img/LOGO.PNG.png" width="112" height="112">
-    </a> 
-  </div>
-  <div class="header-phone">+91-8849483704, +1 8064516285 (USA)</div>
-  <div class="vertical-panel-content">
-    <div class="vertical-panel-info">
-      <div class="line"></div>
-    </div>
-    <ul class="social-list">
-      <li><a href="#" target="_blank" class="fa fa-facebook"></a></li>
-      <li><a href="#" target="_blank" class="fa fa-instagram"></a></li>
-      <li><a href="mailto:relivest.partners@gmail.com" class="fa fa-envelope"></a></li>
-    </ul>
-  </div>
-  <nav class="navbar-desctop visible-md visible-lg">
-    <div class="container"> 
-      <a href="index.html" class="brand js-target-scroll"> 
-      </a>
-      <ul class="navbar-desctop-menu">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
+  <!-- Loader -->
+  <div class="loader"></div>
 
-<main class="main">
-  <section id="home" class="home section">
-    <!-- Home section content goes here -->
-  </section>
-</main>
-
-<footer id="footer" class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <p>© 2024 Relivest Partners. All Rights Reserved.</p>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo"><img src="img/logo.png" alt="Relivest Partners"></a>
+        <ul class="nav-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <div class="col-md-6">
-        <p>Additional footer links or information can go here.</p>
-      </div>
+    </nav>
+    <div class="header-content">
+      <h1>Welcome to Relivest Partners</h1>
+      <p>Your trusted partner in investment and real estate</p>
     </div>
-  </div>
-</footer>
+  </header>
 
-<script>
-  // JavaScript for handling page loading animation
-  document.addEventListener("DOMContentLoaded", function(event) {
-    // Remove loader when page is fully loaded
-    var loader = document.querySelector('.loader');
-    loader.style.display = 'none';
-  });
-</script>
+  <!-- Main Content -->
+  <main>
+    <!-- About Us Section -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Insert your about us content here...</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p>Insert your services content here...</p>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please contact us at:</p>
+        <p>Email: relivest.partners@gmail.com</p>
+        <p>Phone: +91-8849483704(INDIA) , +1 (806) 451-6285 (USA)</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Relivest Partners. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
 </body>
 </html>
