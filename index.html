@@ -7,15 +7,39 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Montserrat" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <style>
+    /* Loader animation */
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .loading-spinner {
+      border: 5px solid #f3f3f3; /* Light grey */
+      border-top: 5px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
 <div class="loader">
-  <!-- Loading animation code goes here -->
+  <div class="loading-spinner"></div>
 </div>
+
 <header id="top" class="header-inner">
   <div class="brand-panel"> 
     <a href="index.html" class="brand js-target-scroll"> 
-      <img src="img/LOGO.PNG.png" width="112" height="112">
+      <img src="https://github.com/Sarthak414/Relivest/blob/main/img/LOGO.PNG.png" width="112" height="112">
     </a> 
   </div>
   <div class="header-phone">+91-8849483704, +1 8064516285 (USA)</div>
@@ -46,15 +70,30 @@
 
 <main class="main">
   <section id="about" class="about section">
-    <!-- About Us section content goes here -->
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Our vision at Relivest Partners is to be a leading force of innovation and excellence in the investment, consulting, and real estate development sectors. We aspire to shape vibrant communities, drive economic growth, and enhance quality of life through our commitment to sustainable practices and forward-thinking strategies. With a focus on integrity, collaboration, and innovation, we aim to create enduring value for our partners and communities, setting new standards of excellence in every project we undertake.</p>
+      <p>At Relivest Partners, our approach is rooted in strategic collaboration, innovative thinking, and unwavering commitment to our clients' success. We specialize in investment management across various sectors, including real estate development. Currently, we are actively investing in a residential project in Jarod, Gujarat. Leveraging our deep expertise and industry insights, we aim to deliver sustainable growth and value creation for our clients and stakeholders. Through transparent communication, diligent research, and proactive risk management, we strive to exceed expectations and build lasting relationships based on trust and integrity.</p>
+    </div>
   </section>
 
   <section id="services" class="services section">
-    <!-- Our Services section content goes here -->
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>At Relivest Partners, we offer comprehensive solutions in investment management, real estate development, and strategic consulting. Our services include expert investment guidance, full-cycle real estate development, tailored financial advisory, market analysis, risk management, project management, and sustainable investing strategies. With a commitment to excellence and innovation, we empower our clients to achieve their financial goals and build a sustainable future.</p>
+    </div>
   </section>
 
   <section id="contact" class="contact section">
-    <!-- Contact Us section content goes here -->
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Contact information:</p>
+      <ul>
+        <li>Address: Vadodara, Gujarat</li>
+        <li>Phone: +91-8849483704, +1 8064516285 (USA for Internation Investors)</li>
+        <li>Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a></li>
+      </ul>
+    </div>
   </section>
 </main>
 
