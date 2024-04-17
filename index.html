@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -59,11 +59,35 @@
       color: #000; /* Adjust text color */
       font-weight: bold; /* Adjust font weight as needed */
     }
+
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .slideshow-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-name {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
-  <div id="top-image">
-    <img src="https://raw.githubusercontent.com/Sarthak414/Relivest/main/img/Project_Jarod.png" alt="Top Image">
+  <div id="top-image" class="slideshow-container">
+    <img id="project-image" src="" alt="Top Image">
+    <div class="project-name" id="project-name"></div>
   </div>
   <div class="loader"></div>
 
@@ -98,19 +122,23 @@
 
           <!-- Forte section -->
     <div class="forte-section">
-      <h2>Our Experince with investment in Porjects in:</h2>
+      <h2>Our Experience with investment in Projects</h2>
       <ul>
         <li>
-          <img src="img/high-rise-image.jpg" alt="High Rise Image" width="150" height="200">
-          <p>High Rise</p>
+          <img src="img/high-rise-image.jpg" alt="High Rise Image" width="112" height="112">
+          <p>High Rise (Nest Realty - Vadsar,Vadodara)</p>
         </li>
         <li>
-          <img src="img/commercial-image.jpg" alt="Commercial Image" width="150" height="200">
-          <p>Commercial</p>
+          <img src="img/commercial-image.jpg" alt="Commercial Image" width="112" height="112">
+          <p>Commercial (Ages Realty - Kotambi, Comming soon)</p>
         </li>
         <li>
-          <img src="img/bungalow-image.jpg" alt="Bungalow Image" width="150" height="200">
-          <p>Bungalow</p>
+          <img src="img/bungalow-image.jpg" alt="Bungalow Image" width="112" height="112">
+          <p>2-3 BHK Comfortable (Nakshtra Greensm, Jarod} </p>
+        </li>
+        <li>
+          <img src="img/project-image4.jpg" alt="Project 4 Image" width="112" height="112">
+          <p>Villa (Glan Forest, Paldi Road, Jarod)</p>
         </li>
       </ul>
     </div>
@@ -142,11 +170,30 @@
   </footer>
 
   <script>
-    // JavaScript for handling page loading animation
-    document.addEventListener("DOMContentLoaded", function (event) {
-      var loader = document.querySelector('.loader');
-      loader.style.display = 'none';
-    });
+    // Slideshow functionality
+    var projects = [
+      { name: "High Rise", image: "img/high-rise-image.jpg" },
+      { name: "Commercial", image: "img/commercial-image.jpg" },
+      { name: "Bungalow", image: "img/bungalow-image.jpg" },
+      { name: "Villa", image: "img/project-image4.jpg" }
+    ];
+
+    var currentProjectIndex = 0;
+    var projectImageElement = document.getElementById("project-image");
+    var projectNameElement = document.getElementById("project-name");
+
+    function showNextProject() {
+      currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+      var project = projects[currentProjectIndex];
+      projectImageElement.src = project.image;
+      projectNameElement.textContent = project.name;
+    }
+
+    // Show the first project initially
+    showNextProject();
+
+    // Change project every 3 seconds (3000 milliseconds)
+    setInterval(showNextProject, 3000);
   </script>
 </body>
 </html>
