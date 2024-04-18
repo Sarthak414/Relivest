@@ -74,70 +74,72 @@ body {
   font-size: 14px;
 }
 
-.contact-container {
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 600px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.contact-header {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 24px;
-}
-
-.contact-container form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-container form label {
-  margin-bottom: 10px;
-}
-
-.contact-container form input[type="text"],
-.contact-container form input[type="email"],
-.contact-container form textarea {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.contact-container form textarea {
-  height: 150px;
-}
-
-.contact-container form input[type="submit"] {
-  padding: 15px 20px;
+/* reset */
+form input,
+form select,
+form textarea,
+form fieldset,
+form optgroup,
+form label,
+.StripeElement {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
   border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+form label,
+form legend {
+  font-size: 0.825rem;
+  margin-bottom: 0.5rem;
+}
+/* border, padding, margin, width */
+form input,
+form select,
+form textarea,
+.StripeElement {
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.75em 1rem;
+  margin-bottom: 1.5rem;
+}
+form input:focus,
+form select:focus,
+form textarea:focus,
+.StripeElement:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;
+}
+form [type="text"],
+form [type="email"],
+.StripeElement {
+  width: 100%;
+}
+form [type="button"],
+form [type="submit"],
+form [type="reset"] {
+  width: auto;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 }
-
-.contact-container form input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-.contact-container form input[type="submit"]:focus {
+form [type="button"]:focus,
+form [type="submit"]:focus,
+form [type="reset"]:focus {
   outline: none;
 }
 
-/* Optional: Add styles for form validation */
-.contact-container form input:invalid,
-.contact-container form textarea:invalid {
-  border-color: #dc3545;
-}
-
-.contact-container form input:valid,
-.contact-container form textarea:valid {
-  border-color: #28a745;
+form select {
+  text-transform: none;
 }
