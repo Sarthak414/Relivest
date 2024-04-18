@@ -1,44 +1,35 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Viewer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coming Soon - Relivest Partners</title>
+  <link rel="stylesheet" href="css/styles.css">
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-    .image-container {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
     .back-button {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      padding: 10px;
-      background-color: rgba(255, 255, 255, 0.5);
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <a href="https://www.relivestpartners.in/" class="back-button">Back to Relivest Partners</a>
-  <div class="image-container">
-    <img src="img/comming-soon.jpg" alt="Coming Soon">
-  </div>
+  <a href="https://www.relivestpartners.in/" class="back-button">Back to Home</a>
+  <main class="main">
+    <section id="coming-soon" class="coming-soon section">
+      <div class="container">
+        <!-- Replace the src attribute value with the correct path to your image -->
+        <img src="img/coming-soon.jpg" alt="Coming Soon" style="width: 100%;">
+      </div>
+    </section>
+  </main>
 </body>
 </html>
