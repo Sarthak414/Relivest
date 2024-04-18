@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,15 +10,10 @@
   <style>
     #top-image {
       position: relative;
-      width: 100%;
-      height: 700px; /* Adjust the height as needed */
-      overflow: hidden;
+      height: 300px; /* Adjust height as needed */
     }
 
     #top-image img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -48,16 +43,7 @@
       padding: 0;
       text-align: center;
     }
-    
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: none;
-  z-index: 9999;
-}
+
     .button-panel ul li {
       display: inline-block;
       margin: 0 10px; /* Adjust margin as needed */
@@ -69,27 +55,109 @@
       font-weight: bold; /* Adjust font weight as needed */
     }
 
-    .slideshow-container {
+    .header-inner {
       position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
+      z-index: 1; /* Ensure header content stays above slideshow */
     }
 
-    .slideshow-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .project-name {
+    .contact-info {
       position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 10px 20px;
-      border-radius: 10px;
+      top: 0;
+      right: 0;
+      font-size: 18px; /* Adjust font size as needed */
+      color: white; /* Text color */
+      background-color: rgba(0, 0, 0, 0.7); /* Background color */
+      padding: 10px; /* Adjust padding as needed */
+    }
+
+    .vertical-panel-content {
+      color: white; /* Text color */
+    }
+
+    #slideshow {
+      /* Slideshow styles */
+    }
+
+    /* Additional styling for the buttons panel if needed */
+    .buttons-panel {
+      /* Add your styles here */
+    }
+
+    /* Additional styles */
+    /* reset */
+    form input,
+    form select,
+    form textarea,
+    form fieldset,
+    form optgroup,
+    form label,
+    .StripeElement {
+      font-family: inherit;
+      font-size: 100%;
+      color: inherit;
+      border: none;
+      border-radius: 0;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    form label,
+    form legend {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* border, padding, margin, width */
+    form input,
+    form select,
+    form textarea,
+    .StripeElement {
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 0.75em 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    form input:focus,
+    form select:focus,
+    form textarea:focus,
+    .StripeElement:focus {
+      background-color: white;
+      outline-style: solid;
+      outline-width: thin;
+      outline-color: gray;
+      outline-offset: -1px;
+    }
+
+    form [type="text"],
+    form [type="email"],
+    .StripeElement {
+      width: 100%;
+    }
+
+    form [type="button"],
+    form [type="submit"],
+    form [type="reset"] {
+      width: auto;
+      cursor: pointer;
+      -webkit-appearance: button;
+      -moz-appearance: button;
+      appearance: button;
+    }
+
+    form [type="button"]:focus,
+    form [type="submit"]:focus,
+    form [type="reset"]:focus {
+      outline: none;
+    }
+
+    form select {
+      text-transform: none;
     }
   </style>
 </head>
@@ -97,86 +165,20 @@
   <div id="top-image" class="slideshow-container">
     <img id="project-image" src="" alt="Top Image">
     <div class="project-name" id="project-name"></div>
+    <div class="brand-panel">
+      <a href="index.html" class="brand js-target-scroll">
+        <img src="img/LOGO.PNG.png" width="150" height="150" alt="Logo">
+      </a>
+    </div>
   </div>
   <div class="loader"></div>
 
-<header class="header-inner">
-  <div class="brand-panel">
-    <a href="index.html" class="brand js-target-scroll">
-      <img src="img/LOGO.PNG.png" width="150" height="150" alt="Logo">
-    </a>
-  </div>
-  
-  <div class="buttons-panel">
-    <!-- Your buttons panel content here -->
-  </div>
-  
-  <div class="contact-info">
-    <span>Contact us via Phone:</span>
-    <div class="vertical-panel-content">+91 - 8849483704 or +1 806 451-6825</div>
-  </div>
-  
-  <nav class="navbar-desctop visible-md visible-lg">
-    <!-- Desktop navigation menu -->
-  </nav>
-  <nav class="navbar-mobile">
-    <!-- Mobile navigation menu -->
-  </nav>
-</header>
-
-<div id="slideshow">
-  <!-- Slideshow images and content here -->
-</div>
-
-
-  <main class="main main-inner bg-about" data-stellar-background-ratio="0.6">
-    <div class="container">
-      <h2>Our Vision</h2>
-      <p>
-        Our vision at Relivest Partners is to be a leading force of innovation and excellence in the investment, consulting, and real estate development sectors. We aspire to shape vibrant communities, drive economic growth, and enhance quality of life through our commitment to sustainable practices and forward-thinking strategies. With a focus on integrity, collaboration, and innovation, we aim to create enduring value for our partners and communities, setting new standards of excellence in every project we undertake.
-      </p>
-       <h2>Our Approach</h2>
-      <p>
-        At Relivest Partners, our approach is rooted in strategic collaboration, innovative thinking, and unwavering commitment to our clients' success. We specialize in investment management across various sectors, including real estate development. Currently, we are actively investing in a residential project in Jarod, Gujarat. Leveraging our deep expertise and industry insights, we aim to deliver sustainable growth and value creation for our clients and stakeholders. Through transparent communication, diligent research, and proactive risk management, we strive to exceed expectations and build lasting relationships based on trust and integrity.
-      </p>
-
-          <!-- Forte section -->
-<div class="forte-section">
-  <h2>Our Experience with Investment in Projects</h2>
-  <div class="project-grid">
-    <div class="project-item">
-      <img src="img/high-rise-image.jpg" width="200" height="250" alt="High Rise Image">
-      <div class="project-details">
-        <h3>High Rise</h3>
-        <p>Nest Realty - Vadsar, Vadodara</p>
-      </div>
+  <header class="header-inner">
+    <div class="contact-info">
+      <span>Contact us via Phone:</span>
+      <div class="vertical-panel-content">+91 - 8849483704 or +1 806 451-6825</div>
     </div>
-    <div class="project-item">
-      <img src="img/commercial-image.jpg" width="200" height="250" alt="Commercial Image">
-      <div class="project-details">
-        <h3>Commercial</h3>
-        <p>Aegis Infra - Kotambi, Coming soon</p>
-      </div>
-    </div>
-    <div class="project-item">
-      <img src="img/bungalow-image.jpg" width="200" height="250" alt="Bungalow Image">
-      <div class="project-details">
-        <h3>2-3 BHK Comfortable</h3>
-        <p>Nakshtra Greens, Jarod</p>
-      </div>
-    </div>
-    <div class="project-item">
-      <img src="img/project-image4.jpg" width="200" height="250" alt="Project 4 Image">
-      <div class="project-details">
-        <h3>Villa</h3>
-        <p>Glan Forest, Paldi Road, Jarod</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  </main>
+  </header>
 
   <!-- Fixed button panel -->
   <div class="button-panel">
@@ -189,7 +191,85 @@
     </nav>
   </div>
 
+  <main class="main main-inner bg-about" data-stellar-background-ratio="0.6">
+    <div class="container">
+      <h2>Our Vision</h2>
+      <p>
+        Our vision at Relivest Partners is to be a leading force of innovation and excellence in the investment, consulting, and real estate development sectors. We aspire to shape vibrant communities, drive economic growth, and enhance quality of life through our commitment to sustainable practices and forward-thinking strategies. With a focus on integrity, collaboration, and innovation, we aim to create enduring value for our partners and communities, setting new standards of excellence in every project we undertake.
+      </p>
+      <h2>Our Approach</h2>
+      <p>
+        At Relivest Partners, our approach is rooted in strategic collaboration, innovative thinking, and unwavering commitment to our clients' success. We specialize in investment management across various sectors, including real estate development. Currently, we are actively investing in a residential project in Jarod, Gujarat. Leveraging our deep expertise and industry insights, we aim to deliver sustainable growth and value creation for our clients and stakeholders. Through transparent communication, diligent research, and proactive risk management, we strive to exceed expectations and build lasting relationships based on trust and integrity.
+      </p>
 
+      <!-- Forte section -->
+      <div class="forte-section">
+        <h2>Our Experience with Investment in Projects</h2>
+        <div class="project-grid">
+          <div class="project-item">
+            <img src="img/high-rise-image.jpg" width="200" height="250" alt="High Rise Image">
+            <div class="project-details">
+              <h3>High Rise</h3>
+              <p>Nest Realty - Vadsar, Vadodara</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="img/commercial-image.jpg" width="200" height="250" alt="Commercial Image">
+            <div class="project-details">
+              <h3>Commercial</h3>
+              <p>Aegis Infra - Kotambi, Coming soon</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="img/bungalow-image.jpg" width="200" height="250" alt="Bungalow Image">
+            <div class="project-details">
+              <h3>2-3 BHK Comfortable</h3>
+              <p>Nakshtra Greens, Jarod</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="img/project-image4.jpg" width="200" height="250" alt="Project 4 Image">
+            <div class="project-details">
+              <h3>Villa</h3>
+              <p>Glan Forest, Paldi Road, Jarod</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="contact-container">
+    <h1 class="contact-header">Let's Connect</h1>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+      <fieldset id="fs-frm-inputs">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+        <label for="email-address">Email Address</label>
+        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+        <label for="message">Message</label>
+        <textarea rows="5" name="message" id="message" placeholder="Which Project would you like to inquire about" required=""></textarea>
+        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>© 2024 Relivest Partners. All Rights Reserved.</p>
+        </div>
+        <div class="col">
+          <p>Thank you for visiting our website</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript code for slideshow -->
   <script>
     // Slideshow functionality
     var projects = [
@@ -216,43 +296,5 @@
     // Change project every 3 seconds (3000 milliseconds)
     setInterval(showNextProject, 3000);
   </script>
-
-<main class="main main-inner bg-about" data-stellar-background-ratio="0.6">
-  <!-- Your content here -->
-</main>
-
-<footer class="footer">
-  <!-- Your footer content here -->
-</footer>
-
-<div class="contact-container">
-  <h1 class="contact-header">Let's Connect</h1>
-<!-- modify this form HTML and place wherever you want your form -->
-<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
-  <fieldset id="fs-frm-inputs">
-    <label for="full-name">Full Name</label>
-    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-    <label for="email-address">Email Address</label>
-    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
-    <label for="message">Message</label>
-    <textarea rows="5" name="message" id="message" placeholder="Which Project would you like to inquire about" required=""></textarea>
-    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-  </fieldset>
-  <input type="submit" value="Submit">
-</form>
-</div>
-    <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p>© 2024 Relivest Partners. All Rights Reserved.</p>
-        </div>
-        <div class="col">
-          <p>Thank you for visiting our website</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
 </body>
 </html>
