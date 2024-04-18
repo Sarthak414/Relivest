@@ -75,12 +75,18 @@ body {
 }
 
 .contact-container {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
+  background-color: #f9f9f9;
+  padding: 30px;
   border-radius: 10px;
-  margin: 20px auto; /* Center horizontally and add some space from top */
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
 }
 
 .contact-container form {
@@ -88,15 +94,50 @@ body {
   flex-direction: column;
 }
 
-.contact-container form input,
-.contact-container form textarea {
+.contact-container form label {
   margin-bottom: 10px;
 }
 
-.button-panel {
-  position: relative; /* Remove fixed positioning */
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9); /* Adjust the background color and opacity */
-  padding: 10px 0; /* Adjust padding as needed */
-  z-index: 1000; /* Ensure the panel is above other content */
+.contact-container form input[type="text"],
+.contact-container form input[type="email"],
+.contact-container form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-container form textarea {
+  height: 150px;
+}
+
+.contact-container form input[type="submit"] {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-container form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.contact-container form input[type="submit"]:focus {
+  outline: none;
+}
+
+/* Optional: Add styles for form validation */
+.contact-container form input:invalid,
+.contact-container form textarea:invalid {
+  border-color: #dc3545;
+}
+
+.contact-container form input:valid,
+.contact-container form textarea:valid {
+  border-color: #28a745;
 }
