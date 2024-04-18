@@ -89,6 +89,11 @@ body {
   max-width: 600px;
   border-radius: 10px;
   margin: 0 auto; /* Center horizontally */
+  position: fixed;
+  bottom: 0; /* Position the form at the bottom of the viewport */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1000; /* Ensure the form stays above other content */
 }
 
 .contact-container form {
@@ -104,8 +109,5 @@ body {
 .contact-container form input[type="submit"] {
   align-self: center; /* Center the submit button */
 }
-
-
-
 
 /* Rest of the CSS remains the same */
