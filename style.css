@@ -76,6 +76,7 @@ body {
 
 .header-inner {
   position: relative;
+  z-index: 1; /* Ensure header content stays above slideshow */
 }
 
 .contact-info {
@@ -86,13 +87,15 @@ body {
   color: white; /* Text color */
   background-color: rgba(0, 0, 0, 0.7); /* Background color */
   padding: 10px; /* Adjust padding as needed */
-  z-index: 999; /* Ensure the contact info appears above other content */
 }
 
 .vertical-panel-content {
   color: white; /* Text color */
 }
 
+#slideshow {
+  /* Slideshow styles */
+}
 /* Additional styling for the buttons panel if needed */
 .buttons-panel {
   /* Add your styles here */
