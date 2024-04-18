@@ -74,15 +74,30 @@ body {
   font-size: 14px;
 }
 
-.vertical-panel-content {
+.header-inner {
+  position: relative;
+}
+
+.contact-info {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.1); /* Light black background */
-  color: #fff; /* White font color */
-  font-size: 18px; /* Increased font size */
-  padding: 10px; /* Add some padding for spacing */
+  font-size: 18px; /* Adjust font size as needed */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.7); /* Background color */
+  padding: 10px; /* Adjust padding as needed */
+  z-index: 999; /* Ensure the contact info appears above other content */
 }
+
+.vertical-panel-content {
+  color: white; /* Text color */
+}
+
+/* Additional styling for the buttons panel if needed */
+.buttons-panel {
+  /* Add your styles here */
+}
+
 
 
 /* reset */
