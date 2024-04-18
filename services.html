@@ -1,42 +1,92 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Our Services - Relivest Partners</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .back-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background-color: black;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    
-    .main {
-      padding-top: 70px; /* Adjust padding top to ensure content is below the back button */
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services - Relivest Partners</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  /* Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Services Styles */
+  .services-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+
+  .services-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+
+  .service {
+    margin-bottom: 30px;
+  }
+
+  .service-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+
+  .service-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .service-description {
+    color: #666;
+  }
+
+</style>
 </head>
 <body>
-  <a href="https://www.relivestpartners.in/" class="back-button">Back to Home</a>
-  <main class="main">
-    <section id="services" class="services section">
-      <div class="container">
-        <h2>Our Services</h2>
-        <!-- Our Services content goes here -->
-        <p>
-          At Relivest Partners, we offer comprehensive solutions in investment management, real estate development, and strategic consulting. Our services include expert investment guidance, full-cycle real estate development, tailored financial advisory, market analysis, risk management, project management, and sustainable investing strategies. With a commitment to excellence and innovation, we empower our clients to achieve their financial goals and build a sustainable future.
+  <div class="container">
+    <div class="services-container">
+      <h1 class="services-header">Our Services</h1>
+
+      <div class="service">
+        <i class="fas fa-chart-line service-icon"></i>
+        <h2 class="service-title">Investment Management</h2>
+        <p class="service-description">
+          Our expert team provides comprehensive solutions in investment management, tailored to meet your financial goals. We offer personalized strategies, diligent research, and proactive risk management to maximize returns and minimize risks.
         </p>
       </div>
-    </section>
-  </main>
+
+      <div class="service">
+        <i class="fas fa-home service-icon"></i>
+        <h2 class="service-title">Real Estate Development</h2>
+        <p class="service-description">
+          We specialize in full-cycle real estate development, from concept to completion. Our innovative approach, strategic partnerships, and attention to detail ensure the successful execution of residential, commercial, and mixed-use projects.
+        </p>
+      </div>
+
+      <div class="service">
+        <i class="fas fa-handshake service-icon"></i>
+        <h2 class="service-title">Strategic Consulting</h2>
+        <p class="service-description">
+          Our strategic consulting services provide actionable insights and expert guidance to drive growth and success. Whether you need market analysis, project management, or sustainable investing strategies, we're here to help you achieve your objectives.
+        </p>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
