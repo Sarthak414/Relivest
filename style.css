@@ -12,6 +12,8 @@
 /* Additional styles for Relivest Partners */
 body {
   background-color: #ffffff; /* Set background color to white */
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
 }
 
 #top-image {
@@ -20,22 +22,13 @@ body {
 }
 
 #top-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 999;
+  display: none; /* Hide the loader by default */
 }
 
 .forte-section {
@@ -46,19 +39,19 @@ body {
 .project-grid {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
 .project-item {
-  width: 23%; /* Adjust the width to fit 4 items in a row */
-  margin-bottom: 20px; /* Adjust margin between items */
+  width: calc(25% - 20px); /* Adjust the width to fit 4 items in a row with margins */
+  margin-bottom: 20px;
   text-align: center;
-  overflow: hidden; /* Hide overflow content */
 }
 
 .project-item img {
   width: 100%;
-  height: 100%; /* Set height to 100% to cover entire container */
-  object-fit: cover; /* Crop the image to cover entire container */
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -81,7 +74,6 @@ body {
   font-size: 14px;
 }
 
-/* Rest of the CSS remains the same */
 .contact-container {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
@@ -91,15 +83,20 @@ body {
   margin: 20px auto; /* Center horizontally and add some space from top */
 }
 
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container form input,
+.contact-container form textarea {
+  margin-bottom: 10px;
+}
+
 .button-panel {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative; /* Remove fixed positioning */
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9); /* Adjust the background color and opacity */
   padding: 10px 0; /* Adjust padding as needed */
   z-index: 1000; /* Ensure the panel is above other content */
 }
-
-
-/* Rest of the CSS remains the same */
