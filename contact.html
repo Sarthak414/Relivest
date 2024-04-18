@@ -57,38 +57,20 @@
     margin: 10px 0;
   }
 
-  .contact-form {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
+  .contact-social {
+    text-align: center;
+    margin-top: 30px;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
+  .social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s ease;
   }
 
-  .contact-form textarea {
-    resize: vertical;
-    height: 150px;
-  }
-
-  .contact-form input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .contact-form input[type="submit"]:hover {
-    background-color: #0056b3;
+  .social-icon:hover {
+    color: #007bff;
   }
 
 </style>
@@ -101,12 +83,12 @@
         <p><i class="fas fa-envelope"></i> Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a></p>
         <p><i class="fas fa-phone"></i> Phone: +91-8849483704 (INDIA), +1 (806) 451-6285 (For International Investors)</p>
       </div>
-      <form class="contact-form" action="#" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <input type="submit" value="Send Message">
-      </form>
+      <div class="contact-social">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
   </div>
 </body>
