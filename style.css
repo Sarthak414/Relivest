@@ -88,26 +88,18 @@ body {
   width: 80%;
   max-width: 600px;
   border-radius: 10px;
-  margin: 0 auto; /* Center horizontally */
+  margin: 20px auto; /* Center horizontally and add some space from top */
+}
+
+.button-panel {
   position: fixed;
-  bottom: 0; /* Position the form at the bottom of the viewport */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  z-index: 1000; /* Ensure the form stays above other content */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust the background color and opacity */
+  padding: 10px 0; /* Adjust padding as needed */
+  z-index: 1000; /* Ensure the panel is above other content */
 }
 
-.contact-container form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-container form input,
-.contact-container form textarea {
-  margin-bottom: 10px;
-}
-
-.contact-container form input[type="submit"] {
-  align-self: center; /* Center the submit button */
-}
 
 /* Rest of the CSS remains the same */
