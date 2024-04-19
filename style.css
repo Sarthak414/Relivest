@@ -103,7 +103,7 @@ body {
 
   .about-title {
     font-size: 24px;
-    color: #2ECC71; /* Golden green color */
+    color: #D4AF37; /* Golden green color */
     margin-bottom: 20px;
   }
 
@@ -143,13 +143,13 @@ body {
 
   .read-more-button a {
     text-decoration: none;
-    color: #2ECC71; /* Golden green color */
+    color: #D4AF37; /* Golden green color */
     font-weight: bold;
     transition: color 0.3s ease;
   }
 
   .read-more-button a:hover {
-    color: #27AE60; /* Lighter shade of golden green on hover */
+    color: #D4AF37; /* Lighter shade of golden green on hover */
   }
 
 /* Media Queries */
