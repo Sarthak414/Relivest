@@ -209,7 +209,7 @@ form select {
   position: absolute;
   top: 10px; /* Adjust the top position as needed */
   right: 20px; /* Adjust the right position as needed */
-  font-size: 16px; /* Adjust font size as needed */
+  font-size: 10px; /* Adjust font size as needed */
   color: white; /* Text color */
   background-color: rgba(62, 54, 46, 0.1); /* Translucent background color */
   padding: 10px; /* Adjust padding as needed */
