@@ -109,16 +109,16 @@ body {
 
   .about-us-container {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 3fr 3fr;
     grid-gap: 40px;
-    max-width: 800px; /* Limit the width of the content */
+    max-width: 900px; /* Limit the width of the content */
     margin: 0 auto; /* Center the content horizontally */
   }
 
 .about-us-description {
   grid-column: 1 / 2;
-     font-size: 18px;
-    line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6;
   text-align: left; /* Align the description to the left */
 }
 
