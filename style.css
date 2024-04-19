@@ -293,13 +293,25 @@ form select {
 
 .vision-container,
 .approach-container {
+  position: relative; /* Position relative to allow for curved corners */
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 20px 0;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.9); /* Translucent white background color */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add shadow effect */
-  background-size: cover;
-  background-position: center;
+  border-radius: 20px; /* Add border radius for curved corners */
+}
+
+.vision-container::before,
+.approach-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20px; /* Adjust the value to control the width of the curve */
+  width: 40px; /* Adjust the width of the curve */
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9); /* Match container background color */
+  border-radius: 0 20px 20px 0; /* Adjust the border radius to match container */
 }
 
 
