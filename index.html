@@ -175,10 +175,36 @@ form [type="reset"]:focus {
 form select {
   text-transform: none;
 }
+ /* Position and style for the logo elements */
+    .faded-logo {
+      position: fixed;
+      width: 100px; /* Adjust size as needed */
+      height: auto; /* Maintain aspect ratio */
+      opacity: 0.2; /* Adjust opacity to make it faded */
+      pointer-events: none; /* Prevent interaction with the logo */
+      z-index: -1; /* Ensure the logo is behind other content */
+    }
 
+    /* Position the logo in different places */
+    .logo-top-left {
+      top: 20px;
+      left: 20px;
+    }
+
+    .logo-bottom-right {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    /* Additional logo positions can be added as needed */
   </style>
+  
 </head>
 <body>
+   <!-- Logo images -->
+  <img src="img/LOGO.PNG.png" alt="Logo" class="faded-logo logo-top-left">
+  <img src="img/LOGO.PNG.png" alt="Logo" class="faded-logo logo-bottom-right">
+  
   <div id="top-image" class="slideshow-container">
     <img id="project-image" src="" alt="Top Image">
     <div class="project-name" id="project-name"></div>
@@ -213,6 +239,15 @@ form select {
     </nav>
   </div>
   
+     <div class="brand-panel">
+      <a href="index.html" class="brand js-target-scroll">
+        <img src="img/LOGO.PNG.png" width="150" height="150" alt="Logo">
+      </a>
+      <div class="contact-info">
+        <span>Contact us via Phone:</span>
+        <div class="vertical-panel-content">+91 - 8849483704 or +1 806 451-6825</div>
+      </div>
+    </div>
   
 <style>
   /* Font Family */
