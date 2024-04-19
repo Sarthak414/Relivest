@@ -89,25 +89,33 @@ body {
   width: 100px;
   height: auto;
 }
-  .about-us-skills {
-  display: flex;
-  justify-content: space-between;
+.about-us-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.about-us-description {
+  grid-column: 1 / 2;
+}
+
+.about-us-skills {
+  grid-column: 2 / 3;
 }
 
 .about-us-skills ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 .about-us-skills ul li {
-  text-align: center;
   margin-bottom: 1rem;
 }
 
 .skill-icon {
-  max-width: 30px; /* Adjust the size as needed */
+  max-width: 50px; /* Adjust the size as needed */
 }
+
 
 /* Media Queries */
 /* Mobile devices */
