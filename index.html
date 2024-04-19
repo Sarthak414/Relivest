@@ -190,6 +190,30 @@ form select {
     }
 
     /* Additional logo positions can be added as needed */
+------
+    .about-us-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+  }
+  .about-us-description {
+    color: black;
+  }
+  .about-us-title {
+    font-weight: bold;
+    color: #2ECC71; /* Replace with your desired golden green color */
+  }
+  .about-us-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .about-us-skill {
+    text-align: center;
+    margin: 1rem;
+  }
+---
   </style>
   
 </head>
@@ -261,35 +285,36 @@ form select {
   }
 </style>
 
-<main class="main main-inner bg-about" data-stellar-background-ratio="0.6">
-  <div class="container">
-    <div class="vision-container">
-      <div class="service">
-        <div class="service-icon">
-          <i class="fas fa-eye"></i> <!-- Font Awesome "eye" icon -->
-        </div>
-        <div class="service-details">
-          <h2 class="service-title">Our Vision</h2>
-          <p class="service-description">
-            Our vision at Relivest Partners is to become a <span class="highlight">beacon</span> of <span class="highlight">transformation</span> and <span class="highlight">progress</span> in the investment, consulting, and real estate development landscape of India. We aspire to <span class="highlight">catalyze</span> the growth of vibrant communities, drive <span class="highlight">sustainable</span> economic development, and elevate the quality of life across the nation. With a steadfast commitment to <span class="highlight">ethical</span> practices, collaborative partnerships, and innovative solutions, we endeavor to create <span class="highlight">lasting</span> value for our stakeholders and contribute to India's journey towards prosperity and excellence.
-          </p>
-        </div>
+<div class="about-us-container">
+    <div class="about-us-description">
+      <h2 style="color: black;">About <span style="color: #d4af37;">Relivest Partners</span></h2>
+      <p><strong>Relivest Partners: Transforming India's Investment Landscape</strong></p>
+      <p>Relivest Partners stands as a prominent figure, driving transformation and progress in India's investment, consulting, and real estate development sector. Our vision is to be a beacon of positive change, catalyzing the growth of vibrant communities, fostering sustainable economic development, and elevating the quality of life across the nation.</p>
+      <div class="read-more-button">
+        <a href="about.html" style="color: #d4af37;" target="_blank">Read More</a>
       </div>
     </div>
-    <div class="approach-container">
-      <div class="service">
-        <div class="service-icon">
-          <i class="fas fa-handshake"></i>
-        </div>
-        <div class="service-details">
-          <h2 class="service-title">Our Approach</h2>
-          <p class="service-description">
-            At Relivest Partners, our approach is deeply rooted in the ethos of <span class="highlight">collaboration</span>, <span class="highlight">innovation</span>, and <span class="highlight">client-centricity</span>. We specialize in <span class="highlight">prudent</span> investment management across diverse sectors, including the dynamic real estate landscape of India. Presently, we are actively engaged in a transformative residential/Commerical projects in/near Vadodara, Gujarat. Drawing upon our extensive industry knowledge and insights, we are committed to delivering <span class="highlight">sustainable</span> growth and value for our clients and stakeholders. Through transparent communication, rigorous research, and proactive risk mitigation, we endeavor to surpass expectations and foster enduring relationships founded on trust and integrity.
-          </p>
-        </div>
+    
+    <div class="about-us-skills">
+      <div class="about-us-skill">
+        <img src="img/High-Rise-Icon.png" alt="Skill 1">
+        <p>High Rise</p>
+      </div>
+      <div class="about-us-skill">
+        <img src="img/Residential.png" alt="Skill 2">
+        <p>Duplex & Single Family Homes</p>
+      </div>
+      <div class="about-us-skill">
+        <img src="img/Commercial-Icon.png" alt="Skill 3">
+        <p>Commercial</p>
+      </div>
+      <div class="about-us-skill">
+        <img src="img/Investing.png" alt="Skill 4">
+        <p>Commercial</p>
       </div>
     </div>
   </div>
+
 </main>
 
 
