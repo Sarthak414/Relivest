@@ -91,14 +91,14 @@ body {
 }
 
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
   }
 
   main {
     padding-top: 40px;
-    text-align: center; /* Center align the content */
+    text-align: left; /* Center align the content */
   }
 
   .about-title {
@@ -126,13 +126,13 @@ body {
     margin: 0;
   }
 
-  .about-us-skills ul li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    font-size: 16px;
-    line-height: 1.4;
-  }
+.about-us-skills ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem; /* Increase the gap */
+  font-size: 16px;
+  line-height: 1.4;
+}
 
   .skill-icon {
     max-width: 60px; /* Reduce icon size */
