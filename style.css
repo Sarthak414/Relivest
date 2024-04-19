@@ -89,33 +89,42 @@ body {
   width: 100px;
   height: auto;
 }
-.about-us-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-}
 
-.about-us-description {
-  grid-column: 1 / 2;
-}
+ main {
+    padding-top: 40px; /* Adding gap from the section above */
+  }
 
-.about-us-skills {
-  grid-column: 2 / 3;
-}
+  .about-us-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
 
-.about-us-skills ul {
-  list-style-type: none;
-  padding: 0;
-}
+  .about-us-description {
+    grid-column: 1 / 2;
+    font-size: 18px; /* Increase font size */
+  }
 
-.about-us-skills ul li {
-  margin-bottom: 1rem;
-}
+  .about-us-skills {
+    grid-column: 2 / 3;
+  }
 
-.skill-icon {
-  max-width: 50px; /* Adjust the size as needed */
-}
+  .about-us-skills ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
+  .about-us-skills ul li {
+    display: flex; /* Display skill name next to icon */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 1rem;
+    font-size: 16px; /* Increase font size */
+  }
+
+  .skill-icon {
+    max-width: 50px; /* Adjust the size as needed */
+    margin-right: 10px; /* Add space between icon and skill name */
+  }
 
 /* Media Queries */
 /* Mobile devices */
