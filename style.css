@@ -232,14 +232,15 @@ form select {
   margin-bottom: 40px; /* Add more space below approach container */
 }
 
-.contact-header {
+.contact-container .contact-header {
   font-family: 'Arial', sans-serif; /* Match the website font */
-  font-size: 2.5rem; /* Increase font size */
+  font-size: 2.5rem !important; /* Increase font size */
   color: #333; /* Dark text color */
   text-align: center; /* Align to the center */
   margin-top: 40px; /* Adjust spacing from the top section */
   margin-bottom: 20px; /* Add space below the header */
 }
+
 
 
 .project-name {
