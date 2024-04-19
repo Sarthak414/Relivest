@@ -225,8 +225,8 @@ form select {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(62, 54, 46, 0.9); /* Translucent white background color */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+  background-color: rgba(255, 255, 255, 0.9); /* Translucent white background color */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add shadow effect */
   background-size: cover;
   background-position: center;
 }
