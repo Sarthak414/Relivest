@@ -104,6 +104,11 @@ body {
   /* Add your styles here */
 }
 
+.forte-section > h2 {
+  font-weight: bold; /* Make the text bold */
+  color: #3B5998; /* Set the font color */
+}
+
 /* reset */
 /* Apply styles to form input, select, textarea, fieldset, optgroup, label, and StripeElement */
 /* Apply styles to form input, select, textarea, fieldset, optgroup, label, and StripeElement */
