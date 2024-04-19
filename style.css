@@ -89,6 +89,25 @@ body {
   width: 100px;
   height: auto;
 }
+  .about-us-skills {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us-skills ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-us-skills ul li {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skill-icon {
+  max-width: 30px; /* Adjust the size as needed */
+}
 
 /* Media Queries */
 /* Mobile devices */
@@ -107,26 +126,6 @@ body {
     width: 100%;
     height: auto;
   }
-  .about-us-skills {
-  display: flex;
-  justify-content: space-between;
-}
-
-.about-us-skills ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.about-us-skills ul li {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.skill-icon {
-  max-width: 50px; /* Adjust the size as needed */
-}
-
 }
 
 
