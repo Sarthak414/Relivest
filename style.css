@@ -1,3 +1,4 @@
+/* Import external stylesheets */
 @import url('bootstrap.min.css');
 @import url('font-awesome.min.css');
 @import url('animate.css');
@@ -9,16 +10,17 @@
 @import url('layers.css');
 @import url('navigation.css');
 
-/* Additional styles for Relivest Partners */
+/* Base styles */
 body {
-  background-color: #F7f9fb; /* Set background color to white */
-  margin: 0; /* Remove default body margin */
-  padding: 0; /* Remove default body padding */
+  background-color: #F7f9fb;
+  margin: 0;
+  padding: 0;
 }
 
+/* Top image */
 #top-image {
   position: relative;
-  height: 300px; /* Adjust height as needed */
+  height: 300px;
 }
 
 #top-image img {
@@ -28,9 +30,10 @@ body {
 }
 
 .loader {
-  display: none; /* Hide the loader by default */
+  display: none;
 }
 
+/* Forte section */
 .forte-section {
   text-align: center;
   padding: 50px 0;
@@ -39,11 +42,11 @@ body {
 .project-grid {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-wrap: wrap;
 }
 
 .project-item {
-  width: calc(25% - 20px); /* Adjust the width to fit 4 items in a row with margins */
+  width: calc(25% - 20px);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -74,299 +77,50 @@ body {
   font-size: 14px;
 }
 
-/* Updated styles for the logo */
+/* Brand panel */
 .brand-panel {
-  position: Relative;
-  top: 20px; /* Adjust the top position as needed */
-  left: 0px; /* Adjust the left position as needed */
-  z-index: 1000; /* Ensure the logo is above the image */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
 }
 
 .logo-image {
-  width: 50px; /* Adjust the width as needed */
-  height: 100px; /* Maintain aspect ratio */
+  width: 100px;
+  height: auto;
 }
 
-.header-inner {
-  position: relative; /* Ensure the header is positioned relative to its parent */
-  text-align: right; /* Align the content of the header to the right */
-}
-
-.vertical-panel-content {
-  color: white; /* Text color */
-}
-
-#slideshow {
-  /* Slideshow styles */
-}
-/* Additional styling for the buttons panel if needed */
-.buttons-panel {
-  /* Add your styles here */
-}
-
-.forte-section > h2 {
-  font-weight: bold; /* Make the text bold */
-  color: #3B5998; /* Set the font color */
-}
-
-/* reset */
-/* Apply styles to form input, select, textarea, fieldset, optgroup, label, and StripeElement */
-/* Apply styles to form input, select, textarea, fieldset, optgroup, label, and StripeElement */
-form input,
-form select,
-form textarea,
-form fieldset,
-form optgroup,
-form label,
-.StripeElement {
-  font-size: 100%;
-  color: inherit;
-  border: none;
-  border-radius: 5px; /* Add curved borders */
-  display: block;
-  width: 80%;
-  padding: 20px; /* Add padding */
-  margin-bottom: 10px; /* Add space between elements */
-  margin: 0 auto 15px; /* Center the element horizontally and add space below */
-  webkit-appearance: button;
-  moz-appearance: button;
-  box-sizing: border-box;
-}
-
-/* Additional styling for form label and legend */
-form label,
-form legend {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Apply border, padding, margin, and width to form input, select, textarea, and StripeElement */
-form input,
-form select,
-form textarea,
-.StripeElement {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: rgba(62, 54, 46, 0.1); /* Translucent background color */
-}
-
-/* Additional styling for focused elements */
-form input:focus,
-form select:focus,
-form textarea:focus,
-.StripeElement:focus {
-  background-color: white;
-  outline-style: solid;
-  outline-width: thin;
-  outline-color: gray;
-  outline-offset: -1px;
-
-
-/* Define breakpoints for different screen sizes/* /* Mobile devices (portrait and landscape) */
+/* Media Queries */
+/* Mobile devices */
 @media only screen and (max-width: 480px) {
-  /* Adjust styles for smaller screens */
-  body {
-    font-size: 12px; /* Decrease base font size */
-  }
-
   .brand-panel {
-    top: 10px; /* Adjust the top position */
-    left: 5px; /* Adjust the left position */
+    top: 10px;
+    left: 10px;
   }
 
-  .logo-bottom-right {
-    width: 50px; /* Adjust logo size for smaller screens */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .button-panel ul li {
-    margin: 0 5px; /* Adjust margin for buttons */
-  }
-
-  .contact-container .contact-header {
-    font-size: 2rem; /* Decrease font size for contact header */
-    margin-top: 20px; /* Adjust spacing from the top section */
-  }
-
-  /* Adjust involvement grid */
   .project-item {
-    width: 100%; /* Make project items full width */
-    margin-bottom: 10px; /* Add space between project items */
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .project-item img {
-    width: 100%; /* Make project images full width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
   }
 }
 
-/* Mobile devices (portrait and landscape) */
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-  /* Adjust styles for smaller screens */
-  .logo-image {
-    width: 80px; /* Decrease logo size for smaller screens */
-  }
-
-  .contact-info {
-    font-size: 8px; /* Decrease font size for contact info on smaller screens */
-  }
-
-  .service-title {
-    font-size: 2rem; /* Decrease font size for service titles on smaller screens */
-  }
-
-  .service-description {
-    font-size: 1rem; /* Decrease font size for service descriptions on smaller screens */
-  }
-
-  .project-grid {
-    display: block; /* Change the display to block for project grid on smaller screens */
-  }
-
-  .project-item {
-    width: 100%; /* Make project items full width on smaller screens */
-  }
-}
-
-/* Tablet devices (portrait and landscape) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Adjust styles for tablet-sized screens */
-  .logo-image {
-    width: 90px; /* Adjust logo size for tablets */
-  }
-
-  .contact-info {
-    font-size: 10px; /* Adjust font size for contact info on tablets */
-  }
-
-  .service-title {
-    font-size: 2.2rem; /* Adjust font size for service titles on tablets */
-  }
-
-  .service-description {
-    font-size: 1.2rem; /* Adjust font size for service descriptions on tablets */
+/* Tablet devices */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .brand-panel {
+    top: 20px;
+    left: 20px;
   }
 }
 
 /* Desktop devices */
-@media only screen and (min-width: 1024px) {
-  /* Styles for desktop-sized screens */
-  .logo-image {
-    width: 100px; /* Default logo size for desktops */
-  }
-
-  .contact-info {
-    font-size: 12px; /* Default font size for contact info on desktops */
-  }
-
-  .service-title {
-    font-size: 2.5rem; /* Default font size for service titles on desktops */
-  }
-
-  .service-description {
-    font-size: 1.4rem; /* Default font size for service descriptions on desktops */
+@media only screen and (min-width: 1025px) {
+  .brand-panel {
+    top: 20px;
+    left: 20px;
   }
 }
-
-}
-
-/* Apply width to text and email inputs and StripeElement */
-form [type="text"],
-form [type="email"],
-.StripeElement {
-  width: 80%;
-}
-
-/* Apply width to button inputs */
-form [type="button"],
-form [type="submit"],
-form [type="reset"] {
-  width: 80%; /* Set button width to 100% */
-  cursor: pointer;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-}
-
-/* Remove outline on focus for button inputs */
-form [type="button"]:focus,
-form [type="submit"]:focus,
-form [type="reset"]:focus {
-  outline: none;
-}
-
-/* Additional styling for form select */
-form select {
-  text-transform: none;
-}
-
-/* Updated styles for the logo */
-.brand-panel {
-  position: absolute;
-  top: 20px; /* Adjust the top position as needed */
-  left: 20px; /* Adjust the left position as needed */
-  z-index: 1000; /* Ensure the logo is above the image */
-}
-
-.logo-image {
-  width: 100px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
-
-.vertical-panel-content {
-  color: white; /* Text color */
-}
-
-.vision-container,
-.approach-container {
-  position: relative; /* Position relative to allow for curved corners */
-  max-width: 1000px;
-  margin: 20px 0;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9); /* Translucent white background color */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add shadow effect */
-  border-radius: 20px; /* Add border radius for curved corners */
-}
-
-.vision-container::before,
-.approach-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -20px; /* Adjust the value to control the width of the curve */
-  width: 40px; /* Adjust the width of the curve */
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9); /* Match container background color */
-  border-radius: 0 20px 20px 0; /* Adjust the border radius to match container */
-}
-
-
-.vision-container {
-  margin-bottom: 20px; /* Add space between vision and approach containers */
-}
-
-.approach-container {
-  margin-bottom: 40px; /* Add more space below approach container */
-}
-
-.contact-container .contact-header {
-  font-size: 2.5rem !important; /* Increase font size */
-  color: #333; /* Dark text color */
-  text-align: center; /* Align to the center */
-  background-color: rgba(62, 54, 46, 0.1); /* Translucent background color */
-  margin-top: 40px; /* Adjust spacing from the top section */
-  margin-bottom: 20px; /* Add space below the header */
-}
-
-.project-name {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 9rem; /* Adjust font size as needed */
-  color: #F7F9FB; /* Text color */
-  background-color: rgba(62, 54, 46, 0.5); /* Translucent background color */
-  padding: 20px; /* Add padding for better readability */
-  z-index: 1000; /* Ensure the text is above the image */
-}
-
