@@ -207,7 +207,7 @@ form select {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-image: url('img/real_estate_background.jpg'); /* Updated background image URL */
+  background-color: #f9faf2;
   background-size: cover;
   background-position: center;
 }
