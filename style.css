@@ -11,7 +11,7 @@
 
 /* Additional styles for Relivest Partners */
 body {
-  background-color: #AC8968; /* Set background color to white */
+  background-color: #F7f9fb; /* Set background color to white */
   margin: 0; /* Remove default body margin */
   padding: 0; /* Remove default body padding */
 }
@@ -236,5 +236,15 @@ form select {
   margin: 0 auto; /* Center the header horizontally */
   font-size: 2rem; /* Increase font size */
   color: #333; /* Dark text color */
+}
+
+.project-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem; /* Adjust font size as needed */
+  color: white; /* Text color */
+  z-index: 1000; /* Ensure the text is above the image */
 }
 
