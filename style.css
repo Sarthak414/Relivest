@@ -163,7 +163,36 @@ form textarea:focus,
 
 /* Define breakpoints for different screen sizes */
 /* Mobile devices (portrait and landscape) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
+  /* Adjust styles for smaller screens */
+  .logo-image {
+    width: 60px; /* Decrease logo size for smaller screens */
+  }
+
+  .contact-info {
+    font-size: 6px; /* Decrease font size for contact info on smaller screens */
+  }
+
+  .service-title {
+    font-size: 1.5rem; /* Decrease font size for service titles on smaller screens */
+  }
+
+  .service-description {
+    font-size: 0.8rem; /* Decrease font size for service descriptions on smaller screens */
+  }
+
+  .project-grid {
+    display: block; /* Change the display to block for project grid on smaller screens */
+  }
+
+  .project-item {
+    width: 100%; /* Make project items full width on smaller screens */
+  }
+}
+
+
+/* Mobile devices (portrait and landscape) */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   /* Adjust styles for smaller screens */
   .logo-image {
     width: 80px; /* Decrease logo size for smaller screens */
