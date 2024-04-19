@@ -6,10 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Relivest Partners</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Additional styles for About Us page */
+    /* Reset CSS */
+    body, h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Main styles */
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f7f9fb;
@@ -64,11 +69,75 @@
       color: #333;
     }
 
-    footer {
-      padding: 20px;
-      background-color: #3B5998;
-      color: #fff;
+    .read-more-button {
+      margin-top: 20px;
+    }
+
+    .read-more-button a {
+      text-decoration: none;
+      color: #3B5998;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .read-more-button a:hover {
+      color: #2ECC71;
+    }
+
+    .about-title {
+      font-size: 28px;
+      color: #3B5998;
       text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .about-us-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 30px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .about-us-description {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-us-description h2 {
+      color: #3B5998;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .about-us-description p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skill-icons-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .skill-icon {
+      margin-bottom: 20px;
+    }
+
+    .skill-icon img {
+      width: 50px;
+      height: auto;
+    }
+
+    .skill-name {
+      color: #3B5998;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -87,17 +156,37 @@
   </header>
 
   <main>
+    <h1 class="about-title">About Us - Relivest Partners</h1>
+
+    <div class="about-us-container">
+      <div class="about-us-description">
+        <h2>About Relivest Partners</h2>
+        <p><strong>Relivest Partners: Pioneering Investment Solutions in India</strong></p>
+        <p>Relivest Partners stands as a prominent figure, driving transformation and progress in India's investment, consulting, and real estate development sector. Our vision is to be a beacon of positive change, catalyzing the growth of vibrant communities, fostering sustainable economic development, and elevating the quality of life across the nation.</p>
+        <div class="read-more-button">
+          <a href="about.html" style="color: #D4AF37;" target="_blank">Read More</a>
+        </div>
+      </div>
+
+      <div class="skill-icons-column">
+        <div class="skill-icon">
+          <img src="img/skill-icon1.png" alt="Skill Icon 1">
+          <p class="skill-name">Collaborative Approach</p>
+        </div>
+        <div class="skill-icon">
+          <img src="img/skill-icon2.png" alt="Skill Icon 2">
+          <p class="skill-name">Innovative Solutions</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Existing partner information sections -->
     <section class="partner-info">
       <h2>Sarthak Devmurari - Co-Founder</h2>
       <p>Real Estate Investor with a Vision for Transformative Projects <br>
         Vadodara, Gujarat, India <br>
-      <p>As a co-founder of Relivest Partners, Sarthak Devmurari is a driving force behind our real estate investment endeavors.
-        With a keen eye for opportunities and a strategic approach, Sarthak leads our efforts in identifying and investing in
-        transformative real estate projects. His vision for creating vibrant communities and driving sustainable economic
-        development guides our investment strategy.</p>
-      <p>Although we're in the early stages, Sarthak's leadership has already positioned Relivest Partners as a key player in
-        the real estate development landscape. Through his innovative thinking and commitment to excellence, we are poised to
-        deliver exceptional value to our stakeholders and contribute to the growth of India's real estate sector.</p>
+        As a co-founder of Relivest Partners, Sarthak Devmurari is a driving force behind our real estate investment endeavors. With a keen eye for opportunities and a strategic approach, Sarthak leads our efforts in identifying and investing in transformative real estate projects. His vision for creating vibrant communities and driving sustainable economic development guides our investment strategy.</p>
+      <p>Although we're in the early stages, Sarthak's leadership has already positioned Relivest Partners as a key player in the real estate development landscape. Through his innovative thinking and commitment to excellence, we are poised to deliver exceptional value to our stakeholders and contribute to the growth of India's real estate sector.</p>
       <p>Services: <br>
         Real Estate Investment • Project Identification and Evaluation • Strategic Planning • Investment Management</p>
     </section>
@@ -106,26 +195,20 @@
       <h2>Minal Shah - Co-Founder</h2>
       <p>Expert Financial Strategist <br>
         Mumbai, India <br>
-
-      <p>Strategic Financial Advisor with a track record of helping businesses thrive. Minal brings extensive expertise
-        in financial management, tax planning, and compliance. With years of experience running AKSHAY ASSOCIATES, a
-        leading financial consultancy firm in Mumbai, she has guided numerous clients to financial success. Minal is
-        dedicated to providing personalized financial solutions that align with clients' goals and maximize their
-        financial potential.</p>
+        Strategic Financial Advisor with a track record of helping businesses thrive. Minal brings extensive expertise in financial management, tax planning, and compliance. With years of experience running AKSHAY ASSOCIATES, a leading financial consultancy firm in Mumbai, she has guided numerous clients to financial success. Minal is dedicated to providing personalized financial solutions that align with clients' goals and maximize their financial potential.</p>
       <p>Services: <br>
         Financial Strategy • Tax Planning • Compliance • Financial Reporting • Business Advisory</p>
     </section>
 
     <section class="partner-info">
-<h2>Darshak Vatsraj - Co-Founder</h2>
-<p>Solar Project Leader and Renewable Energy Advocate <br>
-    Vadodara, Gujarat, India <br>
-</p>
-<p>As a co-founder of Relivest Partners, Darshak Vatsraj spearheads our efforts in solar project development and advocates for renewable energy initiatives. With a deep understanding of solar technologies and a passion for sustainability, Darshak leads our team in identifying and executing solar projects that contribute to a greener future.</p>
-<p>With his expertise and dedication, Darshak plays a pivotal role in expanding Relivest Partners' portfolio to include renewable energy projects. Through his leadership, we are committed to harnessing solar power and other renewable resources to drive positive environmental impact and sustainable development.</p>
-<p>Services: <br>
-    Solar Project Development • Renewable Energy Advocacy • Sustainability Consulting</p>
-
+      <h2>Darshak Vatsraj - Co-Founder</h2>
+      <p>Solar Project Leader and Renewable Energy Advocate <br>
+        Vadodara, Gujarat, India <br>
+        As a co-founder of Relivest Partners, Darshak Vatsraj spearheads our efforts in solar project development and advocates for renewable energy initiatives. With a deep understanding of solar technologies and a passion for sustainability, Darshak leads our team in identifying and executing solar projects that contribute to a greener future.</p>
+      <p>With his expertise and dedication, Darshak plays a pivotal role in expanding Relivest Partners' portfolio to include renewable energy projects. Through his leadership, we are committed to harnessing solar power and other renewable resources to drive positive environmental impact and sustainable development.</p>
+      <p>Services: <br>
+        Solar Project Development • Renewable Energy Advocacy • Sustainability Consulting</p>
+    </section>
   </main>
 
   <footer>
