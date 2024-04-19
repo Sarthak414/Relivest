@@ -219,15 +219,18 @@ form select {
 .vertical-panel-content {
   color: white; /* Text color */
 }
+
 .vision-container,
 .approach-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(62, 54, 46, 0.1); /* Translucent background color */
+  background-color: rgba(62, 54, 46, 0.9); /* Translucent white background color */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
   background-size: cover;
   background-position: center;
 }
+
 
 .vision-container {
   margin-bottom: 20px; /* Add space between vision and approach containers */
