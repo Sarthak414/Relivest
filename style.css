@@ -243,8 +243,10 @@ form select {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4rem; /* Adjust font size as needed */
-  color: white; /* Text color */
+  font-size: 9rem; /* Adjust font size as needed */
+  color: #F7F9FB; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
+  padding: 20px; /* Add padding for better readability */
   z-index: 1000; /* Ensure the text is above the image */
 }
 
