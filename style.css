@@ -207,13 +207,13 @@ form select {
 /* Additional styles for the contact info */
 .contact-info {
   position: absolute;
-  top: 10px; /* Adjust the top position as needed */
-  right: 20px; /* Adjust the right position as needed */
+  top: 5px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the right position as needed */
   font-size: 10px; /* Adjust font size as needed */
   color: white; /* Text color */
-  background-color: rgba(62, 54, 46, 0.1); /* Translucent background color */
-  padding: 10px; /* Adjust padding as needed */
-  border-radius: 8px; /* Add border radius for rounded corners */
+  background-color: rgba(62, 54, 46, 0.5); /* Translucent background color */
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Add border radius for rounded corners */
 }
 
 .vertical-panel-content {
