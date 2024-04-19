@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,45 +10,73 @@
   <link rel="stylesheet" href="style.css">
   <style>
     /* Additional styles for About Us page */
-    .about-container {
-      max-width: 1000px;
-      margin: 0 auto;
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f7f9fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-      border-radius: 20px;
-      overflow: hidden; /* Hide overflowing content */
+      background-color: #3B5998;
+      color: #fff;
+    }
+
+    .logo-image img {
+      width: 100px;
+      height: auto;
+    }
+
+    .brand-panel {
+      flex-grow: 1;
+    }
+
+    .contact-info {
+      font-size: 14px;
+    }
+
+    main {
+      padding: 20px;
     }
 
     .partner-info {
       margin-bottom: 30px;
-    }
-
-    .partner-info img {
-      width: 100px; /* Adjust partner image width */
-      height: 100px; /* Adjust partner image height */
-      border-radius: 50%; /* Make partner image round */
-      margin-right: 20px;
-      float: left;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
     .partner-info h2 {
-      margin-top: 0;
-      font-size: 2rem;
       color: #3B5998;
+      font-size: 24px;
+      margin-top: 0;
     }
 
     .partner-info p {
-      font-size: 1.2rem;
+      font-size: 16px;
       line-height: 1.6;
+      color: #333;
+    }
+
+    footer {
+      padding: 20px;
+      background-color: #3B5998;
+      color: #fff;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
   <header class="logo-image">
     <div class="brand-panel">
       <a href="index.html" class="brand js-target-scroll">
-        <img src="img/LOGO.PNG.png" width="150" height="150" alt="Logo">
+        <img src="img/LOGO.PNG.png" alt="Logo">
       </a>
     </div>
     <div class="contact-info">
@@ -56,37 +85,50 @@
     </div>
   </header>
 
-  <div class="about-container">
-    <div class="partner-info">
-      <img src="img/sarthak.jpg" alt="Sarthak">
-      <h2>Sarthak - Co-Founder</h2>
-      <p>Sarthak, one of the visionary co-founders of Relivest Partners, brings a wealth of experience in investment, consulting, and real estate development. With a passion for innovation and a commitment to excellence, Sarthak spearheads our efforts to transform the landscape of India's investment and real estate sectors.</p>
-    </div>
+  <main>
+    <section class="partner-info">
+      <h2>Sarthak Devmurari - Co-Founder</h2>
+      <p>Real Estate Investor with a Vision for Transformative Projects <br>
+        Vadodara, Gujarat, India <br>
+      <p>As a co-founder of Relivest Partners, Sarthak Devmurari is a driving force behind our real estate investment endeavors.
+        With a keen eye for opportunities and a strategic approach, Sarthak leads our efforts in identifying and investing in
+        transformative real estate projects. His vision for creating vibrant communities and driving sustainable economic
+        development guides our investment strategy.</p>
+      <p>Although we're in the early stages, Sarthak's leadership has already positioned Relivest Partners as a key player in
+        the real estate development landscape. Through his innovative thinking and commitment to excellence, we are poised to
+        deliver exceptional value to our stakeholders and contribute to the growth of India's real estate sector.</p>
+      <p>Services: <br>
+        Real Estate Investment • Project Identification and Evaluation • Strategic Planning • Investment Management</p>
+    </section>
 
-    <div class="partner-info">
-      <img src="img/minal.jpg" alt="Minal">
+    <section class="partner-info">
       <h2>Minal Shah - Co-Founder</h2>
-      <p>Minal Shah, the founder of Akshay Associates, Mumbai's leading Chartered Accountancy firm, is a key figure in Relivest Partners. With her expertise in finance, taxation, and regulatory compliance, Minal plays a pivotal role in guiding our financial strategies and ensuring sustainable growth.</p>
-    </div>
+      <p>Expert Financial Strategist <br>
+        Mumbai, India <br>
 
-    <div class="partner-info">
-      <img src="img/darshak.jpg" alt="Darshak">
+      <p>Strategic Financial Advisor with a track record of helping businesses thrive. Minal brings extensive expertise
+        in financial management, tax planning, and compliance. With years of experience running AKSHAY ASSOCIATES, a
+        leading financial consultancy firm in Mumbai, she has guided numerous clients to financial success. Minal is
+        dedicated to providing personalized financial solutions that align with clients' goals and maximize their
+        financial potential.</p>
+      <p>Services: <br>
+        Financial Strategy • Tax Planning • Compliance • Financial Reporting • Business Advisory</p>
+    </section>
+
+    <section class="partner-info">
       <h2>Darshak Vatsraj - Co-Founder</h2>
-      <p>Darshak Vatsraj, a retired executive from GEDA, joins Relivest Partners as a co-founder, bringing invaluable insights and a deep understanding of infrastructure and development projects. Darshak's experience enriches our team, guiding our initiatives towards impactful and sustainable development.</p>
-    </div>
-  </div>
+      <p>Retired Engineer from GEDA <br>
+        Vadodara, Gujarat, India <br>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p>© 2024 Relivest Partners. All Rights Reserved.</p>
-        </div>
-        <div class="col">
-          <p>Thank you for visiting our website</p>
-        </div>
-      </div>
-    </div>
+  <p>Experienced Engineer with a demonstrated history of working in the electrical and electronic manufacturing industry. Skilled in AutoCAD, Electrical Wiring, Engineering, and Project Engineering. Strong engineering professional with a Bachelor's degree focused in Electrical and Electronics Engineering from Lekhadhirji Engineering College, Morbi, Gujarat.</p>
+  <p>Services: <br>
+    Engineering Design • Project Management • Electrical Engineering • Electronics Engineering</p>
+</section>
+  </main>
+
+  <footer>
+    <!-- Add your footer content here -->
   </footer>
 </body>
+
 </html>
