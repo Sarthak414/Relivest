@@ -202,3 +202,20 @@ form select {
 .vertical-panel-content {
   color: white; /* Text color */
 }
+.vision-container,
+.approach-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url('img/real_estate_background.jpg'); /* Updated background image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+.vision-container {
+  margin-bottom: 20px; /* Add space between vision and approach containers */
+}
+
+.approach-container {
+  margin-bottom: 40px; /* Add more space below approach container */
+}
