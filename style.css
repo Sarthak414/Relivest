@@ -141,7 +141,7 @@ form select,
 form textarea,
 .StripeElement {
   border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: rgba(62, 54, 46, 0.5); /* Translucent background color */
+    background-color: rgba(62, 54, 46, 0.1); /* Translucent background color */
 }
 
 /* Additional styling for focused elements */
@@ -206,7 +206,7 @@ form select {
   right: 20px; /* Adjust the right position as needed */
   font-size: 16px; /* Adjust font size as needed */
   color: white; /* Text color */
-    background-color: rgba(62, 54, 46, 0.5); /* Translucent background color */
+    background-color: rgba(62, 54, 46, 0.1); /* Translucent background color */
   padding: 10px; /* Adjust padding as needed */
   border-radius: 8px; /* Add border radius for rounded corners */
 }
@@ -219,7 +219,7 @@ form select {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(62, 54, 46, 0.5); /* Translucent background color */
+  background-color: rgba(62, 54, 46, 0.3); /* Translucent background color */
   background-size: cover;
   background-position: center;
 }
@@ -236,7 +236,7 @@ form select {
   font-size: 2.5rem !important; /* Increase font size */
   color: #333; /* Dark text color */
   text-align: center; /* Align to the center */
-  background-color: rgba(62, 54, 46, 0.5); /* Translucent background color */
+  background-color: rgba(62, 54, 46, 0.1); /* Translucent background color */
   margin-top: 40px; /* Adjust spacing from the top section */
   margin-bottom: 20px; /* Add space below the header */
 }
