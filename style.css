@@ -159,6 +159,77 @@ form textarea:focus,
   outline-width: thin;
   outline-color: gray;
   outline-offset: -1px;
+
+
+/* Define breakpoints for different screen sizes */
+/* Mobile devices (portrait and landscape) */
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .logo-image {
+    width: 80px; /* Decrease logo size for smaller screens */
+  }
+
+  .contact-info {
+    font-size: 8px; /* Decrease font size for contact info on smaller screens */
+  }
+
+  .service-title {
+    font-size: 2rem; /* Decrease font size for service titles on smaller screens */
+  }
+
+  .service-description {
+    font-size: 1rem; /* Decrease font size for service descriptions on smaller screens */
+  }
+
+  .project-grid {
+    display: block; /* Change the display to block for project grid on smaller screens */
+  }
+
+  .project-item {
+    width: 100%; /* Make project items full width on smaller screens */
+  }
+}
+
+/* Tablet devices (portrait and landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Adjust styles for tablet-sized screens */
+  .logo-image {
+    width: 90px; /* Adjust logo size for tablets */
+  }
+
+  .contact-info {
+    font-size: 10px; /* Adjust font size for contact info on tablets */
+  }
+
+  .service-title {
+    font-size: 2.2rem; /* Adjust font size for service titles on tablets */
+  }
+
+  .service-description {
+    font-size: 1.2rem; /* Adjust font size for service descriptions on tablets */
+  }
+}
+
+/* Desktop devices */
+@media only screen and (min-width: 1024px) {
+  /* Styles for desktop-sized screens */
+  .logo-image {
+    width: 100px; /* Default logo size for desktops */
+  }
+
+  .contact-info {
+    font-size: 12px; /* Default font size for contact info on desktops */
+  }
+
+  .service-title {
+    font-size: 2.5rem; /* Default font size for service titles on desktops */
+  }
+
+  .service-description {
+    font-size: 1.4rem; /* Default font size for service descriptions on desktops */
+  }
+}
+
 }
 
 /* Apply width to text and email inputs and StripeElement */
@@ -222,7 +293,7 @@ form select {
 
 .vision-container,
 .approach-container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.9); /* Translucent white background color */
@@ -248,8 +319,6 @@ form select {
   margin-top: 40px; /* Adjust spacing from the top section */
   margin-bottom: 20px; /* Add space below the header */
 }
-
-
 
 .project-name {
   position: absolute;
