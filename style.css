@@ -161,20 +161,26 @@ form textarea:focus,
   outline-offset: -1px;
 
 
-/* Define breakpoints for different screen sizes */
-/* Mobile devices (portrait and landscape) */
+/* Define breakpoints for different screen sizes/* Mobile devices (portrait and landscape) */
 @media only screen and (max-width: 480px) {
   /* Adjust styles for smaller screens */
+  body {
+    font-size: 12px; /* Decrease base font size */
+  }
+
   .logo-image {
-    width: 60px; /* Decrease logo size for smaller screens */
+    width: 40px; /* Decrease logo size for smaller screens */
+    position: absolute; /* Adjust position */
+    top: 10px; /* Add space from the top */
+    left: 10px; /* Add space from the left */
   }
 
   .contact-info {
-    font-size: 6px; /* Decrease font size for contact info on smaller screens */
+    font-size: 5px; /* Decrease font size for contact info on smaller screens */
   }
 
   .service-title {
-    font-size: 1.5rem; /* Decrease font size for service titles on smaller screens */
+    font-size: 1.2rem; /* Decrease font size for service titles on smaller screens */
   }
 
   .service-description {
@@ -189,7 +195,6 @@ form textarea:focus,
     width: 100%; /* Make project items full width on smaller screens */
   }
 }
-
 
 /* Mobile devices (portrait and landscape) */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
