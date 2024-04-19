@@ -278,7 +278,7 @@ form select {
 /* Additional styles for the contact info */
 .contact-info {
   position: fixed;
-  top: 15px;
+  top: 25px;
   right: 10px;
   font-size: 12px;
   color: white;
