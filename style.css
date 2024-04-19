@@ -78,7 +78,7 @@ body {
 .brand-panel {
   position: Relative;
   top: 20px; /* Adjust the top position as needed */
-  left: 20px; /* Adjust the left position as needed */
+  left: 0px; /* Adjust the left position as needed */
   z-index: 1000; /* Ensure the logo is above the image */
 }
 
