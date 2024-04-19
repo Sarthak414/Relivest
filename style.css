@@ -161,38 +161,41 @@ form textarea:focus,
   outline-offset: -1px;
 
 
-/* Define breakpoints for different screen sizes/* Mobile devices (portrait and landscape) */
+/* Define breakpoints for different screen sizes/* /* Mobile devices (portrait and landscape) */
 @media only screen and (max-width: 480px) {
   /* Adjust styles for smaller screens */
   body {
     font-size: 12px; /* Decrease base font size */
   }
 
-  .logo-image {
-    width: 40px; /* Decrease logo size for smaller screens */
-    position: absolute; /* Adjust position */
-    top: 10px; /* Add space from the top */
-    left: 10px; /* Add space from the left */
+  .brand-panel {
+    top: 10px; /* Adjust the top position */
+    left: 5px; /* Adjust the left position */
   }
 
-  .contact-info {
-    font-size: 5px; /* Decrease font size for contact info on smaller screens */
+  .logo-bottom-right {
+    width: 50px; /* Adjust logo size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
   }
 
-  .service-title {
-    font-size: 1.2rem; /* Decrease font size for service titles on smaller screens */
+  .button-panel ul li {
+    margin: 0 5px; /* Adjust margin for buttons */
   }
 
-  .service-description {
-    font-size: 0.8rem; /* Decrease font size for service descriptions on smaller screens */
+  .contact-container .contact-header {
+    font-size: 2rem; /* Decrease font size for contact header */
+    margin-top: 20px; /* Adjust spacing from the top section */
   }
 
-  .project-grid {
-    display: block; /* Change the display to block for project grid on smaller screens */
-  }
-
+  /* Adjust involvement grid */
   .project-item {
-    width: 100%; /* Make project items full width on smaller screens */
+    width: 100%; /* Make project items full width */
+    margin-bottom: 10px; /* Add space between project items */
+  }
+
+  .project-item img {
+    width: 100%; /* Make project images full width */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
