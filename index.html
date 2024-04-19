@@ -362,33 +362,41 @@ form select {
   </footer>
 
   <!-- JavaScript code for slideshow -->
-  <script>
-    // Slideshow functionality
-    var projects = [
-      { name: "Relivest Partners", image: "img/high-rise-image.jpg" },
-      { name: "Relivest Partners", image: "img/commercial-image.jpg" },
-      { name: "Relivest Partners", image: "img/bungalow-image.jpg" },
-      { name: "Relivest Partners", image: "img/project-image4.jpg" }
-    ];
+ <script>
+  // Slideshow functionality
+  var projects = [
+    { name: "Relivest Partners", image: "img/high-rise-image.jpg" },
+    { name: "Relivest Partners", image: "img/commercial-image.jpg" },
+    { name: "Relivest Partners", image: "img/bungalow-image.jpg" },
+    { name: "Relivest Partners", image: "img/project-image4.jpg" }
+  ];
 
-    var currentProjectIndex = 0;
-    var projectImageElement = document.getElementById("project-image");
-    var projectNameElement = document.getElementById("project-name");
+  var currentProjectIndex = 0;
+  var projectImageElement = document.getElementById("project-image");
+  var projectNameElement = document.getElementById("project-name");
 
-    function showNextProject() {
-      currentProjectIndex = (currentProjectIndex + 1) % projects.length;
-      var project = projects[currentProjectIndex];
-      projectImageElement.src = project.image;
-      projectNameElement.textContent = project.name;
-    }
+  function showNextProject() {
+    currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+    var project = projects[currentProjectIndex];
+    projectImageElement.src = project.image;
+    projectNameElement.textContent = project.name;
+  }
 
-    // Show the first project initially
-    showNextProject();
+  // Show the first project initially
+  showNextProject();
 
-    // Change project every 3 seconds (3000 milliseconds)
-    setInterval(showNextProject, 3000);
+  // Change project every 3 seconds (3000 milliseconds)
+  setInterval(showNextProject, 3000);
 
-  projectNameElement.style.fontSize = "6rem"; // Adjust font size as needed
-  </script>
+  // Adjust font size and style for project name
+  projectNameElement.style.fontSize = "6rem"; // Adjust font size
+  projectNameElement.style.color = "white"; // Set text color to white
+  projectNameElement.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // Set background color to translucent black
+  projectNameElement.style.padding = "10px"; // Add padding for better readability
+  projectNameElement.style.position = "absolute"; // Position the element
+  projectNameElement.style.top = "50%"; // Center vertically
+  projectNameElement.style.left = "50%"; // Center horizontally
+  projectNameElement.style.transform = "translate(-50%, -50%)"; // Center the element precisely
+</script>
 </body>
 </html>
