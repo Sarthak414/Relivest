@@ -5,11 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Relivest Partners</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* Reset CSS */
-    body, h1, h2, p {
+    body, h1, h2, p, ul, li {
       margin: 0;
       padding: 0;
     }
@@ -18,8 +17,15 @@
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f7f9fb;
+      color: #333;
       margin: 0;
       padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
     header {
@@ -31,121 +37,38 @@
       color: #fff;
     }
 
-    .logo-image img {
+    .logo img {
       width: 100px;
       height: auto;
     }
 
-    .brand-panel {
-      flex-grow: 1;
-    }
-
-    .contact-info {
-      font-size: 14px;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    .partner-info {
-      margin-top: 40px;
-      margin-bottom: 30px;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .partner-info h2 {
+    h1, h2 {
       color: #3B5998;
-      font-size: 24px;
-      margin-top: 0;
     }
 
-    .partner-info p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    .read-more-button {
-      margin-top: 20px;
-    }
-
-    .read-more-button a {
-      text-decoration: none;
-      color: #3B5998;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    .read-more-button a:hover {
-      color: #2ECC71;
-    }
-
-    .about-title {
-      font-size: 28px;
-      color: #3B5998;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .about-us-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-gap: 30px;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .about-us-description {
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .about-us-description h2 {
-      color: #3B5998;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .about-us-description p {
-      color: #333;
+    p {
       font-size: 16px;
       line-height: 1.6;
     }
 
-    .skill-icons-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    ul {
+      list-style-type: none;
     }
 
-    .skill-icon {
-      margin-bottom: 20px;
-    }
-
-    .skill-icon img {
-      width: 50px;
-      height: auto;
-    }
-
-    .skill-name {
+    ul li::before {
+      content: "\2022";
       color: #3B5998;
-      font-size: 18px;
-      font-weight: bold;
-      margin-top: 10px;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
     }
   </style>
 </head>
 
 <body>
-  <header class="logo-image">
-    <div class="brand-panel">
-      <a href="index.html" class="brand js-target-scroll">
+  <header>
+    <div class="logo">
+      <a href="index.html">
         <img src="img/LOGO.PNG.png" alt="Logo">
       </a>
     </div>
@@ -155,71 +78,23 @@
     </div>
   </header>
 
-  <main>
-    <h1 class="about-title">About Us - Relivest Partners</h1>
-
-    <div class="about-us-container">
-      <div class="about-us-description">
-        <h2>About Relivest Partners</h2>
-        <p><strong>Relivest Partners: Pioneering Investment Solutions in India</strong></p>
-        <p>Relivest Partners stands as a prominent figure, driving transformation and progress in India's investment, consulting, and real estate development sector. Our vision is to be a beacon of positive change, catalyzing the growth of vibrant communities, fostering sustainable economic development, and elevating the quality of life across the nation.</p>
-        <p>Relivest Partners: Transforming India's Investment Landscape
-
-Relivest Partners stands as a prominent figure, driving transformation and progress in India's investment, consulting, and real estate development sector. Our vision is to be a beacon of positive change, catalyzing the growth of vibrant communities, fostering sustainable economic development, and elevating the quality of life across the nation.
-
-Collaborative Approach, Innovative Solutions
-
-At Relivest Partners, collaboration, innovation, and client-centricity are at the heart of our approach. We specialize in prudent investment management across diverse sectors, with a keen focus on India's dynamic real estate landscape. Currently, we're actively engaged in transformative residential and commercial projects in and around Vadodara, Gujarat.
-
-Extensive Knowledge, Sustainable Growth
-
-Our team leverages extensive industry knowledge and insights to deliver sustainable growth and value for our clients and stakeholders. We believe in transparent communication, rigorous research, and proactive risk mitigation.  Our commitment is to surpass expectations and foster enduring relationships built on trust and integrity.
-
-Together, we create lasting value.
-
-This combines the core aspects of your provided text:
-
-Vision: Highlighting the company's goal of transformation and positive impact.
-Expertise: Emphasize investment management and real estate development experience.
-Approach: Client-centricity, collaboration, and innovation as core values.
-Commitment: Transparency, research, risk mitigation, and building trust.</p>
-        </div>
-      </div>
-
-    <!-- Existing partner information sections -->
-    <section class="partner-info">
-      <h2>Sarthak Devmurari - Co-Founder</h2>
-      <p>Real Estate Investor with a Vision for Transformative Projects <br>
-        Vadodara, Gujarat, India <br>
-        As a co-founder of Relivest Partners, Sarthak Devmurari is a driving force behind our real estate investment endeavors. With a keen eye for opportunities and a strategic approach, Sarthak leads our efforts in identifying and investing in transformative real estate projects. His vision for creating vibrant communities and driving sustainable economic development guides our investment strategy.</p>
-      <p>Although we're in the early stages, Sarthak's leadership has already positioned Relivest Partners as a key player in the real estate development landscape. Through his innovative thinking and commitment to excellence, we are poised to deliver exceptional value to our stakeholders and contribute to the growth of India's real estate sector.</p>
-      <p>Services: <br>
-        Real Estate Investment • Project Identification and Evaluation • Strategic Planning • Investment Management</p>
+  <div class="container">
+    <h1>About Us - Relivest Partners</h1>
+    <section class="about-us">
+      <h2>About Relivest Partners</h2>
+      <p><strong>Relivest Partners: Pioneering Investment Solutions in India</strong></p>
+      <p>Relivest Partners is a leading figure in India's investment, consulting, and real estate development sector. Our vision is to drive positive change by catalyzing the growth of vibrant communities, fostering sustainable economic development, and elevating the quality of life across the nation.</p>
+      <p>At Relivest Partners, we specialize in prudent investment management across diverse sectors, with a focus on India's dynamic real estate landscape. Currently, we're actively engaged in transformative residential and commercial projects in and around Vadodara, Gujarat.</p>
+      <p>Our team leverages extensive industry knowledge and insights to deliver sustainable growth and value for our clients and stakeholders. We believe in transparent communication, rigorous research, and proactive risk mitigation. Our commitment is to surpass expectations and foster enduring relationships built on trust and integrity.</p>
+      <p>We combine:</p>
+      <ul>
+        <li>Vision: Highlighting the company's goal of transformation and positive impact.</li>
+        <li>Expertise: Emphasizing investment management and real estate development experience.</li>
+        <li>Approach: Client-centricity, collaboration, and innovation as core values.</li>
+        <li>Commitment: Transparency, research, risk mitigation, and building trust.</li>
+      </ul>
     </section>
-
-    <section class="partner-info">
-      <h2>Minal Shah - Co-Founder</h2>
-      <p>Expert Financial Strategist <br>
-        Mumbai, India <br>
-        Strategic Financial Advisor with a track record of helping businesses thrive. Minal brings extensive expertise in financial management, tax planning, and compliance. With years of experience running AKSHAY ASSOCIATES, a leading financial consultancy firm in Mumbai, she has guided numerous clients to financial success. Minal is dedicated to providing personalized financial solutions that align with clients' goals and maximize their financial potential.</p>
-      <p>Services: <br>
-        Financial Strategy • Tax Planning • Compliance • Financial Reporting • Business Advisory</p>
-    </section>
-
-    <section class="partner-info">
-      <h2>Darshak Vatsraj - Co-Founder</h2>
-      <p>Solar Project Leader and Renewable Energy Advocate <br>
-        Vadodara, Gujarat, India <br>
-        As a co-founder of Relivest Partners, Darshak Vatsraj spearheads our efforts in solar project development and advocates for renewable energy initiatives. With a deep understanding of solar technologies and a passion for sustainability, Darshak leads our team in identifying and executing solar projects that contribute to a greener future.</p>
-      <p>With his expertise and dedication, Darshak plays a pivotal role in expanding Relivest Partners' portfolio to include renewable energy projects. Through his leadership, we are committed to harnessing solar power and other renewable resources to drive positive environmental impact and sustainable development.</p>
-      <p>Services: <br>
-        Solar Project Development • Renewable Energy Advocacy • Sustainability Consulting</p>
-    </section>
-  </main>
-
-  <footer>
-    <!-- Add your footer content here -->
-  </footer>
+  </div>
 </body>
 
 </html>
