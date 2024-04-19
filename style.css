@@ -279,7 +279,7 @@ form select {
 .contact-info {
   position: fixed;
   top: 40px;
-  right: 3px;
+  right: 1px;
   font-size: 12px;
   color: white;
   background-color: rgba(62, 54, 46, 0.5);
