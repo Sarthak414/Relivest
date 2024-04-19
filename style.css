@@ -233,10 +233,14 @@ form select {
 }
 
 .contact-header {
-  margin: 0 auto; /* Center the header horizontally */
-  font-size: 2rem; /* Increase font size */
+  font-family: 'Arial', sans-serif; /* Match the website font */
+  font-size: 2.5rem; /* Increase font size */
   color: #333; /* Dark text color */
+  text-align: center; /* Align to the center */
+  margin-top: 40px; /* Adjust spacing from the top section */
+  margin-bottom: 20px; /* Add space below the header */
 }
+
 
 .project-name {
   position: absolute;
