@@ -365,34 +365,39 @@ form select {
   <!-- JavaScript code for slideshow -->
  <script>
   // Slideshow functionality
-  // JavaScript code to dynamically change the appearance and add animations
-    document.addEventListener("DOMContentLoaded", function() {
-      // Function to change the background color and animate it
-      function changeBackgroundColor() {
-        var colors = ["#ff6347", "#4682b4", "#32cd32", "#ffd700"]; // Array of colors
-        var randomColor = colors[Math.floor(Math.random() * colors.length)]; // Get a random color
-        document.body.style.backgroundColor = randomColor; // Change background color
-        document.body.style.transition = "background-color 1s ease"; // Add transition animation
-      }
+  var projects = [
+    { name: "Relivest Partners", image: "img/high-rise-image.jpg" },
+    { name: "Relivest Partners", image: "img/commercial-image.jpg" },
+    { name: "Relivest Partners", image: "img/bungalow-image.jpg" },
+    { name: "Relivest Partners", image: "img/project-image4.jpg" }
+  ];
 
-      // Function to fade out an element
-      function fadeOut(element) {
-        element.style.opacity = "0"; // Set opacity to 0
-        element.style.transition = "opacity 1s ease"; // Add transition animation
-      }
+  var currentProjectIndex = 0;
+  var projectImageElement = document.getElementById("project-image");
+  var projectNameElement = document.getElementById("project-name");
 
-      // Function to fade in an element
-      function fadeIn(element) {
-        element.style.opacity = "1"; // Set opacity to 1
-        element.style.transition = "opacity 1s ease"; // Add transition animation
-      }
+  function showNextProject() {
+    currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+    var project = projects[currentProjectIndex];
+    projectImageElement.src = project.image;
+    projectNameElement.textContent = project.name;
+  }
 
-      // Call the functions to change the appearance and add animations
-      changeBackgroundColor(); // Change background color
-      fadeOut(document.getElementById("project-image")); // Fade out the project image
-      fadeOut(document.getElementById("project-name")); // Fade out the project name
-      fadeIn(document.getElementById("button-panel")); // Fade in the button panel
-    });
+  // Show the first project initially
+  showNextProject();
+
+  // Change project every 3 seconds (3000 milliseconds)
+  setInterval(showNextProject, 3000);
+
+  // Adjust font size and style for project name
+  projectNameElement.style.fontSize = "1rem"; // Adjust font size
+  projectNameElement.style.color = "#D4AF37"; // Set text color to white
+  projectNameElement.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // Set background color to translucent black
+  projectNameElement.style.padding = "10px"; // Add padding for better readability
+  projectNameElement.style.position = "absolute"; // Position the element
+  projectNameElement.style.top = "10%"; // Center vertically
+  projectNameElement.style.left = "90%"; // Center horizontally
+
 </script>
 </body>
 </html>
