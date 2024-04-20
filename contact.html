@@ -4,138 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Relivest Partners</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="style.css"> 
-  <!-- Include the map API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-  <style>
-    /* Additional styles */
-    /* Reset CSS */
-    body, h1, h2, p, ul, li {
-      margin: 0;
-      padding: 0;
-    }
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
 
-    /* Main styles */
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f7f9fb;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #3B5998;
-      color: #fff;
-    }
+  <!-- Add your Leaflet JavaScript to display the map -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize the map
+      var map = L.map('map').setView([22.3072, 73.1812], 13);
 
-    .logo img {
-      width: 100px;
-      height: auto;
-    }
+      // Add the tile layer (replace 'your.map.tile.layer' with the actual tile layer URL)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
 
-    h1, h2 {
-      color: #3B5998;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    ul {
-      list-style-type: none;
-    }
-
-    ul li::before {
-      content: "\2022";
-      color: #3B5998;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-
-    /* Map container */
-    #map {
-      height: 300px;
-      margin-bottom: 20px;
-    }
-
-    /* Call to action button */
-    .cta-button {
-      background-color: #D4AF37;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #C49F27;
-    }
-  </style>
+      // Add a marker to the map for Vadodara
+      var marker = L.marker([22.3072, 73.1812]).addTo(map);
+    });
+  </script>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <a href="https://www.relivestpartners.in/" class="logo">
       <img src="img/LOGO.PNG.png" alt="Relivest Partners Logo">
     </a>
   </header>
+
+  <!-- Main content -->
   <main>
-    <div class="container">
-      <section class="contact-container">
-        <h1>Contact Us</h1>
-        <p>Feel free to reach out to us using the contact information provided below.</p>
-        <!-- Interactive Map -->
-        <div id="map"></div>
-        <a href="#" class="cta-button">Call for Action</a>
-        <div class="contact-info">
-          <h2>Contact Details</h2>
-          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a></p>
-          <p><i class="fas fa-phone"></i> Phone: +91-8849483704 (INDIA), +1 (806) 451-6285 (For International Investors)</p>
-        </div>
-        <div class="social-media">
-          <h2>Follow Us</h2>
-          <ul>
-            <li><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
-      </section>
-    </div>
+    <!-- Interactive map -->
+    <div id="map" style="height: 400px;"></div>
+
+    <!-- Contact information -->
+    <section class="contact-info">
+      <h2>Contact Details</h2>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a></p>
+      <p><i class="fas fa-phone"></i> Phone: <a href="tel:+918849483704">+91-8849483704 (INDIA)</a></p>
+    </section>
+
+    <!-- Call-to-action button -->
+    <a href="tel:+918849483704" class="call-action-button">Call Now</a>
   </main>
 
-  <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Vadodara, Gujarat
-      var vadodara = { lat: 22.3072, lng: 73.1812 };
-      // The map, centered at Vadodara, Gujarat
-      var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
-        center: vadodara,
-      });
-      // The marker, positioned at Vadodara, Gujarat
-      var marker = new google.maps.Marker({
-        position: vadodara,
-        map: map,
-      });
-    }
-  </script>
+  <!-- Your footer and other elements here -->
+
+  <!-- Your custom JavaScript -->
 </body>
 </html>
