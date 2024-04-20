@@ -8,12 +8,23 @@
 <style>
   /* Global Styles */
   body {
-    font-family: Arial, sans-serif;
+    font-family: "Moserant", Arial, sans-serif; /* Updated font family */
     margin: 0;
     padding: 0;
-    background-image: url('img/real_estate_background.jpg'); /* Updated background image URL */
-    background-size: cover;
-    background-position: center;
+    background-color: #f5f5f5;
+  }
+
+  .header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .header-logo {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
   }
 
   .container {
@@ -22,33 +33,30 @@
     padding: 20px;
   }
 
-  /* Services Styles */
   .services-container {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.8); /* Added background color with opacity */
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 40px;
-    overflow: hidden;
-    color: #333;
+    margin-top: 20px;
   }
 
   .services-header {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 30px;
     text-align: center;
-    color: #333;
+    color: #333333;
   }
 
   .service {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
   }
 
   .service-icon {
     font-size: 60px;
     margin-bottom: 20px;
-    color: #0a0a0a;
+    color: #d4af37; /* New color */
     transition: transform 0.3s ease;
   }
 
@@ -59,57 +67,38 @@
   .service-title {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #333;
+    color: #333333;
   }
 
   .service-description {
-    color: #666;
+    color: #666666;
+    line-height: 1.6;
   }
 
-  /* Back Button Styles */
-  .back-button {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: black;
-    color: white;
+  .cta-button {
+    display: inline-block;
+    background-color: #d4af37; /* New color */
+    color: #ffffff;
     padding: 10px 20px;
-    border: none;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    z-index: 1000;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
   }
 
-  .faded-logo {
-      position: fixed;
-      width: 100px; /* Adjust size as needed */
-      height: auto; /* Maintain aspect ratio */
-      opacity: 0.2; /* Adjust opacity to make it faded */
-      pointer-events: none; /* Prevent interaction with the logo */
-      z-index: -1; /* Ensure the logo is behind other content */
-    }
-
-    /* Position the logo in different places */
-    .logo-top-left {
-      top: 20px;
-      left: 20px;
-    }
-
-    .logo-bottom-right {
-      bottom: 20px;
-      right: 20px;
-    }
-
-    /* Additional logo positions can be added as needed */
+  .cta-button:hover {
+    background-color: #b3902f; /* Darker shade of the new color on hover */
+  }
 </style>
 </head>
 <body>
-  <a href="https://www.relivestpartners.in/" class="back-button">Back to Home</a>
+  <div class="header">
+    <a href="https://www.relivestpartners.in/"><img src="img/LOGO.PNG.png" alt="Logo" class="header-logo"></a>
+  </div>
   <div class="container">
     <div class="services-container">
-      <h1 class="services-header">Our Services</h1>
+      <h1 class="services-header">Explore Our Services</h1>
 
       <div class="service">
         <i class="fas fa-chart-line service-icon"></i>
@@ -120,10 +109,13 @@
       </div>
 
       <div class="service">
-        <i class="fas fa-home service-icon"></i>
+        <i class="fas fa-building service-icon"></i>
         <h2 class="service-title">Real Estate Development</h2>
         <p class="service-description">
           We specialize in full-cycle real estate development, from concept to completion. Our innovative approach, strategic partnerships, and attention to detail ensure the successful execution of residential, commercial, and mixed-use projects.
+        </p>
+        <p class="service-description">
+          Explore our properties, including modern apartments, spacious villas, and prime commercial spaces. Find your ideal home, office, or investment opportunity today!
         </p>
       </div>
 
@@ -135,10 +127,9 @@
         </p>
       </div>
 
+      <a href="tel:+918849483704" class="cta-button">Call Now to Explore Properties</a>
+
     </div>
   </div>
-
-  <img src="img/LOGO.PNG.png" alt="Logo" class="faded-logo logo-bottom-right">
-  
 </body>
 </html>
