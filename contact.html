@@ -5,14 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Relivest Partners</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> 
+  <!-- Include the map API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
   <style>
-    /* Global Styles */
-    body {
-      font-family: Arial, sans-serif;
+    /* Additional styles */
+    /* Reset CSS */
+    body, h1, h2, p, ul, li {
       margin: 0;
       padding: 0;
-      background-image: url('img/contact.png'); /* Added background image */
-      background-size: cover;
+    }
+
+    /* Main styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f7f9fb;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
@@ -21,117 +31,111 @@
       padding: 20px;
     }
 
-    /* Contact Us Styles */
-    .contact-container {
-      background-color: rgba(255, 255, 255, 0.8); /* Added background color with opacity */
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      color: #333;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #3B5998;
+      color: #fff;
     }
 
-    .contact-header {
-      font-size: 24px;
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+
+    h1, h2 {
+      color: #3B5998;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    ul li::before {
+      content: "\2022";
+      color: #3B5998;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    /* Map container */
+    #map {
+      height: 300px;
       margin-bottom: 20px;
-      text-align: center;
-      color: #333;
     }
 
-    .contact-info {
-      margin-bottom: 20px;
-    }
-
-    .contact-info i {
-      margin-right: 10px;
-      color: #007bff;
-    }
-
-    .contact-info a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-info p {
-      margin: 10px 0;
-    }
-
-    .contact-social {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .social-icon {
-      font-size: 24px;
-      margin: 0 10px;
-      color: #333;
-      transition: color 0.3s ease;
-    }
-
-    .social-icon:hover {
-      color: #007bff;
-    }
-
-    /* Back Button Styles */
-    .back-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background-color: black;
-      color: white;
+    /* Call to action button */
+    .cta-button {
+      background-color: #D4AF37;
+      color: #fff;
       padding: 10px 20px;
-      border: none;
       border-radius: 5px;
       text-decoration: none;
-      font-size: 16px;
       font-weight: bold;
-      z-index: 1000;
-    }
-    /* Position and style for the logo elements */
-    .faded-logo {
-      position: fixed;
-      width: 100px; /* Adjust size as needed */
-      height: auto; /* Maintain aspect ratio */
-      opacity: 0.2; /* Adjust opacity to make it faded */
-      pointer-events: none; /* Prevent interaction with the logo */
-      z-index: -1; /* Ensure the logo is behind other content */
+      transition: background-color 0.3s;
     }
 
-    /* Position the logo in different places */
-    .logo-top-left {
-      top: 20px;
-      left: 20px;
+    .cta-button:hover {
+      background-color: #C49F27;
     }
-
-    .logo-bottom-right {
-      bottom: 20px;
-      right: 20px;
-    }
-
-    /* Additional logo positions can be added as needed */
   </style>
 </head>
 <body>
-  <a href="https://www.relivestpartners.in/" class="back-button">Back to Home</a>
-  <div class="container">
-    <div class="contact-container">
-      <h1 class="contact-header">Contact Us</h1>
-      <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> Phone: +91-8849483704 (INDIA), +1 (806) 451-6285 (For International Investors)</p>
-      </div>
-      <div class="contact-social">
-        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-      </div>
+  <header>
+    <a href="https://www.relivestpartners.in/" class="logo">
+      <img src="img/LOGO.PNG.png" alt="Relivest Partners Logo">
+    </a>
+  </header>
+  <main>
+    <div class="container">
+      <section class="contact-container">
+        <h1>Contact Us</h1>
+        <p>Feel free to reach out to us using the contact information provided below.</p>
+        <!-- Interactive Map -->
+        <div id="map"></div>
+        <a href="#" class="cta-button">Call for Action</a>
+        <div class="contact-info">
+          <h2>Contact Details</h2>
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:relivest.partners@gmail.com">relivest.partners@gmail.com</a></p>
+          <p><i class="fas fa-phone"></i> Phone: +91-8849483704 (INDIA), +1 (806) 451-6285 (For International Investors)</p>
+        </div>
+        <div class="social-media">
+          <h2>Follow Us</h2>
+          <ul>
+            <li><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </section>
     </div>
-  </div>
-   <img src="img/LOGO.PNG.png" alt="Logo" class="faded-logo logo-bottom-right">
+  </main>
+
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Vadodara, Gujarat
+      var vadodara = { lat: 22.3072, lng: 73.1812 };
+      // The map, centered at Vadodara, Gujarat
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: vadodara,
+      });
+      // The marker, positioned at Vadodara, Gujarat
+      var marker = new google.maps.Marker({
+        position: vadodara,
+        map: map,
+      });
+    }
+  </script>
 </body>
-  
 </html>
