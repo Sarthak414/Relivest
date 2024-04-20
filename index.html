@@ -91,16 +91,14 @@ list-style-image: url("img/icon.png");
 }
 
   
-    /* Additional styles */
-    /* reset */
-/* Apply styles to form input, select, textarea, fieldset, optgroup, label, and StripeElement */
+ /* Apply styles to form input, select, textarea, fieldset, optgroup, label, and StripeElement */
 form input,
 form select,
 form textarea,
 form fieldset,
 form optgroup,
 form label,
-.StripeElement {
+form .StripeElement {
   font-size: 100%;
   color: inherit;
   border: none;
@@ -126,7 +124,7 @@ form legend {
 form input,
 form select,
 form textarea,
-.StripeElement {
+form .StripeElement {
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(62, 54, 46, 0.1); /* Translucent background color */
 }
@@ -135,7 +133,7 @@ form textarea,
 form input:focus,
 form select:focus,
 form textarea:focus,
-.StripeElement:focus {
+form .StripeElement:focus {
   background-color: white;
   outline-style: solid;
   outline-width: thin;
@@ -146,7 +144,7 @@ form textarea:focus,
 /* Apply width to text and email inputs and StripeElement */
 form [type="text"],
 form [type="email"],
-.StripeElement {
+form .StripeElement {
   width: 60%;
 }
 
