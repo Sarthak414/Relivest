@@ -112,10 +112,10 @@ body {
 h2 {
   width: 100%; /* Take up full width */
   text-align: center; /* Center-align the header */
-  font-size: 28px; /* Increase the font size of the header */
+  font-size: 35px; /* Increase the font size of the header */
 }
 .image-section img {
-  max-width: 100%; /* Set maximum width to 100% of its container */
+  max-width: 80%; /* Set maximum width to 100% of its container */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -142,8 +142,8 @@ h2 {
 }
 
 .skill-icon {
-  max-width: 80px; /* Reduce icon size */
-  margin-right: 10px;
+  max-width: 90px; /* Reduce icon size */
+  margin-right: 5px;
 }
 
 .read-more-button a {
