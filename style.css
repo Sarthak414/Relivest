@@ -112,6 +112,7 @@ body {
 h2 {
   width: 100%; /* Take up full width */
   text-align: center; /* Center-align the header */
+  font-size: 28px; /* Increase the font size of the header */
 }
 .image-section img {
   max-width: 100%; /* Set maximum width to 100% of its container */
@@ -141,7 +142,7 @@ h2 {
 }
 
 .skill-icon {
-  max-width: 50px; /* Reduce icon size */
+  max-width: 80px; /* Reduce icon size */
   margin-right: 10px;
 }
 
