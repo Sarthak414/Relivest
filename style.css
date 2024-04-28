@@ -141,6 +141,11 @@ h2 {
   margin-bottom: 1rem; /* Increase the gap */
 }
 
+.about-us-header h3 {
+  font-size: 24px; /* Increase font size of the header */
+  color: #333; /* Adjust color if needed */
+}
+
 .skill-icon {
   max-width: 90px; /* Reduce icon size */
   margin-right: 5px;
