@@ -102,48 +102,33 @@ body {
     text-align: left; /* Center align the content */
   }
 
-  .about-title {
-    font-size: 24px;
-    color: #D4AF37; /* Golden green color */
-    margin-bottom: 20px;
-  }
-
 .about-us-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* Adjust column widths */
-  grid-gap: 40px;
   max-width: 100%; /* Set max width to 100% */
   margin: 0 auto; /* Center the content horizontally */
-  align-items: center; /* Center-align items vertically */
-}
-
-.image-section {
-  grid-column: 1 / 2;
-  background-color: #f5f5f5; /* Set a background color for the image section */
-}
-
-.image-section img {
-  display: block;
-  margin: 0 auto; /* Center-align the image */
-  max-width: 100%;
-  height: auto;
-  max-height: 200px; /* Set a maximum height for the image */
-}
-
-.about-us-content {
-  grid-column: 2 / 3;
   display: flex;
   flex-direction: column;
 }
 
+h2 {
+  text-align: center; /* Center-align the heading */
+}
+
+.about-us-content {
+  display: flex;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+}
+
 .about-us-description {
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: left; /* Align the description to the left */
+  flex: 1;
+  padding: 0 20px; /* Add padding for spacing */
 }
 
 .about-us-skills {
-  margin-top: 20px; /* Add some space between description and skills */
+  flex: 1;
 }
 
 .about-us-skills ul {
@@ -167,14 +152,14 @@ body {
 
 .read-more-button a {
   text-decoration: none;
-  color: #D4AF37; /* Golden green color */
+  color: #d4af37; /* Golden green color */
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 .read-more-button a:hover {
-  color: #D4AF37; /* Lighter shade of golden green on hover */
+  color: #d4af37; /* Lighter shade of golden green on hover */
 }
+
 
 /* Media Queries */
 /* Mobile devices */
