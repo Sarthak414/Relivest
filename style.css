@@ -101,22 +101,21 @@ body {
     padding-top: 20px;
     text-align: left; /* Center align the content */
   }
-
 .about-us-container {
   max-width: 100%; /* Set max width to 100% */
   margin: 0 auto; /* Center the content horizontally */
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Center-align items vertically */
 }
 
-h2 {
-  text-align: center; /* Center-align the heading */
+.about-us-description,
+.image-section,
+.about-us-skills {
+  flex: 1; /* Each section takes up equal space */
+  padding: 20px; /* Add padding for spacing */
 }
 
 .about-us-description {
   text-align: center; /* Center-align the description */
-  margin-bottom: 20px; /* Add margin for spacing */
 }
 
 .image-section img {
@@ -129,13 +128,12 @@ h2 {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap; /* Allow skills to wrap to the next line */
-  justify-content: center; /* Center-align skills */
+  flex-direction: column;
+  align-items: center; /* Center-align skills */
 }
 
 .about-us-skills ul li {
   text-align: center; /* Center-align each skill */
-  margin: 0 20px; /* Add margin for spacing */
   margin-bottom: 2rem; /* Increase the gap */
   font-size: 20px;
   line-height: 1.4;
