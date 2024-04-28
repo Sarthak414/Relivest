@@ -113,6 +113,10 @@ h2 {
   width: 100%; /* Take up full width */
   text-align: center; /* Center-align the header */
 }
+.image-section img {
+  max-width: 100%; /* Set maximum width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
+}
 
 .image-section,
 .about-us-description,
