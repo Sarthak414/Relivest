@@ -77,6 +77,15 @@ body {
   font-size: 14px;
 }
 
+.image-section {
+  float: left; /* Align image to the left */
+  margin-right: 20px; /* Add some spacing between image and text */
+}
+
+.image-section img {
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+}
+
 /* Brand panel */
 .brand-panel {
   position: absolute;
