@@ -77,17 +77,6 @@ body {
   font-size: 14px;
 }
 
-.image-section {
-  flex: 1;
-  background-color: #f5f5f5; /* Set a background color for the image section */
-}
-
-.image-section img {
-  display: block;
-  margin: 0 auto; /* Center-align the image */
-  max-width: 100%;
-  height: auto;
-}
 
 /* Brand panel */
 .brand-panel {
@@ -119,26 +108,45 @@ body {
     margin-bottom: 20px;
   }
 
-  .about-us-container {
-    display: grid;
-    grid-template-columns: 3fr 3fr;
-    grid-gap: 40px;
-    max-width: 900px; /* Limit the width of the content */
-    margin: 0 auto; /* Center the content horizontally */
-  }
+.about-us-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Adjust column widths */
+  grid-gap: 40px;
+  max-width: 900px; /* Limit the width of the content */
+  margin: 0 auto; /* Center the content horizontally */
+  align-items: center; /* Center-align items vertically */
+}
+
+.image-section {
+  grid-column: 1 / 2;
+  background-color: #f5f5f5; /* Set a background color for the image section */
+}
+
+.image-section img {
+  display: block;
+  margin: 0 auto; /* Center-align the image */
+  max-width: 100%;
+  height: auto;
+  max-height: 100px; /* Set a maximum height for the image */
+}
+
+.about-us-content {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+}
 
 .about-us-description {
-  grid-column: 1 / 2;
   font-size: 18px;
   line-height: 1.6;
   text-align: left; /* Align the description to the left */
 }
 
-  .about-us-skills ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+.about-us-skills ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 .about-us-skills ul li {
   display: flex;
@@ -148,22 +156,21 @@ body {
   line-height: 1.4;
 }
 
-  .skill-icon {
-    max-width: 80px; /* Reduce icon size */
-    margin-right: 10px;
-  }
+.skill-icon {
+  max-width: 80px; /* Reduce icon size */
+  margin-right: 10px;
+}
 
-  .read-more-button a {
-    text-decoration: none;
-    color: #D4AF37; /* Golden green color */
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
+.read-more-button a {
+  text-decoration: none;
+  color: #D4AF37; /* Golden green color */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
-  .read-more-button a:hover {
-    color: #D4AF37; /* Lighter shade of golden green on hover */
-  }
-
+.read-more-button a:hover {
+  color: #D4AF37; /* Lighter shade of golden green on hover */
+}
 /* Media Queries */
 /* Mobile devices */
 @media only screen and (max-width: 480px) {
