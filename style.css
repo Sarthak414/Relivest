@@ -112,7 +112,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr; /* Adjust column widths */
   grid-gap: 40px;
-  max-width: 900px; /* Limit the width of the content */
+  max-width: 100%; /* Set max width to 100% */
   margin: 0 auto; /* Center the content horizontally */
   align-items: center; /* Center-align items vertically */
 }
@@ -127,7 +127,7 @@ body {
   margin: 0 auto; /* Center-align the image */
   max-width: 100%;
   height: auto;
-  max-height: 100px; /* Set a maximum height for the image */
+  max-height: 200px; /* Set a maximum height for the image */
 }
 
 .about-us-content {
@@ -142,6 +142,10 @@ body {
   text-align: left; /* Align the description to the left */
 }
 
+.about-us-skills {
+  margin-top: 20px; /* Add some space between description and skills */
+}
+
 .about-us-skills ul {
   list-style-type: none;
   padding: 0;
@@ -151,13 +155,13 @@ body {
 .about-us-skills ul li {
   display: flex;
   align-items: center;
-  margin-bottom: 4rem; /* Increase the gap */
+  margin-bottom: 2rem; /* Increase the gap */
   font-size: 20px;
   line-height: 1.4;
 }
 
 .skill-icon {
-  max-width: 80px; /* Reduce icon size */
+  max-width: 50px; /* Reduce icon size */
   margin-right: 10px;
 }
 
@@ -171,6 +175,7 @@ body {
 .read-more-button a:hover {
   color: #D4AF37; /* Lighter shade of golden green on hover */
 }
+
 /* Media Queries */
 /* Mobile devices */
 @media only screen and (max-width: 480px) {
