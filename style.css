@@ -12,7 +12,7 @@
 
 /* Base styles */
 body {
-  background-color: #F7f9fb;
+  background-color: #FFFFFF;
   margin: 0;
   padding: 0;
 }
@@ -101,38 +101,35 @@ body {
     padding-top: 20px;
     text-align: left; /* Center align the content */
   }
-
 .about-us-container {
   max-width: 100%; /* Set max width to 100% */
   margin: 0 auto; /* Center the content horizontally */
   display: flex;
   align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow flex items to wrap */
+}
+
+h2 {
+  width: 100%; /* Take up full width */
+  text-align: center; /* Center-align the header */
 }
 
 .image-section,
 .about-us-description,
 .about-us-skills {
-  flex: 1; /* Each section takes up equal space */
+  flex: 1 1 33%; /* Each section takes up one-third of the available space */
   padding: 20px; /* Add padding for spacing */
 }
 
-.about-us-skills {
-  align-items: flex-start; /* Align items to the top */
-}
-
 .about-us-description {
-  text-align: center; /* Center-align the description */
-}
-
-.image-section img {
-  max-width: 100%;
-  height: auto;
+  font-size: 24px; /* Increase font size */
 }
 
 .about-us-skills ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  font-size: 24px; /* Increase font size */
 }
 
 .about-us-skills ul li {
