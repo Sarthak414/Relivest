@@ -26,30 +26,57 @@
             position: relative;
         }
 
-        /* Left Image */
-        .left-image {
+        /* Left Image 1 (Top Left) */
+        .left-image-1 {
             position: absolute;
             left: 0;
             top: 0;
-            bottom: 0;
-            width: 50%;
+            width: 150px;
+            height: 180px;
             background-image: url('img/Pup1.jpg');
             background-size: cover;
             background-position: center;
             z-index: -1;
         }
 
-        /* Right Image */
-        .right-image {
+        /* Left Image 2 (Bottom Left) */
+        .left-image-2 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 150px;
+            height: 180px;
+            background-image: url('img/Pup3.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        /* Right Image 1 (Top Right) */
+        .right-image-1 {
             position: absolute;
             right: 0;
             top: 0;
-            bottom: 0;
-            width: 50%;
+            width: 150px;
+            height: 180px;
             background-image: url('img/Pup2.jpg');
             background-size: cover;
             background-position: center;
             z-index: -1;
+        }
+
+        /* Right Image 2 (Middle Right) */
+        .right-image-2 {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 150px;
+            height: 180px;
+            background-image: url('img/Pup4.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            transform: translateY(-50%);
         }
 
         .container {
@@ -130,13 +157,23 @@
 <body>
 
     <div class="page-container">
-        <!-- Left Image -->
-        <div class="left-image">
+        <!-- Left Image 1 (Top Left) -->
+        <div class="left-image-1">
             <div class="image-caption">Meet My Pup</div>
         </div>
 
-        <!-- Right Image -->
-        <div class="right-image">
+        <!-- Left Image 2 (Bottom Left) -->
+        <div class="left-image-2">
+            <div class="image-caption">Meet My Pup</div>
+        </div>
+
+        <!-- Right Image 1 (Top Right) -->
+        <div class="right-image-1">
+            <div class="image-caption">Meet My Pup</div>
+        </div>
+
+        <!-- Right Image 2 (Middle Right) -->
+        <div class="right-image-2">
             <div class="image-caption">Meet My Pup</div>
         </div>
 
