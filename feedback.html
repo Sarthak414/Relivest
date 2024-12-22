@@ -19,6 +19,9 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         h1 {
             text-align: center;
@@ -27,6 +30,7 @@
         form {
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
         label {
             margin-bottom: 8px;
@@ -52,33 +56,25 @@
             background-color: #45a049;
         }
 
-        /* Image styling with overlay text */
+        /* Image container */
         .image-container {
-            position: relative;
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 20px;
+            display: inline-block;
+            margin: 10px;
+            width: 200px; /* Set the width for the images */
+            text-align: center;
         }
 
         .image-container img {
             width: 100%;
+            height: auto;
             border-radius: 8px;
         }
 
-        .image-container .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
+        .image-caption {
+            margin-top: 10px;
+            font-size: 18px;
             font-weight: bold;
-            border-radius: 8px;
+            color: #333;
         }
     </style>
 </head>
@@ -86,25 +82,25 @@
     <div class="container">
         <h1>Dog Treats Feedback Form</h1>
 
-        <!-- Image with text overlay -->
+        <!-- Image with text below -->
         <div class="image-container">
             <img src="img/Pup1.jpg" alt="Pup 1">
-            <div class="overlay">Meet My Pup - 1</div>
+            <div class="image-caption">Meet My Pup - 1</div>
         </div>
 
         <div class="image-container">
             <img src="img/Pup2.jpg" alt="Pup 2">
-            <div class="overlay">Meet My Pup - 2</div>
+            <div class="image-caption">Meet My Pup - 2</div>
         </div>
 
         <div class="image-container">
             <img src="img/Pup3.jpg" alt="Pup 3">
-            <div class="overlay">Meet My Pup - 3</div>
+            <div class="image-caption">Meet My Pup - 3</div>
         </div>
 
         <div class="image-container">
             <img src="img/Pup4.jpg" alt="Pup 4">
-            <div class="overlay">Meet My Pup - 4</div>
+            <div class="image-caption">Meet My Pup - 4</div>
         </div>
 
         <!-- Feedback Form -->
