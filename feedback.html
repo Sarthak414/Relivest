@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Treats Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dog Treats Feedback Form</h1>
+        <form action="YOUR_SERVER_SCRIPT_URL" method="POST">
+            <!-- Basic Info Section -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dog_name">Dog's Name:</label>
+            <input type="text" id="dog_name" name="dog_name" required>
+
+            <label for="dog_breed">Dog's Breed:</label>
+            <input type="text" id="dog_breed" name="dog_breed" required>
+
+            <label for="dog_size">Dog's Size:</label>
+            <select id="dog_size" name="dog_size" required>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+
+            <label for="dog_age">Dog's Age:</label>
+            <select id="dog_age" name="dog_age" required>
+                <option value="Puppy">Puppy</option>
+                <option value="Adult">Adult</option>
+                <option value="Senior">Senior</option>
+            </select>
+
+            <!-- Flavor Selection -->
+            <label for="flavors">Which flavors did your dog try?</label>
+            <select id="flavors" name="flavors[]" multiple required>
+                <option value="Serene Bites">Serene Bites - Banana, Honey & Chamomile</option>
+                <option value="Berry Butter Bites">Berry Butter Bites - Peanut Butter & Blueberry</option>
+                <option value="Sweet Tooth Bites">Sweet Tooth Bites - Banana, Carob, PB, Blackstrap Molasses</option>
+                <option value="Spiced Apple Delight">Spiced Apple Delight - Apple, Cinnamon & Jaggery</option>
+                <option value="Golden Bliss Bites">Golden Bliss Bites - Turmeric, Coconut, Banana, Vanilla</option>
+                <option value="Peanut Banana Bites">Peanut Banana Bites - Peanut Butter & Banana</option>
+            </select>
+
+            <!-- Rating & Feedback -->
+            <label for="taste_rating">How would you rate the taste of the treats?</label>
+            <select id="taste_rating" name="taste_rating" required>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="digestibility">Was the treat easy to digest?</label>
+            <select id="digestibility" name="digestibility" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="reaction">How did your dog react after eating the treat?</label>
+            <textarea id="reaction" name="reaction" rows="4" required></textarea>
+
+            <label for="recommend">Would you recommend these treats to other dog owners?</label>
+            <select id="recommend" name="recommend" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="improvement">Any suggestions for improvement?</label>
+            <textarea id="improvement" name="improvement" rows="4"></textarea>
+
+            <label for="future_samples">Would you like to receive more samples in the future?</label>
+            <select id="future_samples" name="future_samples" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
