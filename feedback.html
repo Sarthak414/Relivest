@@ -24,8 +24,6 @@
             width: 100%;
             height: 100%;
             position: relative;
-            justify-content: center;
-            align-items: center;
         }
 
         /* Left Image 1 (Top Left) */
@@ -33,8 +31,8 @@
             position: absolute;
             left: 50px;
             top: 10%;
-            width: 350px; /* Adjusted width */
-            height: 450px; /* Adjusted height */
+            width: 300px;
+            height: 450px;
             background-image: url('img/Pup1.jpg');
             background-size: cover;
             background-position: center;
@@ -45,7 +43,7 @@
         .left-image-2 {
             position: absolute;
             left: 50px;
-            bottom: 10%;
+            bottom: 60px;
             width: 250px;
             height: 250px;
             background-image: url('img/Pup3.jpg');
@@ -58,9 +56,9 @@
         .right-image-1 {
             position: absolute;
             right: 50px;
-            top: 14%;
-            width: 350px; /* Adjusted width */
-            height: 450px; /* Adjusted height */
+            top: 80px;
+            width: 300px;
+            height: 450px;
             background-image: url('img/Pup2.jpg');
             background-size: cover;
             background-position: center;
@@ -71,9 +69,9 @@
         .right-image-2 {
             position: absolute;
             right: 50px;
-            bottom: 15%;
+            bottom: 10px;
             width: 250px;
-            height:250px;
+            height: 250px;
             background-image: url('img/Pup4.jpg');
             background-size: cover;
             background-position: center;
@@ -92,7 +90,6 @@
             border-radius: 8px;
             position: relative;
             z-index: 1;
-            margin-top: 20px; /* Adjust margin to position form closer to bottom */
         }
 
         h1 {
@@ -133,7 +130,7 @@
             background-color: #45a049;
         }
 
-        /* Image caption for left image only */
+        /* Image captions for sides */
         .image-caption {
             position: absolute;
             bottom: 10px;
@@ -160,20 +157,17 @@
 <body>
 
     <div class="page-container">
-        <!-- Left Image 1 (Top Left) with Caption -->
+        <!-- Left Image 1 (Top Left) -->
         <div class="left-image-1">
             <div class="image-caption">My Pup</div>
         </div>
 
-        <!-- Left Image 2 (Bottom Left) -->
-        <div class="left-image-2"></div>
-
         <!-- Right Image 1 (Top Right) -->
-        <div class="right-image-1"></div>
+        <div class="right-image-1">
+            <div class="image-caption">My Pup</div>
+        </div>
 
-        <!-- Right Image 2 (Middle Right) -->
-        <div class="right-image-2"></div>
-
+    
         <!-- Feedback Form in the center -->
         <div class="content-wrapper">
             <div class="container">
@@ -193,17 +187,62 @@
                     <label for="dog_breed">Dog's Breed:</label>
                     <input type="text" id="dog_breed" name="dog_breed" required>
 
-                    <label for="treat_rating">Treat Rating:</label>
-                    <select id="treat_rating" name="treat_rating" required>
-                        <option value="1">1 - Not Good</option>
-                        <option value="2">2 - Okay</option>
+                    <label for="dog_size">Dog's Size:</label>
+                    <select id="dog_size" name="dog_size" required>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                    </select>
+
+                    <label for="dog_age">Dog's Age:</label>
+                    <select id="dog_age" name="dog_age" required>
+                        <option value="Puppy">Puppy</option>
+                        <option value="Adult">Adult</option>
+                        <option value="Senior">Senior</option>
+                    </select>
+
+                    <label for="flavors">Which flavors did your dog try?</label>
+                    <select id="flavors" name="flavors[]" multiple required>
+                        <option value="Serene Bites">Serene Bites - Banana, Honey & Chamomile</option>
+                        <option value="Berry Butter Bites">Berry Butter Bites - Peanut Butter & Blueberry</option>
+                        <option value="Sweet Tooth Bites">Sweet Tooth Bites - Banana, Carob, PB, Blackstrap Molasses</option>
+                        <option value="Spiced Apple Delight">Spiced Apple Delight - Apple, Cinnamon & Jaggery</option>
+                        <option value="Golden Bliss Bites">Golden Bliss Bites - Turmeric, Coconut, Banana, Vanilla</option>
+                        <option value="Peanut Banana Bites">Peanut Banana Bites - Peanut Butter & Banana</option>
+                    </select>
+
+                    <label for="taste_rating">How would you rate the taste of the treats?</label>
+                    <select id="taste_rating" name="taste_rating" required>
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
                         <option value="3">3 - Good</option>
                         <option value="4">4 - Very Good</option>
                         <option value="5">5 - Excellent</option>
                     </select>
 
-                    <label for="feedback">Feedback:</label>
-                    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                    <label for="digestibility">Was the treat easy to digest?</label>
+                    <select id="digestibility" name="digestibility" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+
+                    <label for="reaction">How did your dog react after eating the treat?</label>
+                    <textarea id="reaction" name="reaction" rows="4" required></textarea>
+
+                    <label for="recommend">Would you recommend these treats to other dog owners?</label>
+                    <select id="recommend" name="recommend" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+
+                    <label for="improvement">Any suggestions for improvement?</label>
+                    <textarea id="improvement" name="improvement" rows="4"></textarea>
+
+                    <label for="future_samples">Would you like to receive more samples in the future?</label>
+                    <select id="future_samples" name="future_samples" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
 
                     <button type="submit" class="submit-btn">Submit Feedback</button>
                 </form>
