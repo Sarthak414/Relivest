@@ -51,14 +51,64 @@
         .submit-btn:hover {
             background-color: #45a049;
         }
+
+        /* Image styling with overlay text */
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .image-container .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Dog Treats Feedback Form</h1>
-        <!-- Form action set to Formspree URL -->
+
+        <!-- Image with text overlay -->
+        <div class="image-container">
+            <img src="img/Pup1.jpg" alt="Pup 1">
+            <div class="overlay">Meet My Pup - 1</div>
+        </div>
+
+        <div class="image-container">
+            <img src="img/Pup2.jpg" alt="Pup 2">
+            <div class="overlay">Meet My Pup - 2</div>
+        </div>
+
+        <div class="image-container">
+            <img src="img/Pup3.jpg" alt="Pup 3">
+            <div class="overlay">Meet My Pup - 3</div>
+        </div>
+
+        <div class="image-container">
+            <img src="img/Pup4.jpg" alt="Pup 4">
+            <div class="overlay">Meet My Pup - 4</div>
+        </div>
+
+        <!-- Feedback Form -->
         <form action="https://formspree.io/f/mbllrqnb" method="POST">
-            <!-- Basic Info Section -->
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -85,7 +135,6 @@
                 <option value="Senior">Senior</option>
             </select>
 
-            <!-- Flavor Selection -->
             <label for="flavors">Which flavors did your dog try?</label>
             <select id="flavors" name="flavors[]" multiple required>
                 <option value="Serene Bites">Serene Bites - Banana, Honey & Chamomile</option>
@@ -96,7 +145,6 @@
                 <option value="Peanut Banana Bites">Peanut Banana Bites - Peanut Butter & Banana</option>
             </select>
 
-            <!-- Rating & Feedback -->
             <label for="taste_rating">How would you rate the taste of the treats?</label>
             <select id="taste_rating" name="taste_rating" required>
                 <option value="1">1 - Poor</option>
@@ -130,7 +178,6 @@
                 <option value="No">No</option>
             </select>
 
-            <!-- Submit Button -->
             <button type="submit" class="submit-btn">Submit Feedback</button>
         </form>
     </div>
