@@ -11,14 +11,20 @@
             color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
         .container {
             max-width: 800px;
-            margin: 50px auto;
+            margin: 50px;
             padding: 30px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -60,12 +66,11 @@
         .image-container {
             display: inline-block;
             margin: 10px;
-            width: 200px; /* Set the width for the images */
             text-align: center;
         }
 
         .image-container img {
-            width: 100%;
+            width: 200px;
             height: auto;
             border-radius: 8px;
         }
@@ -76,32 +81,42 @@
             font-weight: bold;
             color: #333;
         }
+
+        /* Image side layout */
+        .images {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 20px 0;
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Dog Treats Feedback Form</h1>
-
-        <!-- Image with text below -->
+    <div class="images">
         <div class="image-container">
             <img src="img/Pup1.jpg" alt="Pup 1">
-            <div class="image-caption">Meet My Pup - 1</div>
+            <div class="image-caption">Meet My Pup</div>
         </div>
 
         <div class="image-container">
             <img src="img/Pup2.jpg" alt="Pup 2">
-            <div class="image-caption">Meet My Pup - 2</div>
+            <div class="image-caption">Meet My Pup</div>
         </div>
 
         <div class="image-container">
             <img src="img/Pup3.jpg" alt="Pup 3">
-            <div class="image-caption">Meet My Pup - 3</div>
+            <div class="image-caption">Meet My Pup</div>
         </div>
 
         <div class="image-container">
             <img src="img/Pup4.jpg" alt="Pup 4">
-            <div class="image-caption">Meet My Pup - 4</div>
+            <div class="image-caption">Meet My Pup</div>
         </div>
+    </div>
+
+    <div class="container">
+        <h1>Dog Treats Feedback Form</h1>
 
         <!-- Feedback Form -->
         <form action="https://formspree.io/f/mbllrqnb" method="POST">
