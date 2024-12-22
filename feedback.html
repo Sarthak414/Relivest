@@ -7,41 +7,81 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100%;
+            background-color: #f4f4f4;
             flex-direction: column;
+            overflow-x: hidden;
         }
+        .page-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Left Image */
+        .left-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('img/Pup1.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        /* Right Image */
+        .right-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('img/Pup2.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
         .container {
             max-width: 800px;
-            margin: 50px;
-            padding: 30px;
-            background-color: #fff;
+            padding: 20px;
+            background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            width: 60%;
+            z-index: 1;
         }
+
         h1 {
             text-align: center;
             color: #333;
         }
+
         form {
             display: flex;
             flex-direction: column;
             width: 100%;
         }
+
         label {
             margin-bottom: 8px;
             font-weight: bold;
         }
+
         input, select, textarea {
             padding: 10px;
             margin-bottom: 15px;
@@ -49,6 +89,7 @@
             border-radius: 4px;
             font-size: 16px;
         }
+
         .submit-btn {
             background-color: #4CAF50;
             color: white;
@@ -58,139 +99,117 @@
             cursor: pointer;
             font-size: 16px;
         }
+
         .submit-btn:hover {
             background-color: #45a049;
         }
 
-        /* Image container */
-        .image-container {
-            display: inline-block;
-            margin: 10px;
-            text-align: center;
-        }
-
-        .image-container img {
-            width: 200px;
-            height: auto;
-            border-radius: 8px;
-        }
-
+        /* Image captions for sides */
         .image-caption {
-            margin-top: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        /* Image side layout */
-        .images {
-            display: flex;
-            justify-content: space-between;
+            position: absolute;
+            bottom: 10px;
             width: 100%;
-            margin: 20px 0;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
         }
-
     </style>
 </head>
 <body>
-    <div class="images">
-        <div class="image-container">
-            <img src="img/Pup1.jpg" alt="Pup 1">
+
+    <div class="page-container">
+        <!-- Left Image -->
+        <div class="left-image">
             <div class="image-caption">Meet My Pup</div>
         </div>
 
-        <div class="image-container">
-            <img src="img/Pup2.jpg" alt="Pup 2">
+        <!-- Right Image -->
+        <div class="right-image">
             <div class="image-caption">Meet My Pup</div>
         </div>
 
-        <div class="image-container">
-            <img src="img/Pup3.jpg" alt="Pup 3">
-            <div class="image-caption">Meet My Pup</div>
-        </div>
+        <!-- Feedback Form in the center -->
+        <div class="container">
+            <h1>Dog Treats Feedback Form</h1>
 
-        <div class="image-container">
-            <img src="img/Pup4.jpg" alt="Pup 4">
-            <div class="image-caption">Meet My Pup</div>
+            <!-- Feedback Form -->
+            <form action="https://formspree.io/f/mbllrqnb" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="dog_name">Dog's Name:</label>
+                <input type="text" id="dog_name" name="dog_name" required>
+
+                <label for="dog_breed">Dog's Breed:</label>
+                <input type="text" id="dog_breed" name="dog_breed" required>
+
+                <label for="dog_size">Dog's Size:</label>
+                <select id="dog_size" name="dog_size" required>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+
+                <label for="dog_age">Dog's Age:</label>
+                <select id="dog_age" name="dog_age" required>
+                    <option value="Puppy">Puppy</option>
+                    <option value="Adult">Adult</option>
+                    <option value="Senior">Senior</option>
+                </select>
+
+                <label for="flavors">Which flavors did your dog try?</label>
+                <select id="flavors" name="flavors[]" multiple required>
+                    <option value="Serene Bites">Serene Bites - Banana, Honey & Chamomile</option>
+                    <option value="Berry Butter Bites">Berry Butter Bites - Peanut Butter & Blueberry</option>
+                    <option value="Sweet Tooth Bites">Sweet Tooth Bites - Banana, Carob, PB, Blackstrap Molasses</option>
+                    <option value="Spiced Apple Delight">Spiced Apple Delight - Apple, Cinnamon & Jaggery</option>
+                    <option value="Golden Bliss Bites">Golden Bliss Bites - Turmeric, Coconut, Banana, Vanilla</option>
+                    <option value="Peanut Banana Bites">Peanut Banana Bites - Peanut Butter & Banana</option>
+                </select>
+
+                <label for="taste_rating">How would you rate the taste of the treats?</label>
+                <select id="taste_rating" name="taste_rating" required>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+
+                <label for="digestibility">Was the treat easy to digest?</label>
+                <select id="digestibility" name="digestibility" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label for="reaction">How did your dog react after eating the treat?</label>
+                <textarea id="reaction" name="reaction" rows="4" required></textarea>
+
+                <label for="recommend">Would you recommend these treats to other dog owners?</label>
+                <select id="recommend" name="recommend" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label for="improvement">Any suggestions for improvement?</label>
+                <textarea id="improvement" name="improvement" rows="4"></textarea>
+
+                <label for="future_samples">Would you like to receive more samples in the future?</label>
+                <select id="future_samples" name="future_samples" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
         </div>
     </div>
 
-    <div class="container">
-        <h1>Dog Treats Feedback Form</h1>
-
-        <!-- Feedback Form -->
-        <form action="https://formspree.io/f/mbllrqnb" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="dog_name">Dog's Name:</label>
-            <input type="text" id="dog_name" name="dog_name" required>
-
-            <label for="dog_breed">Dog's Breed:</label>
-            <input type="text" id="dog_breed" name="dog_breed" required>
-
-            <label for="dog_size">Dog's Size:</label>
-            <select id="dog_size" name="dog_size" required>
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
-
-            <label for="dog_age">Dog's Age:</label>
-            <select id="dog_age" name="dog_age" required>
-                <option value="Puppy">Puppy</option>
-                <option value="Adult">Adult</option>
-                <option value="Senior">Senior</option>
-            </select>
-
-            <label for="flavors">Which flavors did your dog try?</label>
-            <select id="flavors" name="flavors[]" multiple required>
-                <option value="Serene Bites">Serene Bites - Banana, Honey & Chamomile</option>
-                <option value="Berry Butter Bites">Berry Butter Bites - Peanut Butter & Blueberry</option>
-                <option value="Sweet Tooth Bites">Sweet Tooth Bites - Banana, Carob, PB, Blackstrap Molasses</option>
-                <option value="Spiced Apple Delight">Spiced Apple Delight - Apple, Cinnamon & Jaggery</option>
-                <option value="Golden Bliss Bites">Golden Bliss Bites - Turmeric, Coconut, Banana, Vanilla</option>
-                <option value="Peanut Banana Bites">Peanut Banana Bites - Peanut Butter & Banana</option>
-            </select>
-
-            <label for="taste_rating">How would you rate the taste of the treats?</label>
-            <select id="taste_rating" name="taste_rating" required>
-                <option value="1">1 - Poor</option>
-                <option value="2">2 - Fair</option>
-                <option value="3">3 - Good</option>
-                <option value="4">4 - Very Good</option>
-                <option value="5">5 - Excellent</option>
-            </select>
-
-            <label for="digestibility">Was the treat easy to digest?</label>
-            <select id="digestibility" name="digestibility" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-
-            <label for="reaction">How did your dog react after eating the treat?</label>
-            <textarea id="reaction" name="reaction" rows="4" required></textarea>
-
-            <label for="recommend">Would you recommend these treats to other dog owners?</label>
-            <select id="recommend" name="recommend" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-
-            <label for="improvement">Any suggestions for improvement?</label>
-            <textarea id="improvement" name="improvement" rows="4"></textarea>
-
-            <label for="future_samples">Would you like to receive more samples in the future?</label>
-            <select id="future_samples" name="future_samples" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-
-            <button type="submit" class="submit-btn">Submit Feedback</button>
-        </form>
-    </div>
 </body>
 </html>
