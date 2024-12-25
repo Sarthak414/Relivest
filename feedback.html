@@ -13,16 +13,17 @@
         }
 
         body {
-            background-image: url('img/back11.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    background-image: url('img/back11.jpg');
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed on scroll */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
         .page-container {
             display: flex;
@@ -43,7 +44,7 @@
             border-radius: 8px;
             position: relative;
             z-index: 1;
-             margin-right: 610px;
+             margin-right: 580px;
         }
 
         h1 {
