@@ -1,5 +1,51 @@
-[
-    {"name": "SHIB", "gain": "295"},
-    {"name": "PEPE", "gain": "370"},
-    {"name": "Bonk", "gain": "190"}
+import requests
+from bs4 import BeautifulSoup
+import json
+import time
+
+# URLs for tracking meme coins
+urls = [
+    "https://coinmarketcap.com/gainers-losers/",
+    "https://www.coingecko.com/en/coins/trending"
 ]
+
+def fetch_data(url):
+    """Fetch and parse HTML from a URL."""
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        return BeautifulSoup(response.text, "html.parser")
+    else:
+        print(f"Failed to fetch {url}")
+        return None
+
+def extract_meme_coins(soup):
+    """Extract meme coins that gained over 100% in 7 days."""
+    coins = []
+    for row in soup.find_all("tr"):
+        cols = row.find_all("td")
+        if len(cols) > 2:
+            name = cols[1].text.strip()
+            change_7d = cols[3].text.strip().replace('%', '')
+            try:
+                if float(change_7d) > 100:
+                    coins.append({"name": name, "gain": float(change_7d)})
+            except ValueError:
+                continue
+    return coins
+
+def main():
+    all_meme_coins = []
+    for url in urls:
+        soup = fetch_data(url)
+        if soup:
+            coins = extract_meme_coins(soup)
+            all_meme_coins.extend(coins)
+        time.sleep(2)  # Avoid getting blocked
+
+    # Save to JSON
+    with open("coins.json", "w") as file:
+        json.dump(all_meme_coins, file, indent=4)
+
+if __name__ == "__main__":
+    main()
