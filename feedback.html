@@ -154,30 +154,31 @@
         </form>
     </div>
 
-    <script>
-        function updateLabels() {
-            let ownerName = document.getElementById("name").value.trim();
-            let petNameLabel = document.getElementById("dog-name-label");
+<script>
+    function updateLabels() {
+        let ownerName = document.getElementById("name").value.trim();
+        let petName = document.getElementById("dog_name").value.trim();
+        
+        // Update the second question dynamically
+        let dogNameLabel = document.getElementById("dog-name-label");
+        dogNameLabel.innerText = ownerName ? `${ownerName}, what is your pet's name?` : "Your Pet's Name:";
+        
+        // Replace "Pet" with the entered pet's name dynamically across all labels
+        let allLabels = document.querySelectorAll("label");
+        allLabels.forEach(label => {
+            let originalText = label.getAttribute("data-original-text") || label.innerText;
 
-            if (ownerName) {
-                petNameLabel.innerText = ownerName + ", what is your pet's name?";
-            } else {
-                petNameLabel.innerText = "What is your pet's name?";
+            if (!label.hasAttribute("data-original-text")) {
+                label.setAttribute("data-original-text", originalText);
             }
-        }
 
-        function updatePetName() {
-            let petName = document.getElementById("dog_name").value.trim();
-            let petLabels = document.querySelectorAll(".pet-label");
+            label.innerText = petName ? originalText.replace(/Pet's|Pet/g, petName + "'s") : originalText;
+        });
+    }
 
-            petLabels.forEach(label => {
-                if (petName) {
-                    label.innerText = label.innerText.replace(/Pet's|pet's|Pet|pet/g, petName + "'s");
-                } else {
-                    label.innerText = label.innerText.replace(/[^']+'s/g, "Pet's");
-                }
-            });
-        }
-    </script>
+    document.getElementById("name").addEventListener("input", updateLabels);
+    document.getElementById("dog_name").addEventListener("input", updateLabels);
+</script>
+
 </body>
 </html>
