@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Parent Survey</title>
+    <title>Pet Parent Survey</title>
     <style>
         html, body {
             margin: 0;
@@ -16,7 +16,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             display: flex;
-            justify-content: left; /* Shift everything to the left */
+            justify-content: left;
             align-items: left;
             flex-direction: column;
             padding-left: 1.5%;
@@ -102,41 +102,40 @@
 </head>
 <body>
     <div class="container">
-        <h1>Dog Parent Survey</h1>
+        <h1>Pet Parent Survey</h1>
         
-        <!-- Masked Link -->
         <div class="survey-link">
             <a href="https://www.relivestpartners.in/feedback.html" target="_blank">Pet Survey - Helping Parents with Innovative Solutions</a>
         </div>
 
         <form action="https://formspree.io/f/mbllrqnb" method="POST">
             <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required oninput="updateDogNameLabel()">
+            <input type="text" id="name" name="name" required oninput="updatePetNameLabels()">
 
-            <label for="dog_name" id="dog-name-label">Your Dog's Name:</label>
-            <input type="text" id="dog_name" name="dog_name" required>
+            <label for="pet_name" id="pet-name-label">Your Pet's Name:</label>
+            <input type="text" id="pet_name" name="pet_name" required oninput="updatePetNameLabels()">
 
             <label for="email">Email Address (Optional):</label>
-            <input type="email" id="email" name="email" optional>
+            <input type="email" id="email" name="email">
 
-            <label for="dog_breed">Dog's Breed:</label>
-            <input type="text" id="dog_breed" name="dog_breed" required>
+            <label for="pet_breed">Pet's Breed:</label>
+            <input type="text" id="pet_breed" name="pet_breed" required>
 
-            <label for="dog_size">Dog's Size:</label>
-            <select id="dog_size" name="dog_size" required>
+            <label for="pet_size">Pet's Size:</label>
+            <select id="pet_size" name="pet_size" required>
                 <option value="Small">Small</option>
                 <option value="Medium">Medium</option>
                 <option value="Large">Large</option>
             </select>
 
-            <label for="dog_age">Dog's Age:</label>
-            <select id="dog_age" name="dog_age" required>
-                <option value="Puppy">Puppy</option>
+            <label for="pet_age">Pet's Age:</label>
+            <select id="pet_age" name="pet_age" required>
+                <option value="Young">Young</option>
                 <option value="Adult">Adult</option>
                 <option value="Senior">Senior</option>
             </select>
 
-            <label for="challenges">What challenges do you face with your dog?</label>
+            <label for="challenges" id="challenges-label">What challenges do you face with your pet?</label>
             <select id="challenges" name="challenges[]" multiple required>
                 <option value="Boredom & Anxiety">Boredom & Anxiety</option>
                 <option value="Exercise Needs">Exercise Needs</option>
@@ -147,7 +146,7 @@
             </select>
             <textarea id="other_challenges" name="other_challenges" placeholder="If other, please specify"></textarea>
 
-            <label for="improvement">What products or solutions do you wish existed for your dog?</label>
+            <label for="improvement" id="improvement-label">What products or solutions do you wish existed for your pet?</label>
             <textarea id="improvement" name="improvement" rows="4"></textarea>
 
             <button type="submit" class="submit-btn">Submit Feedback</button>
@@ -155,14 +154,17 @@
     </div>
 
     <script>
-        function updateDogNameLabel() {
-            let ownerName = document.getElementById("name").value.trim();
-            let dogNameLabel = document.getElementById("dog-name-label");
+        function updatePetNameLabels() {
+            let petName = document.getElementById("pet_name").value.trim();
+            let challengesLabel = document.getElementById("challenges-label");
+            let improvementLabel = document.getElementById("improvement-label");
             
-            if (ownerName) {
-                dogNameLabel.innerText = ownerName + " What is your Pet's Name:";
+            if (petName) {
+                challengesLabel.innerText = "What challenges do you face with " + petName + "?";
+                improvementLabel.innerText = "What products or solutions do you wish existed for " + petName + "?";
             } else {
-                dogNameLabel.innerText = "Your Dog's Name:";
+                challengesLabel.innerText = "What challenges do you face with your pet?";
+                improvementLabel.innerText = "What products or solutions do you wish existed for your pet?";
             }
         }
     </script>
