@@ -17,23 +17,22 @@
             background-attachment: fixed;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             flex-direction: column;
-            min-height: 100vh;
         }
 
         .container {
             width: 90%;
             max-width: 800px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(208, 201, 205, 0.9);
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            margin-left: 50px;
+            text-align: left;
         }
 
         h1 {
-            text-align: left;
+            text-align: center;
             color: #333;
         }
 
@@ -43,8 +42,8 @@
         }
 
         label {
-            font-weight: bold;
             margin-top: 10px;
+            font-weight: bold;
         }
 
         input, select, textarea {
@@ -55,6 +54,7 @@
             border-radius: 4px;
             font-size: 16px;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .submit-btn {
@@ -69,15 +69,26 @@
         }
 
         .submit-btn:hover {
-            background-color: #c4b8aa;
+            background-color: #d1bfa6;
         }
 
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Dog Parent Survey</h1>
         <form action="https://formspree.io/f/mbllrqnb" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
             <label for="dog_name">Dog's Name:</label>
             <input type="text" id="dog_name" name="dog_name" required>
 
@@ -98,28 +109,21 @@
                 <option value="Senior">Senior</option>
             </select>
 
-            <label for="dog_issues">What challenges do you face with your dog? (Select all that apply)</label>
-            <select id="dog_issues" name="dog_issues[]" multiple required>
-                <option value="Paw prints all over the house">Paw prints all over the house</option>
-                <option value="Dog gets too hot in summer">Dog gets too hot in summer</option>
-                <option value="Toys don’t last long enough">Toys don’t last long enough</option>
-                <option value="My dog gets bored easily">My dog gets bored easily</option>
-                <option value="Dog eats too fast">Dog eats too fast</option>
-                <option value="Separation anxiety when left alone">Separation anxiety when left alone</option>
-                <option value="Other">Other (please specify below)</option>
+            <label for="challenges">What challenges do you face with your dog?</label>
+            <select id="challenges" name="challenges[]" multiple required>
+                <option value="Boredom & Anxiety">Boredom & Anxiety</option>
+                <option value="Exercise Needs">Exercise Needs</option>
+                <option value="Hot Weather Comfort">Hot Weather Comfort</option>
+                <option value="Messy Paws Indoors">Messy Paws Indoors</option>
+                <option value="Chewing Destruction">Chewing Destruction</option>
+                <option value="Other">Other (Please specify below)</option>
             </select>
-            <input type="text" id="other_issue" name="other_issue" placeholder="If other, please specify">
+            <textarea id="other_challenges" name="other_challenges" placeholder="If other, please specify"></textarea>
 
-            <label for="ideal_solution">What would be your ideal solution to these problems?</label>
-            <textarea id="ideal_solution" name="ideal_solution" rows="3" required></textarea>
+            <label for="improvement">What products or solutions do you wish existed for your dog?</label>
+            <textarea id="improvement" name="improvement" rows="4"></textarea>
 
-            <label for="favorite_products">What are your dog's favorite products/toys?</label>
-            <textarea id="favorite_products" name="favorite_products" rows="3"></textarea>
-
-            <label for="feedback">Any other feedback?</label>
-            <textarea id="feedback" name="feedback" rows="3"></textarea>
-
-            <button type="submit" class="submit-btn">Submit Survey</button>
+            <button type="submit" class="submit-btn">Submit Feedback</button>
         </form>
     </div>
 </body>
