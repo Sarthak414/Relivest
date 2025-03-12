@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusive Pet Care Survey – Enhancing Comfort & Wellness</title>
+    <title>Dog Parent Survey</title>
     <style>
         html, body {
             margin: 0;
@@ -16,32 +16,25 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             display: flex;
-            justify-content: flex-start; /* Align content to the left */
-            align-items: flex-start;
+            justify-content: left; /* Shift everything to the left */
+            align-items: left;
             flex-direction: column;
-            padding-left: 2%; /* Adds spacing from the left edge */
-            padding-top: 5%; /* Adds spacing from the top */
+            padding-left: 3%;
         }
 
         .container {
             width: 90%;
             max-width: 800px;
-            background-color: rgba(208, 201, 205, 0.95);
-            padding: 25px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            border-radius: 12px;
+            background-color: rgba(208, 201, 205, 0.9);
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
             text-align: left;
         }
 
         h1 {
-            text-align: left;
-            color: #5a3e36;
-        }
-
-        .intro {
-            font-size: 18px;
+            text-align: center;
             color: #333;
-            margin-bottom: 20px;
         }
 
         form {
@@ -52,33 +45,52 @@
         label {
             margin-top: 20px;
             font-weight: bold;
-            color: #5a3e36;
         }
 
         input, select, textarea {
             background-color: #fff8e9;
-            padding: 12px;
+            padding: 10px;
             margin-top: 5px;
-            border: 1px solid #d3c3b5;
-            border-radius: 6px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
             font-size: 16px;
             width: 100%;
             box-sizing: border-box;
         }
 
         .submit-btn {
-            background-color: #c39b77;
-            color: white;
-            padding: 14px;
+            background-color: #e6d8ca;
+            color: black;
+            padding: 12px;
             border: none;
-            border-radius: 6px;
+            border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .submit-btn:hover {
-            background-color: #a07b5c;
+            background-color: #d1bfa6;
+        }
+
+        .survey-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .survey-link a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #ffd700;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .survey-link a:hover {
+            background-color: #ffcc00;
         }
 
         @media (max-width: 768px) {
@@ -90,21 +102,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>Exclusive Pet Care Survey</h1>
-        <p class="intro">
-            Your dog deserves the best! Help us understand what premium pet solutions can enhance your dog's well-being and comfort. 
-            Your insights will shape the next generation of high-quality pet products.
-        </p>
+        <h1>Dog Parent Survey</h1>
+        
+        <!-- Masked Link -->
+        <div class="survey-link">
+            <a href="https://www.relivestpartners.in/feedback.html" target="_blank">Pet Survey - Helping Parents with Innovative Solutions</a>
+        </div>
 
         <form action="https://formspree.io/f/mbllrqnb" method="POST">
             <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required oninput="updateDogNameLabel()">
+
+            <label for="dog_name" id="dog-name-label">Your Dog's Name:</label>
+            <input type="text" id="dog_name" name="dog_name" required>
 
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" required>
-
-            <label for="dog_name">Dog's Name:</label>
-            <input type="text" id="dog_name" name="dog_name" required>
 
             <label for="dog_breed">Dog's Breed:</label>
             <input type="text" id="dog_breed" name="dog_breed" required>
@@ -140,5 +153,18 @@
             <button type="submit" class="submit-btn">Submit Feedback</button>
         </form>
     </div>
+
+    <script>
+        function updateDogNameLabel() {
+            let ownerName = document.getElementById("name").value.trim();
+            let dogNameLabel = document.getElementById("dog-name-label");
+            
+            if (ownerName) {
+                dogNameLabel.innerText = ownerName + "Your Pet's Name:";
+            } else {
+                dogNameLabel.innerText = "Your Dog's Name:";
+            }
+        }
+    </script>
 </body>
 </html>
