@@ -16,9 +16,11 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             display: flex;
-            justify-content: left;
-            align-items: center;
+            justify-content: flex-start; /* Align content to the left */
+            align-items: flex-start;
             flex-direction: column;
+            padding-left: 5%; /* Adds spacing from the left edge */
+            padding-top: 5%; /* Adds spacing from the top */
         }
 
         .container {
@@ -32,12 +34,11 @@
         }
 
         h1 {
-            text-align: center;
+            text-align: left;
             color: #5a3e36;
         }
 
         .intro {
-            text-align: center;
             font-size: 18px;
             color: #333;
             margin-bottom: 20px;
@@ -78,22 +79,6 @@
 
         .submit-btn:hover {
             background-color: #a07b5c;
-        }
-
-        .survey-link {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .survey-link a {
-            color: #c39b77;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .survey-link a:hover {
-            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -154,11 +139,6 @@
 
             <button type="submit" class="submit-btn">Submit Feedback</button>
         </form>
-
-        <div class="survey-link">
-            <p>Or visit our dedicated survey page:</p>
-            <a href="https://www.relivestpartners.in/feedback.html" target="_blank">Enhancing Pet Wellness – Take the Survey</a>
-        </div>
     </div>
 </body>
 </html>
