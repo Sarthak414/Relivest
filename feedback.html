@@ -3,55 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Owner Survey</title>
+    <title>Dog Parent Survey</title>
     <style>
         html, body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             height: 100%;
-            background-color: #f4f4f4;
+            background-image: url('img/back11.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .container {
-            width: 50%;
-            max-width: 600px;
-            background-color: #fff;
+            width: 90%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            margin: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            margin-left: 50px;
         }
 
         h1 {
+            text-align: left;
             color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
         }
 
         label {
             font-weight: bold;
-            display: block;
             margin-top: 10px;
         }
 
         input, select, textarea {
-            width: 100%;
+            background-color: #fff8e9;
             padding: 10px;
             margin-top: 5px;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 16px;
-        }
-
-        .checkbox-group label {
-            font-weight: normal;
-            display: flex;
-            align-items: center;
-            margin-top: 5px;
+            width: 100%;
         }
 
         .submit-btn {
-            background-color: #5cb85c;
-            color: white;
+            background-color: #e6d8ca;
+            color: black;
             padding: 12px;
             border: none;
             border-radius: 4px;
@@ -61,13 +69,14 @@
         }
 
         .submit-btn:hover {
-            background-color: #4cae4c;
+            background-color: #c4b8aa;
         }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Dog Owner Survey</h1>
+        <h1>Dog Parent Survey</h1>
         <form action="https://formspree.io/f/mbllrqnb" method="POST">
             <label for="dog_name">Dog's Name:</label>
             <input type="text" id="dog_name" name="dog_name" required>
@@ -89,19 +98,28 @@
                 <option value="Senior">Senior</option>
             </select>
 
-            <label>Biggest challenge as a pet parent?</label>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="challenges" value="Wet paw prints on floors"> Wet paw prints on floors</label>
-                <label><input type="checkbox" name="challenges" value="Dog overheating in summer"> Dog overheating in summer</label>
-                <label><input type="checkbox" name="challenges" value="Boredom and anxiety"> Boredom and anxiety</label>
-                <label><input type="checkbox" name="challenges" value="Chewing and destructive behavior"> Chewing and destructive behavior</label>
-                <label><input type="checkbox" name="challenges" value="Messy eating habits"> Messy eating habits</label>
-                <label><input type="checkbox" name="challenges" value="Separation anxiety"> Separation anxiety</label>
-                <label><input type="checkbox" name="challenges" value="Other"> Other:</label>
-                <input type="text" name="other_challenge" placeholder="Describe your challenge">
-            </div>
+            <label for="dog_issues">What challenges do you face with your dog? (Select all that apply)</label>
+            <select id="dog_issues" name="dog_issues[]" multiple required>
+                <option value="Paw prints all over the house">Paw prints all over the house</option>
+                <option value="Dog gets too hot in summer">Dog gets too hot in summer</option>
+                <option value="Toys don’t last long enough">Toys don’t last long enough</option>
+                <option value="My dog gets bored easily">My dog gets bored easily</option>
+                <option value="Dog eats too fast">Dog eats too fast</option>
+                <option value="Separation anxiety when left alone">Separation anxiety when left alone</option>
+                <option value="Other">Other (please specify below)</option>
+            </select>
+            <input type="text" id="other_issue" name="other_issue" placeholder="If other, please specify">
 
-            <button type="submit" class="submit-btn">Submit</button>
+            <label for="ideal_solution">What would be your ideal solution to these problems?</label>
+            <textarea id="ideal_solution" name="ideal_solution" rows="3" required></textarea>
+
+            <label for="favorite_products">What are your dog's favorite products/toys?</label>
+            <textarea id="favorite_products" name="favorite_products" rows="3"></textarea>
+
+            <label for="feedback">Any other feedback?</label>
+            <textarea id="feedback" name="feedback" rows="3"></textarea>
+
+            <button type="submit" class="submit-btn">Submit Survey</button>
         </form>
     </div>
 </body>
