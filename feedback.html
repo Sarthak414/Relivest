@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Parent Survey</title>
+    <title>Exclusive Pet Care Survey – Enhancing Comfort & Wellness</title>
     <style>
         html, body {
             margin: 0;
@@ -16,24 +16,29 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             display: flex;
-            justify-content: center;
-            align-items: Left;
+            justify-content: left;
+            align-items: center;
+            flex-direction: column;
         }
 
         .container {
             width: 90%;
             max-width: 800px;
             background-color: rgba(208, 201, 205, 0.95);
-            padding: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
             text-align: left;
-            overflow-y: auto;
-            max-height: 90vh;
         }
 
         h1 {
             text-align: center;
+            color: #5a3e36;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 18px;
             color: #333;
             margin-bottom: 20px;
         }
@@ -46,23 +51,18 @@
         label {
             margin-top: 20px;
             font-weight: bold;
-            font-size: 16px;
+            color: #5a3e36;
         }
 
         input, select, textarea {
-            background-color: #fef4e5;
+            background-color: #fff8e9;
             padding: 12px;
             margin-top: 5px;
-            border: 1px solid #c2b7b1;
+            border: 1px solid #d3c3b5;
             border-radius: 6px;
             font-size: 16px;
             width: 100%;
             box-sizing: border-box;
-        }
-
-        textarea {
-            resize: none;
-            height: 80px;
         }
 
         .submit-btn {
@@ -72,30 +72,45 @@
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px;
             margin-top: 20px;
-            transition: 0.3s;
         }
 
         .submit-btn:hover {
-            background-color: #a9825f;
+            background-color: #a07b5c;
+        }
+
+        .survey-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .survey-link a {
+            color: #c39b77;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .survey-link a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
             .container {
                 width: 95%;
             }
-
-            input, select, textarea {
-                font-size: 14px;
-                padding: 10px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Dog Parent Survey</h1>
+        <h1>Exclusive Pet Care Survey</h1>
+        <p class="intro">
+            Your dog deserves the best! Help us understand what premium pet solutions can enhance your dog's well-being and comfort. 
+            Your insights will shape the next generation of high-quality pet products.
+        </p>
+
         <form action="https://formspree.io/f/mbllrqnb" method="POST">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
@@ -139,6 +154,11 @@
 
             <button type="submit" class="submit-btn">Submit Feedback</button>
         </form>
+
+        <div class="survey-link">
+            <p>Or visit our dedicated survey page:</p>
+            <a href="https://www.relivestpartners.in/feedback.html" target="_blank">Enhancing Pet Wellness – Take the Survey</a>
+        </div>
     </div>
 </body>
 </html>
