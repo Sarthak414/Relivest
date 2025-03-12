@@ -156,22 +156,36 @@
 
 <script>
     function updatePetName() {
-        let petName = document.getElementById("pet_name").value.trim();
-        if (!petName) return;
+        let petName = document.getElementById("dog_name").value.trim();
 
-        let labels = document.querySelectorAll("label");
+        let allLabels = document.querySelectorAll("label");
+        allLabels.forEach(label => {
+            let originalText = label.getAttribute("data-original-text");
 
-        labels.forEach(label => {
-            let text = label.dataset.original || label.innerText; // Store original text
-            label.dataset.original = text; // Save original text if not already saved
+            // Store original text once to prevent multiple modifications
+            if (!originalText) {
+                originalText = label.innerText;
+                label.setAttribute("data-original-text", originalText);
+            }
 
-            // Replace "Your pet" with the entered pet name
-            label.innerText = text.replace("Your pet", petName);
+            if (petName) {
+                if (originalText.includes("your pet's")) {
+                    // Add "'s" for Breed, Size, and Age
+                    label.innerText = originalText.replace(/your pet's/g, petName + "'s");
+                } else if (originalText.includes("your pet")) {
+                    // No "'s" for the last two questions
+                    label.innerText = originalText.replace(/your pet/g, petName);
+                }
+            } else {
+                // Revert back to original text if petName is empty
+                label.innerText = originalText;
+            }
         });
     }
 
-    document.getElementById("pet_name").addEventListener("input", updatePetName);
+    document.getElementById("dog_name").addEventListener("input", updatePetName);
 </script>
+
 
 </body>
 </html>
