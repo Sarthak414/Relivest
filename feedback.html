@@ -119,17 +119,17 @@
             <label for="email">Email Address (Optional):</label>
             <input type="email" id="email" name="email" optional>
 
-            <label for="dog_breed" class="pet-label">Your Pet Breed:</label>
+            <label for="dog_breed" class="pet-label">Your Pet's Breed:</label>
             <input type="text" id="dog_breed" name="dog_breed" required>
 
-            <label for="dog_size" class="pet-label">Your Pet Size:</label>
+            <label for="dog_size" class="pet-label">Your Pet's Size:</label>
             <select id="dog_size" name="dog_size" required>
                 <option value="Small">Small</option>
                 <option value="Medium">Medium</option>
                 <option value="Large">Large</option>
             </select>
 
-            <label for="dog_age" class="pet-label">Your Pet Age:</label>
+            <label for="dog_age" class="pet-label">Your Pet's Age:</label>
             <select id="dog_age" name="dog_age" required>
                 <option value="Puppy">Puppy</option>
                 <option value="Adult">Adult</option>
@@ -157,8 +157,7 @@
 <script>
     function updatePetName() {
         let petName = document.getElementById("dog_name").value.trim();
-        
-        // Update all labels containing "Pet" dynamically
+
         let allLabels = document.querySelectorAll("label");
         allLabels.forEach(label => {
             let originalText = label.getAttribute("data-original-text");
@@ -169,14 +168,21 @@
                 label.setAttribute("data-original-text", originalText);
             }
 
-            // Replace "Pet" with the entered pet name, or revert back if empty
-            label.innerText = petName ? 
-                originalText.replace(/your pet/g, petName).replace(/Your Pet/g, petName.charAt(0).toUpperCase() + petName.slice(1)) : 
-                originalText;
+            if (petName) {
+                if (originalText.includes("your pet's")) {
+                    // Add "'s" for Breed, Size, and Age
+                    label.innerText = originalText.replace(/your pet's/g, petName + "'s");
+                } else if (originalText.includes("your pet")) {
+                    // No "'s" for the last two questions
+                    label.innerText = originalText.replace(/your pet/g, petName);
+                }
+            } else {
+                // Revert back to original text if petName is empty
+                label.innerText = originalText;
+            }
         });
     }
 
-    // Attach event listener for real-time updates
     document.getElementById("dog_name").addEventListener("input", updatePetName);
 </script>
 
