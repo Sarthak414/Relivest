@@ -19,7 +19,7 @@
             justify-content: left; /* Shift everything to the left */
             align-items: left;
             flex-direction: column;
-            padding-left: 3%;
+            padding-left: 1.5%;
         }
 
         .container {
@@ -116,8 +116,8 @@
             <label for="dog_name" id="dog-name-label">Your Dog's Name:</label>
             <input type="text" id="dog_name" name="dog_name" required>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email">Email Address (Optional):</label>
+            <input type="email" id="email" name="email" optional>
 
             <label for="dog_breed">Dog's Breed:</label>
             <input type="text" id="dog_breed" name="dog_breed" required>
@@ -160,7 +160,7 @@
             let dogNameLabel = document.getElementById("dog-name-label");
             
             if (ownerName) {
-                dogNameLabel.innerText = ownerName + "Your Pet's Name:";
+                dogNameLabel.innerText = ownerName + " What is your Pet's Name:";
             } else {
                 dogNameLabel.innerText = "Your Dog's Name:";
             }
