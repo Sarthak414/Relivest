@@ -159,7 +159,7 @@
         let ownerName = document.getElementById("name").value.trim();
         let petName = document.getElementById("dog_name").value.trim();
         
-        // Update pet name question dynamically
+        // Ensure the full owner name appears in the pet name question
         let dogNameLabel = document.getElementById("dog-name-label");
         if (ownerName) {
             dogNameLabel.innerText = ownerName + ", what is your pet's name?";
@@ -167,7 +167,7 @@
             dogNameLabel.innerText = "Your Pet's Name:";
         }
 
-        // Replace all occurrences of "Pet" in questions
+        // Update all labels containing "Pet" with the entered pet name
         let allLabels = document.querySelectorAll("label");
         allLabels.forEach(label => {
             let originalText = label.getAttribute("data-original-text");
@@ -178,15 +178,16 @@
                 label.setAttribute("data-original-text", originalText);
             }
 
-            // Replace "Pet" with the entered pet name, or default back to "Pet"
-            label.innerText = petName ? originalText.replace(/Pet's|Pet/g, petName + "'s") : originalText;
+            // Replace "Pet" with the entered pet name, or revert back if empty
+            label.innerText = petName ? originalText.replace(/Pet's/g, petName + "'s").replace(/Pet/g, petName) : originalText;
         });
     }
 
-    // Add event listeners for real-time updates
+    // Attach event listeners for real-time updates
     document.getElementById("name").addEventListener("input", updateLabels);
     document.getElementById("dog_name").addEventListener("input", updateLabels);
 </script>
+
 
 </body>
 </html>
