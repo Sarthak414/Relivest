@@ -3,85 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Parent Survey</title>
+    <title>Dog Owner Survey</title>
     <style>
         html, body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             height: 100%;
-        }
-
-        body {
-            background-image: url('img/back11.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            min-height: 100vh;
+            background-color: #f4f4f4;
         }
 
         .container {
-            width: 90%;
-            max-width: 800px;
-            background-color: #d0c9cd;
+            width: 50%;
+            max-width: 600px;
+            background-color: #fff;
             padding: 20px;
+            margin: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            margin: 0 auto;
         }
 
         h1 {
-            text-align: center;
             color: #333;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
         label {
-            margin-bottom: 8px;
             font-weight: bold;
+            display: block;
+            margin-top: 10px;
         }
 
         input, select, textarea {
-            background-color: #fff8e9;
+            width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-top: 5px;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 16px;
         }
 
+        .checkbox-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
         .submit-btn {
-            background-color: #e6d8ca;
+            background-color: #5cb85c;
             color: white;
             padding: 12px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            margin-top: 15px;
         }
 
         .submit-btn:hover {
-            background-color: #45a049;
+            background-color: #4cae4c;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Pet Parent Survey</h1>
+        <h1>Dog Owner Survey</h1>
         <form action="https://formspree.io/f/mbllrqnb" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
             <label for="dog_name">Dog's Name:</label>
             <input type="text" id="dog_name" name="dog_name" required>
 
@@ -102,41 +89,19 @@
                 <option value="Senior">Senior</option>
             </select>
 
-            <label for="summer_issue">How do you keep your dog cool in summer?</label>
-            <select id="summer_issue" name="summer_issue" required>
-                <option value="Cooling mats or vests">Cooling mats or vests</option>
-                <option value="AC or fan all day">AC or fan all day</option>
-                <option value="Frozen treats & ice packs">Frozen treats & ice packs</option>
-                <option value="Struggles with heat, no good solution">Struggles with heat, no good solution</option>
-            </select>
+            <label>Biggest challenge as a pet parent?</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="challenges" value="Wet paw prints on floors"> Wet paw prints on floors</label>
+                <label><input type="checkbox" name="challenges" value="Dog overheating in summer"> Dog overheating in summer</label>
+                <label><input type="checkbox" name="challenges" value="Boredom and anxiety"> Boredom and anxiety</label>
+                <label><input type="checkbox" name="challenges" value="Chewing and destructive behavior"> Chewing and destructive behavior</label>
+                <label><input type="checkbox" name="challenges" value="Messy eating habits"> Messy eating habits</label>
+                <label><input type="checkbox" name="challenges" value="Separation anxiety"> Separation anxiety</label>
+                <label><input type="checkbox" name="challenges" value="Other"> Other:</label>
+                <input type="text" name="other_challenge" placeholder="Describe your challenge">
+            </div>
 
-            <label for="paw_cleaning">How do you currently clean your dog’s paws?</label>
-            <select id="paw_cleaning" name="paw_cleaning" required>
-                <option value="Wet wipes">Wet wipes</option>
-                <option value="Water & towel">Water & towel</option>
-                <option value="Paw cleaner cup">Paw cleaner cup</option>
-                <option value="I don’t clean them">I don’t clean them</option>
-            </select>
-
-            <label for="indoor_mess">Do you face issues with paw prints or dirt inside your home?</label>
-            <select id="indoor_mess" name="indoor_mess" required>
-                <option value="Yes, every day">Yes, every day</option>
-                <option value="Sometimes, but not a big issue">Sometimes, but not a big issue</option>
-                <option value="No, I don’t notice it">No, I don’t notice it</option>
-            </select>
-
-            <label for="problem">What is your biggest challenge as a pet parent?</label>
-            <textarea id="problem" name="problem" rows="4" required></textarea>
-
-            <label for="feature">What feature would you find most useful in a dog product?</label>
-            <select id="feature" name="feature" required>
-                <option value="Mess-free paw cleaning">Mess-free paw cleaning</option>
-                <option value="Cooling feature for hot weather">Cooling feature for hot weather</option>
-                <option value="Long-lasting entertainment & exercise">Long-lasting entertainment & exercise</option>
-                <option value="Weight control support">Weight control support</option>
-            </select>
-
-            <button type="submit" class="submit-btn">Submit Feedback</button>
+            <button type="submit" class="submit-btn">Submit</button>
         </form>
     </div>
 </body>
