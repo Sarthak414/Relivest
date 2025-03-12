@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Treats Feedback Form</title>
+    <title>Pet Parent Survey</title>
     <style>
         html, body {
             margin: 0;
@@ -13,38 +13,26 @@
         }
 
         body {
-    background-image: url('img/back11.jpg');
-    background-size: cover; /* Ensures the image covers the entire page */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Keeps the background fixed on scroll */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-        .page-container {
+            background-image: url('img/back11.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             display: flex;
+            justify-content: center;
+            align-items: flex-start;
             flex-direction: column;
-            width: 100%;
-            height: 100%;
-            position: relative;
+            min-height: 100vh;
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            width: 90%; /* Default width for smaller screens */
-            max-width: 800px; /* Maximum width for larger screens */
+            width: 90%;
+            max-width: 800px;
             background-color: #d0c9cd;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            position: relative;
-            z-index: 1;
-             margin-right: 580px;
+            margin: 0 auto;
         }
 
         h1 {
@@ -85,148 +73,71 @@
         .submit-btn:hover {
             background-color: #45a049;
         }
-
-        /* Images for decorative purposes */
-        .left-image-1,
-        .left-image-2,
-        .right-image-1,
-        .right-image-2 {
-            position: absolute;
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
-
-        /* Responsive adjustments for images */
-        .left-image-1, .left-image-2, .right-image-1, .right-image-2 {
-            display: none; /* Hide decorative images on small screens */
-        }
-
-        /* Media Queries for Responsive Design */
-        @media (min-width: 768px) {
-            .container {
-                width: 70%;
-            }
-
-            .left-image-1 {
-                display: block;
-                left: 20px;
-                top: 20%;
-                width: 150px;
-                height: 200px;
-                background-image: url('img/Pup2.jpg');
-            }
-
-            .right-image-1 {
-                display: block;
-                right: 20px;
-                top: 20%;
-                width: 150px;
-                height: 200px;
-                background-image: url('img/Pup4.jpg');
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .container {
-                width: 60%;
-            }
-
-            .left-image-1 {
-                left: 20px;
-                top: 20%;
-                width: 300px;
-                height: 450px;
-            }
-
-            .right-image-1 {
-                right: 20px;
-                top: 20%;
-                width: 300px;
-                height: 450px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="page-container">
-        <div class="content-wrapper">
-            <div class="container">
-                <h1>Dog Treats Feedback Form</h1>
-                <form action="https://formspree.io/f/mbllrqnb" method="POST">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
+    <div class="container">
+        <h1>Pet Parent Survey</h1>
+        <form action="https://formspree.io/f/mbllrqnb" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
+            <label for="dog_name">Dog's Name:</label>
+            <input type="text" id="dog_name" name="dog_name" required>
 
-                    <label for="dog_name">Dog's Name:</label>
-                    <input type="text" id="dog_name" name="dog_name" required>
+            <label for="dog_breed">Dog's Breed:</label>
+            <input type="text" id="dog_breed" name="dog_breed" required>
 
-                    <label for="dog_breed">Dog's Breed:</label>
-                    <input type="text" id="dog_breed" name="dog_breed" required>
+            <label for="dog_size">Dog's Size:</label>
+            <select id="dog_size" name="dog_size" required>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
 
-                    <label for="dog_size">Dog's Size:</label>
-                    <select id="dog_size" name="dog_size" required>
-                        <option value="Small">Small</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Large">Large</option>
-                    </select>
+            <label for="dog_age">Dog's Age:</label>
+            <select id="dog_age" name="dog_age" required>
+                <option value="Puppy">Puppy</option>
+                <option value="Adult">Adult</option>
+                <option value="Senior">Senior</option>
+            </select>
 
-                    <label for="dog_age">Dog's Age:</label>
-                    <select id="dog_age" name="dog_age" required>
-                        <option value="Puppy">Puppy</option>
-                        <option value="Adult">Adult</option>
-                        <option value="Senior">Senior</option>
-                    </select>
+            <label for="summer_issue">How do you keep your dog cool in summer?</label>
+            <select id="summer_issue" name="summer_issue" required>
+                <option value="Cooling mats or vests">Cooling mats or vests</option>
+                <option value="AC or fan all day">AC or fan all day</option>
+                <option value="Frozen treats & ice packs">Frozen treats & ice packs</option>
+                <option value="Struggles with heat, no good solution">Struggles with heat, no good solution</option>
+            </select>
 
-                    <label for="flavors">Which flavors did your dog try?</label>
-                    <select id="flavors" name="flavors[]" multiple required>
-                        <option value="Serene Bites">Serene Bites - Banana, Honey & Chamomile</option>
-                        <option value="Berry Butter Bites">Berry Butter Bites - Peanut Butter & Blueberry</option>
-                        <option value="Sweet Tooth Bites">Sweet Tooth Bites - Banana, Carob, PB, Blackstrap Molasses</option>
-                        <option value="Spiced Apple Delight">Spiced Apple Delight - Apple, Cinnamon & Jaggery</option>
-                        <option value="Golden Bliss Bites">Golden Bliss Bites - Turmeric, Coconut, Banana, Vanilla</option>
-                        <option value="Peanut Banana Bites">Peanut Banana Bites - Peanut Butter & Banana</option>
-                    </select>
+            <label for="paw_cleaning">How do you currently clean your dog’s paws?</label>
+            <select id="paw_cleaning" name="paw_cleaning" required>
+                <option value="Wet wipes">Wet wipes</option>
+                <option value="Water & towel">Water & towel</option>
+                <option value="Paw cleaner cup">Paw cleaner cup</option>
+                <option value="I don’t clean them">I don’t clean them</option>
+            </select>
 
-                    <label for="taste_rating">How would you rate the taste of the treats?</label>
-                    <select id="taste_rating" name="taste_rating" required>
-                        <option value="1">1 - Poor</option>
-                        <option value="2">2 - Fair</option>
-                        <option value="3">3 - Good</option>
-                        <option value="4">4 - Very Good</option>
-                        <option value="5">5 - Excellent</option>
-                    </select>
+            <label for="indoor_mess">Do you face issues with paw prints or dirt inside your home?</label>
+            <select id="indoor_mess" name="indoor_mess" required>
+                <option value="Yes, every day">Yes, every day</option>
+                <option value="Sometimes, but not a big issue">Sometimes, but not a big issue</option>
+                <option value="No, I don’t notice it">No, I don’t notice it</option>
+            </select>
 
-                    <label for="digestibility">Was the treat easy to digest?</label>
-                    <select id="digestibility" name="digestibility" required>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
+            <label for="problem">What is your biggest challenge as a pet parent?</label>
+            <textarea id="problem" name="problem" rows="4" required></textarea>
 
-                    <label for="reaction">How did your dog react after eating the treat?</label>
-                    <textarea id="reaction" name="reaction" rows="4" required></textarea>
+            <label for="feature">What feature would you find most useful in a dog product?</label>
+            <select id="feature" name="feature" required>
+                <option value="Mess-free paw cleaning">Mess-free paw cleaning</option>
+                <option value="Cooling feature for hot weather">Cooling feature for hot weather</option>
+                <option value="Long-lasting entertainment & exercise">Long-lasting entertainment & exercise</option>
+                <option value="Weight control support">Weight control support</option>
+            </select>
 
-                    <label for="recommend">Would you recommend these treats to other dog owners?</label>
-                    <select id="recommend" name="recommend" required>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
-
-                    <label for="improvement">Any suggestions for improvement?</label>
-                    <textarea id="improvement" name="improvement" rows="4"></textarea>
-
-                    <label for="future_samples">Would you like to receive more samples in the future?</label>
-                    <select id="future_samples" name="future_samples" required>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
-
-                    <button type="submit" class="submit-btn">Submit Feedback</button>
-                </form>
-            </div>
-        </div>
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
     </div>
 </body>
 </html>
