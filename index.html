@@ -1,433 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elevate your real estate investment with Relivest Partners, a trusted developer in Vadodara. Explore our diverse portfolio of 2BHK, 3BHK, villas, bungalows, and more. Experience quality craftsmanship, prime locations, and investment opportunities tailored for you.">
- <meta name="keywords" content="Relivest Partners, investment, real estate, India, 2bhk, duplex, residential, flat, 1bhk, 3bhk, villa, bungalow, land, jamin">
-  <meta name="author" content="Sarthak Devmurari">
-  <title> Relivest Partners </title>
-  <link rel="shortcut icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Oswald|Montserrat" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+const projects = [
+  {
+    name: "The Nest - Vadsar, Vadodara",
+    image: "/img/high-rise-image.jpg",
+    type: "High Rise",
+  },
+  {
+    name: "Divine Luxuria - SunCity Road, Jarod",
+    image: "/img/commercial-image.jpg",
+    type: "Commercial & Residential",
+  },
+  {
+    name: "Nakshatra Greens - Jarod",
+    image: "/img/bungalow-image.jpg",
+    type: "2–3 BHK & Commercial",
+  },
+  {
+    name: "Industrial Plots - Jarod (Coming Soon)",
+    image: "/img/project-image4.jpg",
+    type: "Industrial Plots",
+  },
+];
 
-  <style>
-    #top-image {
-      position: relative;
-      height: 600px; /* Adjust height as needed */
-    }
+const expertise = [
+  {
+    title: "High Rise",
+    image: "/img/High-Rise-Icon.png",
+  },
+  {
+    title: "Duplex & Single Family Homes",
+    image: "/img/Residential.png",
+  },
+  {
+    title: "Commercial",
+    image: "/img/Commercial-Icon.png",
+  },
+  {
+    title: "Investing",
+    image: "/img/Investing.png",
+  },
+];
 
-    #top-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+const RelivestPage = () => {
+  const [currentProject, setCurrentProject] = useState(0);
 
-    .brand-panel {
-      position: absolute;
-      top: 180px; /* Adjust the top position as needed */
-      left: 5px; /* Adjust the left position as needed */
-      z-index: 1000; /* Ensure the logo is above the image */
-    }
+  useEffect(() => {
+    const interval = setInterval(
+      () =>
+        setCurrentProject((prev) => (prev + 1) % projects.length),
+      3000
+    );
+    return () => clearInterval(interval);
+  }, []);
 
-        .brand-panel1 {
-      position: absolute;
-      top: 350px; /* Adjust the top position as needed */
-      right: 35px; /* Adjust the left position as needed */
-      z-index: 1000; /* Ensure the logo is above the image */
-    }
+  const activeProject = projects[currentProject];
 
-    /* Styles for the fixed button panel */
-    .button-panel {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 1); /* Translucent background color */
-      padding: 10px 0; /* Adjust padding as needed */
-      z-index: 1000; /* Ensure the panel is above other content */
-    }
-
-    .button-panel ul {
-/* <url> values */
-list-style-image: url("img/icon.png");
-      margin: 0;
-      padding: 0;
-      text-align: right;
-    }
-
-    .button-panel ul li {
-      display: inline-block;
-      margin: 0 10px; /* Adjust margin as needed */
-    }
-
-    .button-panel ul li a {
-      text-decoration: none;
-      color: #ffffff; /* Adjust text color */
-      font-weight: bold; /* Adjust font weight as needed */
-    }
-
-    .header-inner {
-      position: relative;
-      z-index: 1; /* Ensure header content stays above slideshow */
-    }
-
-    .vertical-panel-content {
-      color: white; /* Text color */
-    }
-
-    #slideshow {
-      /* Slideshow styles */
-    }
-
-    /* Additional styling for the buttons panel if needed */
-    .buttons-panel {
-      /* Add your styles here */
-    }
-    
-  .contact-container .contact-header {
-  font-size: 4.5rem !important; /* Increase font size */
-  font-weight: bold; /* Make the font bold */
-  color: #D4AF37; /* Dark text color */
-  background-color: rgba(242, 240, 245, 0.0); /* Translucent background color */
-  text-align: center; /* Align to the center */
-  margin-top: 40px; /* Adjust spacing from the top section */
-  margin-bottom: 20px; /* Add space below the header */
-}
-
-  
- /* Apply styles to form input, select, textarea, fieldset, optgroup, label, and StripeElement */
-form input,
-form select,
-form textarea,
-form fieldset,
-form optgroup,
-form label,
-form .StripeElement {
-  font-size: 100%;
-  color: inherit;
-  border: none;
-  border-radius: 8px; /* Add curved borders */
-  display: block;
-  width: 60%;
-  padding: 10px; /* Add padding */
-  margin-bottom: 5px; /* Add space between elements */
-  margin: 0 auto 15px; /* Center the element horizontally and add space below */
-  webkit-appearance: button;
-  moz-appearance: button;
-  box-sizing: border-box;
-}
-
-/* Additional styling for form label and legend */
-form label,
-form legend {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Apply border, padding, margin, and width to form input, select, textarea, and StripeElement */
-form input,
-form select,
-form textarea,
-form .StripeElement {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  background-color: rgba(62, 54, 46, 0.0); /* Translucent background color */
-}
-
-/* Additional styling for focused elements */
-form input:focus,
-form select:focus,
-form textarea:focus,
-form .StripeElement:focus {
-  background-color: white;
-  outline-style: solid;
-  outline-width: thin;
-  outline-color: gray;
-  outline-offset: -1px;
-}
-
-/* Apply width to text and email inputs and StripeElement */
-form [type="text"],
-form [type="email"],
-form .StripeElement {
-  width: 60%;
-}
-
-/* Apply width to button inputs */
-form [type="button"],
-form [type="submit"],
-form [type="reset"] {
-  width: 20%; /* Set button width to 100% */
-  cursor: pointer;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  background-color: #D4AF37;
-}
-
-/* Remove outline on focus for button inputs */
-form [type="button"]:focus,
-form [type="submit"]:focus,
-form [type="reset"]:focus 
-    {
-  outline: none;
-}
-
-/* Additional styling for form select */
-form select {
-  text-transform: none;
-}
- /* Position and style for the logo elements */
-    .faded-logo {
-      position: fixed;
-      width: 100px; /* Adjust size as needed */
-      height: auto; /* Maintain aspect ratio */
-      opacity: 0.8; /* Adjust opacity to make it faded */
-      pointer-events: none; /* Prevent interaction with the logo */
-      z-index: -1; /* Ensure the logo is behind other content */
-    }
-
-    /* Position the logo in different places */
-
-    .logo-bottom-right {
-      bottom: 20px;
-      right: 20px;
-    }
-
-    /* Additional logo positions can be added as needed */
-  </style>
-  
-</head>
-<body>
-   <!-- Logo images -->
-  <img src="img/White Logo.jpg" alt="Logo" class="faded-logo logo-bottom-right">
-  
-  <div id="top-image" class="slideshow-container">
-    <img id="project-image" src="" alt="Top Image">
-    <div class="project-name" id="project-name"></div>
-  </div>
-  <div class="loader"></div>
-  <header class="logo-image">
-    <div class="brand-panel">
-      <a href="index.html" class="brand js-target-scroll">
-        <img src="img/White Logo.jpg" width="150" height="150" alt="Logo">
-      </a>
-
-  <nav class="navbar-desctop visible-md visible-lg">
-    <!-- Desktop navigation menu -->
-  </nav>
-  <nav class="navbar-mobile">
-    <!-- Mobile navigation menu -->
-  </nav>
-</header>
-
-  <!-- Fixed button panel -->
-  <div class="button-panel">
-    <nav class="navigation">
-      <ul>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="Investments.html">Our Investment Portfolio</a></li>
-      </ul>
-    </nav>
-  </div>
-  
-     <div class="brand-panel">
-      <a href="index.html" class="brand js-target-scroll">
-        <img src="img/LOGO.PNG.png" width="150" height="150" alt="Logo">
-      </a>
-    </div>
-
-  
-<style>
-  /* Font Family */
-  body {
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  /* Vision and Approach Titles */
-  .service-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: #D4AF37;
-  }
-
-  /* Description Text */
-  .service-description {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
-    line-height: 1.6;
-    color: #000; /* Default text color */
-  }
-
-  /* Highlighted Words */
-  .highlight {
-    color: #D4AF37; /* Highlight color */
-  }
-</style>
-
-<main>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="about-us-container">
-    <h2>About <span style="color: #d4af37;">Relivest Partners</span></h2>
-
-    <!-- Image Section -->
-    <div class="image-section">
-      <img src="img/White Logo.jpg" alt="Description of Image">
-    </div>
-
-    <!-- Description Section -->
-    <div class="about-us-description">
-      <br><br>
-      <p><strong>Relivest Partners: Pioneering Investment Solutions in India</strong></p>
-      <p>Relivest Partners stands as a prominent figure, driving transformation and progress in India's investment, consulting, and real estate development sector. Our vision is to be a beacon of positive change, catalyzing the growth of vibrant communities, fostering sustainable economic development, and elevating the quality of life across the nation.</p>
-      <div class="read-more-button">
-        <a href="about.html" style="color: #d4af37;" target="_blank">Read More</a>
-      </div>
-    </div>
-    
-    <!-- Skills Section -->
-    <div class="about-us-skills">
-      <ul>
-        <li>
-         <h3> <strong>Key Expertise</strong></h3>
-        </li>
-        
-        <li>
-          <img src="img/High-Rise-Icon.png" alt="Skill 1" class="skill-icon">
-          <p>High Rise</p>
-        </li>
-        <li>
-          <img src="img/Residential.png" alt="Skill 2" class="skill-icon">
-          <p>Duplex & Single Family Homes</p>
-        </li>
-        <li>
-          <img src="img/Commercial-Icon.png" alt="Skill 3" class="skill-icon">
-          <p>Commercial</p>
-        </li>
-        <li>
-          <img src="img/Investing.png" alt="Skill 4" class="skill-icon">
-          <p>Investing</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</main>
-
-
-
-      <!-- Forte section -->
-      <div class="forte-section">
-        <h2>Our Current Involvements</h2>
-        <div class="project-grid">
-          <div class="project-item">
-            <img src="img/high-rise-image.jpg" width="200" height="250" alt="High Rise Image">
-            <div class="project-details">
-              <h3>High Rise</h3>
-              <p>Nest Realty - Vadsar, Vadodara</p>
-            </div>
+  return (
+    <div className="min-h-screen bg-[#050509] text-white font-sans">
+      {/* Top nav */}
+      <header className="fixed top-0 inset-x-0 z-40 bg-black/80 backdrop-blur border-b border-white/10">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+          <div className="flex items-center gap-3">
+            <img
+              src="/img/LOGO.PNG.png"
+              alt="Relivest Partners Logo"
+              className="h-12 w-12 rounded-full object-contain"
+            />
+            <span className="text-lg font-semibold tracking-wide">
+              Relivest Partners
+            </span>
           </div>
-          <div class="project-item">
-            <img src="img/commercial-image.jpg" width="200" height="250" alt="Commercial Image">
-            <div class="project-details">
-              <h3>Commercial and Residential</h3>
-              <p>Divine Luxuria, <strong>SunCity Road, Jarod</strong></p>
-            </div>
-          </div>
-          <div class="project-item">
-            <img src="img/bungalow-image.jpg" width="200" height="250" alt="Bungalow Image">
-            <div class="project-details">
-              <h3>2-3 BHK and Commercial</h3>
-              <p>Nakshtra Greens, Jarod</p>
-            </div>
-          </div>
-          <div class="project-item">
-            <img src="img/project-image4.jpg" width="200" height="250" alt="Project 4 Image">
-            <div class="project-details">
-              <h3>Industrial Plots</h3>
-              <p> Jarod <strong>Coming soon</strong></p>
-            </div>
-          </div>
+          <nav className="hidden gap-8 text-sm font-medium md:flex">
+            <a href="#about" className="hover:text-[#D4AF37]">
+              About Us
+            </a>
+            <a href="#expertise" className="hover:text-[#D4AF37]">
+              Key Expertise
+            </a>
+            <a href="#portfolio" className="hover:text-[#D4AF37]">
+              Our Involvements
+            </a>
+            <a href="#contact" className="hover:text-[#D4AF37]">
+              Contact
+            </a>
+          </nav>
         </div>
-      </div>
-    </div>
-  </main>
+      </header>
 
-  <div class="contact-container">
-    <h1 class="contact-header">Get In Touch</h1>
-    <!-- modify this form HTML and place wherever you want your form -->
-    <form
-  action="https://formspree.io/f/mayrangj"
-  method="POST"
->
-      <fieldset id="fs-frm-inputs">
-        <label for="full-name">Full Name</label>
-        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-        <label for="email-address">Email Address</label>
-        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
-        
-        <label for="message">Message</label>
-        <textarea rows="5" name="message" id="message" placeholder="Please mention the project you are interested in and provide your contact number for inquiries." required=""></textarea>
-        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-      </fieldset>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+      <main className="pt-20">
+        {/* HERO / SLIDESHOW */}
+        <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+          <motion.img
+            key={activeProject.image}
+            src={activeProject.image}
+            alt={activeProject.name}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col">
+          {/* Overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/40 to-black/10" />
+
+          {/* Hero content */}
+          <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-center px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="max-w-xl space-y-4"
+            >
+              <p className="inline-flex rounded-full bg-white/10 px-3 py-1 text-xs tracking-widest uppercase">
+                Vadodara • Real Estate & Investments
+              </p>
+              <h1 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
+                Elevating Real Estate Investments in{" "}
+                <span className="text-[#D4AF37]">India</span>
+              </h1>
+              <p className="text-sm text-white/80 md:text-base">
+                Relivest Partners stands as a prominent figure, driving
+                transformation and progress in India&apos;s investment,
+                consulting, and real estate development sector. We catalyze
+                growth of vibrant communities, foster sustainable economic
+                development, and elevate quality of life.
+              </p>
+            </motion.div>
+
+            {/* Current slide info */}
+            <motion.div
+              key={activeProject.name}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mt-8 inline-flex flex-col items-start rounded-2xl bg-black/60 px-5 py-4 text-sm backdrop-blur"
+            >
+              <span className="text-xs uppercase tracking-widest text-white/60">
+                Featured Project
+              </span>
+              <p className="mt-1 text-base font-semibold">
+                {activeProject.name}
+              </p>
+              <p className="text-xs text-white/70">
+                {activeProject.type}
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Floating faded logo bottom-right */}
+          <img
+            src="/img/White Logo.jpg"
+            alt="Relivest Monogram"
+            className="pointer-events-none absolute bottom-6 right-6 z-0 h-16 w-16 opacity-40"
+          />
+        </section>
+
+        {/* ABOUT SECTION */}
+        <section
+          id="about"
+          className="bg-[#050509] py-16 md:py-24 border-t border-white/5"
+        >
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <h2 className="text-3xl font-semibold md:text-4xl">
+                About{" "}
+                <span className="text-[#D4AF37]">Relivest Partners</span>
+              </h2>
+              <p className="text-sm leading-relaxed text-white/80 md:text-base">
+                <strong>Relivest Partners: Pioneering Investment Solutions in India</strong>
+              </p>
+              <p className="text-sm leading-relaxed text-white/80 md:text-base">
+                Relivest Partners is committed to bridging the gap between
+                ambitious investors and exceptional real estate opportunities.
+                Our vision is to be a beacon of positive change, enabling
+                investors to participate in thoughtfully planned projects
+                across emerging and established locations.
+              </p>
+              <p className="text-sm leading-relaxed text-white/80 md:text-base">
+                From high-rise developments and residential townships to
+                commercial hubs and industrial plots, we prioritize quality
+                craftsmanship, prime locations, and sustainable value creation.
+              </p>
+              <a
+                href="about.html"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full border border-[#D4AF37] px-5 py-2 text-sm font-medium text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-colors"
+              >
+                Read More
+              </a>
+            </motion.div>
+
+            {/* About image & mini logo */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="relative flex items-center justify-center"
+            >
+              <div className="relative aspect-square w-72 max-w-full rounded-3xl bg-gradient-to-tr from-[#D4AF37]/10 to-white/10 p-6 shadow-2xl">
+                <div className="flex h-full w-full items-center justify-center rounded-2xl bg-black/70">
+                  <img
+                    src="/img/White Logo.jpg"
+                    alt="Relivest Emblem"
+                    className="h-32 w-32 object-contain opacity-90"
+                  />
+                </div>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="absolute -bottom-6 right-4 rounded-2xl bg-black/80 px-4 py-3 text-xs shadow-lg"
+              >
+                <p className="font-semibold text-[#D4AF37]">
+                  Vadodara • Gujarat
+                </p>
+                <p className="text-[11px] text-white/70">
+                  Investment, consulting & development specialists.
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* KEY EXPERTISE (like your values grid) */}
+        <section
+          id="expertise"
+          className="bg-[#070711] py-16 md:py-24 border-t border-white/5"
+        >
+          <div className="mx-auto max-w-6xl px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-14 text-center"
+            >
+              <h2 className="text-3xl font-semibold md:text-4xl">
+                Our <span className="text-[#D4AF37]">Key Expertise</span>
+              </h2>
+              <p className="mt-4 text-sm text-white/75 md:text-base">
+                A diversified portfolio across{" "}
+                <span className="text-[#D4AF37]">high-rise</span>,{" "}
+                <span className="text-[#D4AF37]">
+                  duplex & single family homes
+                </span>
+                , commercial spaces, and{" "}
+                <span className="text-[#D4AF37]">investment advisory</span>.
+              </p>
+            </motion.div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {expertise.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -8 }}
+                  className="glass-card flex flex-col items-center rounded-2xl bg-white/[0.03] p-6 shadow-lg ring-1 ring-white/10 hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-[#D4AF37]/10">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="h-10 w-10 object-contain"
+                    />
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    {item.title}
+                  </h3>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CURRENT INVOLVEMENTS / PORTFOLIO */}
+        <section
+          id="portfolio"
+          className="bg-[#050509] py-16 md:py-24 border-t border-white/5"
+        >
+          <div className="mx-auto max-w-6xl px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-12 text-center"
+            >
+              <h2 className="text-3xl font-semibold md:text-4xl">
+                Our Current <span className="text-[#D4AF37]">Involvements</span>
+              </h2>
+              <p className="mt-4 text-sm text-white/75 md:text-base">
+                A snapshot of projects where Relivest Partners is currently
+                involved, from residential to commercial and industrial assets.
+              </p>
+            </motion.div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {projects.map((project, index) => (
+                <motion.article
+                  key={project.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -8 }}
+                  className="overflow-hidden rounded-2xl bg-white/[0.03] shadow-lg ring-1 ring-white/10 hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                    <div className="absolute bottom-3 left-3 text-xs uppercase tracking-widest text-[#D4AF37]">
+                      {project.type}
+                    </div>
+                  </div>
+                  <div className="space-y-1 px-4 py-4 text-sm">
+                    <h3 className="font-semibold">{project.name}</h3>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CONTACT SECTION */}
+        <section
+          id="contact"
+          className="bg-[#070711] py-16 md:py-24 border-t border-white/5"
+        >
+          <div className="mx-auto max-w-3xl px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-10 text-center"
+            >
+              <h2 className="text-3xl font-semibold md:text-4xl text-[#D4AF37]">
+                Get In Touch
+              </h2>
+              <p className="mt-3 text-sm text-white/75 md:text-base">
+                Share the project you&apos;re interested in along with your
+                contact details, and our team will connect with you.
+              </p>
+            </motion.div>
+
+            <motion.form
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              action="https://formspree.io/f/mayrangj"
+              method="POST"
+              className="space-y-6 rounded-2xl bg-black/50 p-6 shadow-xl ring-1 ring-white/10"
+            >
+              <div className="space-y-2">
+                <label
+                  htmlFor="full-name"
+                  className="block text-sm font-medium"
+                >
+                  Full Name
+                </label>
+                <input
+                  id="full-name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="First and Last"
+                  className="w-full rounded-xl border border-white/20 bg-black/40 px-3 py-2 text-sm outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label
+                  htmlFor="email-address"
+                  className="block text-sm font-medium"
+                >
+                  Email Address
+                </label>
+                <input
+                  id="email-address"
+                  name="_replyto"
+                  type="email"
+                  required
+                  placeholder="email@domain.com"
+                  className="w-full rounded-xl border border-white/20 bg-black/40 px-3 py-2 text-sm outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  required
+                  placeholder="Please mention the project you are interested in and your contact number for inquiries."
+                  className="w-full rounded-xl border border-white/20 bg-black/40 px-3 py-2 text-sm outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
+                />
+              </div>
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="Contact Form Submission"
+              />
+
+              <button
+                type="submit"
+                className="inline-flex w-full items-center justify-center rounded-full bg-[#D4AF37] px-4 py-2 text-sm font-semibold text-black shadow-md hover:bg-[#e8c55a] transition-colors"
+              >
+                Submit
+              </button>
+            </motion.form>
+          </div>
+        </section>
+      </main>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 bg-black/90 py-6 text-xs text-white/70">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 md:flex-row md:items-center md:justify-between">
           <p>© 2024 Relivest Partners. All Rights Reserved.</p>
+          <p>
+            Thank you for visiting our website,{" "}
+            <a
+              href="about.html"
+              className="text-[#D4AF37] hover:underline"
+            >
+              Our Founders
+            </a>
+          </p>
         </div>
-        <div class="col">
-          <p>Thank you for visiting our website, <a href="about.html">Our founders</a></p>
-        </div>
-      </div>
+      </footer>
     </div>
-  </footer>
+  );
+};
 
-  <!-- JavaScript code for slideshow -->
- <script>
-  // Slideshow functionality
-  var projects = [
-    { name: "The Nest - Vadsar", image: "img/high-rise-image.jpg" },
-    { name: "Divine Luxuria - Jarod", image: "img/commercial-image.jpg" },
-    { name: "Nakshatra Greens - Jarod", image: "img/bungalow-image.jpg" },
-    { name: "Commercial Plots - Soon", image: "img/project-image4.jpg" }
-  ];
-
-  var currentProjectIndex = 0;
-  var projectImageElement = document.getElementById("project-image");
-  var projectNameElement = document.getElementById("project-name");
-
-  function showNextProject() {
-    currentProjectIndex = (currentProjectIndex + 1) % projects.length;
-    var project = projects[currentProjectIndex];
-    projectImageElement.src = project.image;
-    projectNameElement.textContent = project.name;
-  }
-
-  // Show the first project initially
-  showNextProject();
-
-  // Change project every 3 seconds (3000 milliseconds)
-  setInterval(showNextProject, 3000);
-
-  // Adjust font size and style for project name
-  projectNameElement.style.fontSize = "1.5rem"; // Adjust font size
-  projectNameElement.style.color = "#D4AF37"; // Set text color to white
-  projectNameElement.style.backgroundColor = "rgba(255, 255, 255, 0.5)"; // Set background color to translucent black
-  projectNameElement.style.padding = "10px"; // Add padding for better readability
-  projectNameElement.style.position = "absolute"; // Position the element
-  projectNameElement.style.top = "10%"; // Center vertically
-  projectNameElement.style.left = "90%"; // Center horizontally
-
-</script>
-</body>
-</html>
+export default RelivestPage;
