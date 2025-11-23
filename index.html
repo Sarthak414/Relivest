@@ -25,22 +25,10 @@ const projects = [
 ];
 
 const expertise = [
-  {
-    title: "High Rise",
-    image: "/img/High-Rise-Icon.png",
-  },
-  {
-    title: "Duplex & Single Family Homes",
-    image: "/img/Residential.png",
-  },
-  {
-    title: "Commercial",
-    image: "/img/Commercial-Icon.png",
-  },
-  {
-    title: "Investing",
-    image: "/img/Investing.png",
-  },
+  { title: "High Rise", image: "/img/High-Rise-Icon.png" },
+  { title: "Duplex & Single Family Homes", image: "/img/Residential.png" },
+  { title: "Commercial", image: "/img/Commercial-Icon.png" },
+  { title: "Investing", image: "/img/Investing.png" },
 ];
 
 const RelivestPage = () => {
@@ -48,8 +36,7 @@ const RelivestPage = () => {
 
   useEffect(() => {
     const interval = setInterval(
-      () =>
-        setCurrentProject((prev) => (prev + 1) % projects.length),
+      () => setCurrentProject((prev) => (prev + 1) % projects.length),
       3000
     );
     return () => clearInterval(interval);
@@ -58,405 +45,133 @@ const RelivestPage = () => {
   const activeProject = projects[currentProject];
 
   return (
-    <div className="min-h-screen bg-[#050509] text-white font-sans">
+    <div className="min-h-screen">
+      
       {/* Top nav */}
-      <header className="fixed top-0 inset-x-0 z-40 bg-black/80 backdrop-blur border-b border-white/10">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <div className="flex items-center gap-3">
-            <img
-              src="/img/LOGO.PNG.png"
-              alt="Relivest Partners Logo"
-              className="h-12 w-12 rounded-full object-contain"
-            />
-            <span className="text-lg font-semibold tracking-wide">
-              Relivest Partners
-            </span>
-          </div>
-          <nav className="hidden gap-8 text-sm font-medium md:flex">
-            <a href="#about" className="hover:text-[#D4AF37]">
-              About Us
-            </a>
-            <a href="#expertise" className="hover:text-[#D4AF37]">
-              Key Expertise
-            </a>
-            <a href="#portfolio" className="hover:text-[#D4AF37]">
-              Our Involvements
-            </a>
-            <a href="#contact" className="hover:text-[#D4AF37]">
-              Contact
-            </a>
-          </nav>
-        </div>
+      <header>
+        <div>Relivest Partners Logo</div>
+        <nav>
+          About Us Key Expertise Our Involvements Contact
+        </nav>
       </header>
 
-      <main className="pt-20">
-        {/* HERO / SLIDESHOW */}
-        <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
-          <motion.img
-            key={activeProject.image}
-            src={activeProject.image}
-            alt={activeProject.name}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+      {/* HERO / SLIDESHOW */}
+      <section>
+        {/* Overlay gradient */}
+        {/* Hero content */}
+        <h1>Vadodara • Real Estate & Investments</h1>
 
-          {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/40 to-black/10" />
+        <h2>
+          Elevating Real Estate Investments in{" "}
+          <span>India</span>
+        </h2>
 
-          {/* Hero content */}
-          <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-center px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="max-w-xl space-y-4"
-            >
-              <p className="inline-flex rounded-full bg-white/10 px-3 py-1 text-xs tracking-widest uppercase">
-                Vadodara • Real Estate & Investments
-              </p>
-              <h1 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
-                Elevating Real Estate Investments in{" "}
-                <span className="text-[#D4AF37]">India</span>
-              </h1>
-              <p className="text-sm text-white/80 md:text-base">
-                Relivest Partners stands as a prominent figure, driving
-                transformation and progress in India&apos;s investment,
-                consulting, and real estate development sector. We catalyze
-                growth of vibrant communities, foster sustainable economic
-                development, and elevate quality of life.
-              </p>
-            </motion.div>
+        <p>
+          Relivest Partners stands as a prominent figure, driving transformation
+          and progress in India's investment, consulting, and real estate
+          development sector.
+        </p>
 
-            {/* Current slide info */}
-            <motion.div
-              key={activeProject.name}
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mt-8 inline-flex flex-col items-start rounded-2xl bg-black/60 px-5 py-4 text-sm backdrop-blur"
-            >
-              <span className="text-xs uppercase tracking-widest text-white/60">
-                Featured Project
-              </span>
-              <p className="mt-1 text-base font-semibold">
-                {activeProject.name}
-              </p>
-              <p className="text-xs text-white/70">
-                {activeProject.type}
-              </p>
-            </motion.div>
-          </div>
+        {/* Current slide info */}
+        <div>
+          <p>Featured Project</p>
+          <p>{activeProject.name}</p>
+          <p>{activeProject.type}</p>
+        </div>
 
-          {/* Floating faded logo bottom-right */}
-          <img
-            src="/img/White Logo.jpg"
-            alt="Relivest Monogram"
-            className="pointer-events-none absolute bottom-6 right-6 z-0 h-16 w-16 opacity-40"
-          />
-        </section>
+        {/* Floating logo */}
+        <img src="/img/White Logo.jpg" alt="Relivest Monogram" />
+      </section>
 
-        {/* ABOUT SECTION */}
-        <section
-          id="about"
-          className="bg-[#050509] py-16 md:py-24 border-t border-white/5"
-        >
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="space-y-6"
-            >
-              <h2 className="text-3xl font-semibold md:text-4xl">
-                About{" "}
-                <span className="text-[#D4AF37]">Relivest Partners</span>
-              </h2>
-              <p className="text-sm leading-relaxed text-white/80 md:text-base">
-                <strong>Relivest Partners: Pioneering Investment Solutions in India</strong>
-              </p>
-              <p className="text-sm leading-relaxed text-white/80 md:text-base">
-                Relivest Partners is committed to bridging the gap between
-                ambitious investors and exceptional real estate opportunities.
-                Our vision is to be a beacon of positive change, enabling
-                investors to participate in thoughtfully planned projects
-                across emerging and established locations.
-              </p>
-              <p className="text-sm leading-relaxed text-white/80 md:text-base">
-                From high-rise developments and residential townships to
-                commercial hubs and industrial plots, we prioritize quality
-                craftsmanship, prime locations, and sustainable value creation.
-              </p>
-              <a
-                href="about.html"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center rounded-full border border-[#D4AF37] px-5 py-2 text-sm font-medium text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-colors"
-              >
-                Read More
-              </a>
-            </motion.div>
+      {/* ABOUT SECTION */}
+      <section>
+        <h2>
+          About <span>Relivest Partners</span>
+        </h2>
 
-            {/* About image & mini logo */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="relative flex items-center justify-center"
-            >
-              <div className="relative aspect-square w-72 max-w-full rounded-3xl bg-gradient-to-tr from-[#D4AF37]/10 to-white/10 p-6 shadow-2xl">
-                <div className="flex h-full w-full items-center justify-center rounded-2xl bg-black/70">
-                  <img
-                    src="/img/White Logo.jpg"
-                    alt="Relivest Emblem"
-                    className="h-32 w-32 object-contain opacity-90"
-                  />
-                </div>
-              </div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="absolute -bottom-6 right-4 rounded-2xl bg-black/80 px-4 py-3 text-xs shadow-lg"
-              >
-                <p className="font-semibold text-[#D4AF37]">
-                  Vadodara • Gujarat
-                </p>
-                <p className="text-[11px] text-white/70">
-                  Investment, consulting & development specialists.
-                </p>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
+        <p><strong>Relivest Partners: Pioneering Investment Solutions in India</strong></p>
 
-        {/* KEY EXPERTISE (like your values grid) */}
-        <section
-          id="expertise"
-          className="bg-[#070711] py-16 md:py-24 border-t border-white/5"
-        >
-          <div className="mx-auto max-w-6xl px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-14 text-center"
-            >
-              <h2 className="text-3xl font-semibold md:text-4xl">
-                Our <span className="text-[#D4AF37]">Key Expertise</span>
-              </h2>
-              <p className="mt-4 text-sm text-white/75 md:text-base">
-                A diversified portfolio across{" "}
-                <span className="text-[#D4AF37]">high-rise</span>,{" "}
-                <span className="text-[#D4AF37]">
-                  duplex & single family homes
-                </span>
-                , commercial spaces, and{" "}
-                <span className="text-[#D4AF37]">investment advisory</span>.
-              </p>
-            </motion.div>
+        <p>
+          Relivest Partners is committed to bridging the gap between ambitious
+          investors and exceptional real estate opportunities.
+        </p>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {expertise.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -8 }}
-                  className="glass-card flex flex-col items-center rounded-2xl bg-white/[0.03] p-6 shadow-lg ring-1 ring-white/10 hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-[#D4AF37]/10">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="h-10 w-10 object-contain"
-                    />
-                  </div>
-                  <h3 className="mb-2 text-lg font-semibold">
-                    {item.title}
-                  </h3>
-                </motion.div>
-              ))}
+        <p>
+          From high-rise developments and residential townships to commercial
+          hubs and industrial plots, we prioritize quality craftsmanship and
+          long-term value.
+        </p>
+
+        <button>Read More</button>
+
+        {/* About image */}
+        <img src="/img/White Logo.jpg" alt="Relivest Emblem" />
+
+        <div>
+          <p>Vadodara • Gujarat</p>
+          <p>Investment, consulting & development specialists.</p>
+        </div>
+      </section>
+
+      {/* KEY EXPERTISE */}
+      <section>
+        <h2>Our Key Expertise</h2>
+        <p>
+          A diversified portfolio across high-rise, duplex homes, commercial
+          spaces, and investment advisory.
+        </p>
+
+        <div>
+          {expertise.map((item) => (
+            <div key={item.title}>
+              <img src={item.image} alt={item.title} />
+              <p>{item.title}</p>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
 
-        {/* CURRENT INVOLVEMENTS / PORTFOLIO */}
-        <section
-          id="portfolio"
-          className="bg-[#050509] py-16 md:py-24 border-t border-white/5"
-        >
-          <div className="mx-auto max-w-6xl px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-12 text-center"
-            >
-              <h2 className="text-3xl font-semibold md:text-4xl">
-                Our Current <span className="text-[#D4AF37]">Involvements</span>
-              </h2>
-              <p className="mt-4 text-sm text-white/75 md:text-base">
-                A snapshot of projects where Relivest Partners is currently
-                involved, from residential to commercial and industrial assets.
-              </p>
-            </motion.div>
+      {/* PORTFOLIO */}
+      <section>
+        <h2>Our Current Involvements</h2>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {projects.map((project, index) => (
-                <motion.article
-                  key={project.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -8 }}
-                  className="overflow-hidden rounded-2xl bg-white/[0.03] shadow-lg ring-1 ring-white/10 hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                    <div className="absolute bottom-3 left-3 text-xs uppercase tracking-widest text-[#D4AF37]">
-                      {project.type}
-                    </div>
-                  </div>
-                  <div className="space-y-1 px-4 py-4 text-sm">
-                    <h3 className="font-semibold">{project.name}</h3>
-                  </div>
-                </motion.article>
-              ))}
+        <div>
+          {projects.map((project) => (
+            <div key={project.name}>
+              <p>{project.type}</p>
+              <p>{project.name}</p>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
 
-        {/* CONTACT SECTION */}
-        <section
-          id="contact"
-          className="bg-[#070711] py-16 md:py-24 border-t border-white/5"
-        >
-          <div className="mx-auto max-w-3xl px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-10 text-center"
-            >
-              <h2 className="text-3xl font-semibold md:text-4xl text-[#D4AF37]">
-                Get In Touch
-              </h2>
-              <p className="mt-3 text-sm text-white/75 md:text-base">
-                Share the project you&apos;re interested in along with your
-                contact details, and our team will connect with you.
-              </p>
-            </motion.div>
+      {/* CONTACT */}
+      <section>
+        <h2>Get In Touch</h2>
 
-            <motion.form
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              action="https://formspree.io/f/mayrangj"
-              method="POST"
-              className="space-y-6 rounded-2xl bg-black/50 p-6 shadow-xl ring-1 ring-white/10"
-            >
-              <div className="space-y-2">
-                <label
-                  htmlFor="full-name"
-                  className="block text-sm font-medium"
-                >
-                  Full Name
-                </label>
-                <input
-                  id="full-name"
-                  name="name"
-                  type="text"
-                  required
-                  placeholder="First and Last"
-                  className="w-full rounded-xl border border-white/20 bg-black/40 px-3 py-2 text-sm outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
-                />
-              </div>
+        <form action="https://formspree.io/f/mayrangj" method="POST">
+          <label>Full Name</label>
+          <input type="text" name="name" required />
 
-              <div className="space-y-2">
-                <label
-                  htmlFor="email-address"
-                  className="block text-sm font-medium"
-                >
-                  Email Address
-                </label>
-                <input
-                  id="email-address"
-                  name="_replyto"
-                  type="email"
-                  required
-                  placeholder="email@domain.com"
-                  className="w-full rounded-xl border border-white/20 bg-black/40 px-3 py-2 text-sm outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
-                />
-              </div>
+          <label>Email Address</label>
+          <input type="email" name="_replyto" required />
 
-              <div className="space-y-2">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  placeholder="Please mention the project you are interested in and your contact number for inquiries."
-                  className="w-full rounded-xl border border-white/20 bg-black/40 px-3 py-2 text-sm outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
-                />
-              </div>
+          <label>Message</label>
+          <textarea name="message" required />
 
-              <input
-                type="hidden"
-                name="_subject"
-                value="Contact Form Submission"
-              />
+          <input type="hidden" name="_subject" value="Contact Form Submission" />
 
-              <button
-                type="submit"
-                className="inline-flex w-full items-center justify-center rounded-full bg-[#D4AF37] px-4 py-2 text-sm font-semibold text-black shadow-md hover:bg-[#e8c55a] transition-colors"
-              >
-                Submit
-              </button>
-            </motion.form>
-          </div>
-        </section>
-      </main>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/10 bg-black/90 py-6 text-xs text-white/70">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 md:flex-row md:items-center md:justify-between">
-          <p>© 2024 Relivest Partners. All Rights Reserved.</p>
-          <p>
-            Thank you for visiting our website,{" "}
-            <a
-              href="about.html"
-              className="text-[#D4AF37] hover:underline"
-            >
-              Our Founders
-            </a>
-          </p>
-        </div>
+      <footer>
+        <p>© 2024 Relivest Partners. All Rights Reserved.</p>
+        <p>
+          Thank you for visiting, <a href="about.html">Our Founders</a>
+        </p>
       </footer>
     </div>
   );
 };
-
-export default RelivestPage;
