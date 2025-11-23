@@ -1,177 +1,433 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
 
-const projects = [
-  {
-    name: "The Nest - Vadsar, Vadodara",
-    image: "/img/high-rise-image.jpg",
-    type: "High Rise",
-  },
-  {
-    name: "Divine Luxuria - SunCity Road, Jarod",
-    image: "/img/commercial-image.jpg",
-    type: "Commercial & Residential",
-  },
-  {
-    name: "Nakshatra Greens - Jarod",
-    image: "/img/bungalow-image.jpg",
-    type: "2–3 BHK & Commercial",
-  },
-  {
-    name: "Industrial Plots - Jarod (Coming Soon)",
-    image: "/img/project-image4.jpg",
-    type: "Industrial Plots",
-  },
-];
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elevate your real estate investment with Relivest Partners, a trusted developer in Vadodara. Explore our diverse portfolio of 2BHK, 3BHK, villas, bungalows, and more. Experience quality craftsmanship, prime locations, and investment opportunities tailored for you.">
+ <meta name="keywords" content="Relivest Partners, investment, real estate, India, 2bhk, duplex, residential, flat, 1bhk, 3bhk, villa, bungalow, land, jamin">
+  <meta name="author" content="Sarthak Devmurari">
+  <title> Relivest Partners </title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Montserrat" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-const expertise = [
-  { title: "High Rise", image: "/img/High-Rise-Icon.png" },
-  { title: "Duplex & Single Family Homes", image: "/img/Residential.png" },
-  { title: "Commercial", image: "/img/Commercial-Icon.png" },
-  { title: "Investing", image: "/img/Investing.png" },
-];
+  <style>
+    #top-image {
+      position: relative;
+      height: 600px; /* Adjust height as needed */
+    }
 
-const RelivestPage = () => {
-  const [currentProject, setCurrentProject] = useState(0);
+    #top-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-  useEffect(() => {
-    const interval = setInterval(
-      () => setCurrentProject((prev) => (prev + 1) % projects.length),
-      3000
-    );
-    return () => clearInterval(interval);
-  }, []);
+    .brand-panel {
+      position: absolute;
+      top: 180px; /* Adjust the top position as needed */
+      left: 5px; /* Adjust the left position as needed */
+      z-index: 1000; /* Ensure the logo is above the image */
+    }
 
-  const activeProject = projects[currentProject];
+        .brand-panel1 {
+      position: absolute;
+      top: 350px; /* Adjust the top position as needed */
+      right: 35px; /* Adjust the left position as needed */
+      z-index: 1000; /* Ensure the logo is above the image */
+    }
 
-  return (
-    <div className="min-h-screen">
-      
-      {/* Top nav */}
-      <header>
-        <div>Relivest Partners Logo</div>
-        <nav>
-          About Us Key Expertise Our Involvements Contact
-        </nav>
-      </header>
+    /* Styles for the fixed button panel */
+    .button-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 1); /* Translucent background color */
+      padding: 10px 0; /* Adjust padding as needed */
+      z-index: 1000; /* Ensure the panel is above other content */
+    }
 
-      {/* HERO / SLIDESHOW */}
-      <section>
-        {/* Overlay gradient */}
-        {/* Hero content */}
-        <h1>Vadodara • Real Estate & Investments</h1>
+    .button-panel ul {
+/* <url> values */
+list-style-image: url("img/icon.png");
+      margin: 0;
+      padding: 0;
+      text-align: right;
+    }
 
-        <h2>
-          Elevating Real Estate Investments in{" "}
-          <span>India</span>
-        </h2>
+    .button-panel ul li {
+      display: inline-block;
+      margin: 0 10px; /* Adjust margin as needed */
+    }
 
-        <p>
-          Relivest Partners stands as a prominent figure, driving transformation
-          and progress in India's investment, consulting, and real estate
-          development sector.
-        </p>
+    .button-panel ul li a {
+      text-decoration: none;
+      color: #ffffff; /* Adjust text color */
+      font-weight: bold; /* Adjust font weight as needed */
+    }
 
-        {/* Current slide info */}
-        <div>
-          <p>Featured Project</p>
-          <p>{activeProject.name}</p>
-          <p>{activeProject.type}</p>
-        </div>
+    .header-inner {
+      position: relative;
+      z-index: 1; /* Ensure header content stays above slideshow */
+    }
 
-        {/* Floating logo */}
-        <img src="/img/White Logo.jpg" alt="Relivest Monogram" />
-      </section>
+    .vertical-panel-content {
+      color: white; /* Text color */
+    }
 
-      {/* ABOUT SECTION */}
-      <section>
-        <h2>
-          About <span>Relivest Partners</span>
-        </h2>
+    #slideshow {
+      /* Slideshow styles */
+    }
 
-        <p><strong>Relivest Partners: Pioneering Investment Solutions in India</strong></p>
+    /* Additional styling for the buttons panel if needed */
+    .buttons-panel {
+      /* Add your styles here */
+    }
+    
+  .contact-container .contact-header {
+  font-size: 4.5rem !important; /* Increase font size */
+  font-weight: bold; /* Make the font bold */
+  color: #D4AF37; /* Dark text color */
+  background-color: rgba(242, 240, 245, 0.0); /* Translucent background color */
+  text-align: center; /* Align to the center */
+  margin-top: 40px; /* Adjust spacing from the top section */
+  margin-bottom: 20px; /* Add space below the header */
+}
 
-        <p>
-          Relivest Partners is committed to bridging the gap between ambitious
-          investors and exceptional real estate opportunities.
-        </p>
+  
+ /* Apply styles to form input, select, textarea, fieldset, optgroup, label, and StripeElement */
+form input,
+form select,
+form textarea,
+form fieldset,
+form optgroup,
+form label,
+form .StripeElement {
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 8px; /* Add curved borders */
+  display: block;
+  width: 60%;
+  padding: 10px; /* Add padding */
+  margin-bottom: 5px; /* Add space between elements */
+  margin: 0 auto 15px; /* Center the element horizontally and add space below */
+  webkit-appearance: button;
+  moz-appearance: button;
+  box-sizing: border-box;
+}
 
-        <p>
-          From high-rise developments and residential townships to commercial
-          hubs and industrial plots, we prioritize quality craftsmanship and
-          long-term value.
-        </p>
+/* Additional styling for form label and legend */
+form label,
+form legend {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
 
-        <button>Read More</button>
+/* Apply border, padding, margin, and width to form input, select, textarea, and StripeElement */
+form input,
+form select,
+form textarea,
+form .StripeElement {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(62, 54, 46, 0.0); /* Translucent background color */
+}
 
-        {/* About image */}
-        <img src="/img/White Logo.jpg" alt="Relivest Emblem" />
+/* Additional styling for focused elements */
+form input:focus,
+form select:focus,
+form textarea:focus,
+form .StripeElement:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;
+}
 
-        <div>
-          <p>Vadodara • Gujarat</p>
-          <p>Investment, consulting & development specialists.</p>
-        </div>
-      </section>
+/* Apply width to text and email inputs and StripeElement */
+form [type="text"],
+form [type="email"],
+form .StripeElement {
+  width: 60%;
+}
 
-      {/* KEY EXPERTISE */}
-      <section>
-        <h2>Our Key Expertise</h2>
-        <p>
-          A diversified portfolio across high-rise, duplex homes, commercial
-          spaces, and investment advisory.
-        </p>
+/* Apply width to button inputs */
+form [type="button"],
+form [type="submit"],
+form [type="reset"] {
+  width: 20%; /* Set button width to 100% */
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  background-color: #D4AF37;
+}
 
-        <div>
-          {expertise.map((item) => (
-            <div key={item.title}>
-              <img src={item.image} alt={item.title} />
-              <p>{item.title}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+/* Remove outline on focus for button inputs */
+form [type="button"]:focus,
+form [type="submit"]:focus,
+form [type="reset"]:focus 
+    {
+  outline: none;
+}
 
-      {/* PORTFOLIO */}
-      <section>
-        <h2>Our Current Involvements</h2>
+/* Additional styling for form select */
+form select {
+  text-transform: none;
+}
+ /* Position and style for the logo elements */
+    .faded-logo {
+      position: fixed;
+      width: 100px; /* Adjust size as needed */
+      height: auto; /* Maintain aspect ratio */
+      opacity: 0.8; /* Adjust opacity to make it faded */
+      pointer-events: none; /* Prevent interaction with the logo */
+      z-index: -1; /* Ensure the logo is behind other content */
+    }
 
-        <div>
-          {projects.map((project) => (
-            <div key={project.name}>
-              <p>{project.type}</p>
-              <p>{project.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+    /* Position the logo in different places */
 
-      {/* CONTACT */}
-      <section>
-        <h2>Get In Touch</h2>
+    .logo-bottom-right {
+      bottom: 20px;
+      right: 20px;
+    }
 
-        <form action="https://formspree.io/f/mayrangj" method="POST">
-          <label>Full Name</label>
-          <input type="text" name="name" required />
+    /* Additional logo positions can be added as needed */
+  </style>
+  
+</head>
+<body>
+   <!-- Logo images -->
+  <img src="img/White Logo.jpg" alt="Logo" class="faded-logo logo-bottom-right">
+  
+  <div id="top-image" class="slideshow-container">
+    <img id="project-image" src="" alt="Top Image">
+    <div class="project-name" id="project-name"></div>
+  </div>
+  <div class="loader"></div>
+  <header class="logo-image">
+    <div class="brand-panel">
+      <a href="index.html" class="brand js-target-scroll">
+        <img src="img/White Logo.jpg" width="150" height="150" alt="Logo">
+      </a>
 
-          <label>Email Address</label>
-          <input type="email" name="_replyto" required />
+  <nav class="navbar-desctop visible-md visible-lg">
+    <!-- Desktop navigation menu -->
+  </nav>
+  <nav class="navbar-mobile">
+    <!-- Mobile navigation menu -->
+  </nav>
+</header>
 
-          <label>Message</label>
-          <textarea name="message" required />
-
-          <input type="hidden" name="_subject" value="Contact Form Submission" />
-
-          <button type="submit">Submit</button>
-        </form>
-      </section>
-
-      {/* FOOTER */}
-      <footer>
-        <p>© 2024 Relivest Partners. All Rights Reserved.</p>
-        <p>
-          Thank you for visiting, <a href="about.html">Our Founders</a>
-        </p>
-      </footer>
+  <!-- Fixed button panel -->
+  <div class="button-panel">
+    <nav class="navigation">
+      <ul>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="Investments.html">Our Investment Portfolio</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+     <div class="brand-panel">
+      <a href="index.html" class="brand js-target-scroll">
+        <img src="img/LOGO.PNG.png" width="150" height="150" alt="Logo">
+      </a>
     </div>
-  );
-};
+
+  
+<style>
+  /* Font Family */
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Vision and Approach Titles */
+  .service-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #D4AF37;
+  }
+
+  /* Description Text */
+  .service-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #000; /* Default text color */
+  }
+
+  /* Highlighted Words */
+  .highlight {
+    color: #D4AF37; /* Highlight color */
+  }
+</style>
+
+<main>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="about-us-container">
+    <h2>About <span style="color: #d4af37;">Relivest Partners</span></h2>
+
+    <!-- Image Section -->
+    <div class="image-section">
+      <img src="img/White Logo.jpg" alt="Description of Image">
+    </div>
+
+    <!-- Description Section -->
+    <div class="about-us-description">
+      <br><br>
+      <p><strong>Relivest Partners: Pioneering Investment Solutions in India</strong></p>
+      <p>Relivest Partners stands as a prominent figure, driving transformation and progress in India's investment, consulting, and real estate development sector. Our vision is to be a beacon of positive change, catalyzing the growth of vibrant communities, fostering sustainable economic development, and elevating the quality of life across the nation.</p>
+      <div class="read-more-button">
+        <a href="about.html" style="color: #d4af37;" target="_blank">Read More</a>
+      </div>
+    </div>
+    
+    <!-- Skills Section -->
+    <div class="about-us-skills">
+      <ul>
+        <li>
+         <h3> <strong>Key Expertise</strong></h3>
+        </li>
+        
+        <li>
+          <img src="img/High-Rise-Icon.png" alt="Skill 1" class="skill-icon">
+          <p>High Rise</p>
+        </li>
+        <li>
+          <img src="img/Residential.png" alt="Skill 2" class="skill-icon">
+          <p>Duplex & Single Family Homes</p>
+        </li>
+        <li>
+          <img src="img/Commercial-Icon.png" alt="Skill 3" class="skill-icon">
+          <p>Commercial</p>
+        </li>
+        <li>
+          <img src="img/Investing.png" alt="Skill 4" class="skill-icon">
+          <p>Investing</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+
+
+      <!-- Forte section -->
+      <div class="forte-section">
+        <h2>Our Current Involvements</h2>
+        <div class="project-grid">
+          <div class="project-item">
+            <img src="img/high-rise-image.jpg" width="200" height="250" alt="High Rise Image">
+            <div class="project-details">
+              <h3>High Rise</h3>
+              <p>Nest Realty - Vadsar, Vadodara</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="img/commercial-image.jpg" width="200" height="250" alt="Commercial Image">
+            <div class="project-details">
+              <h3>Commercial and Residential</h3>
+              <p>Divine Luxuria, <strong>SunCity Road, Jarod</strong></p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="img/bungalow-image.jpg" width="200" height="250" alt="Bungalow Image">
+            <div class="project-details">
+              <h3>2-3 BHK and Commercial</h3>
+              <p>Nakshtra Greens, Jarod</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="img/project-image4.jpg" width="200" height="250" alt="Project 4 Image">
+            <div class="project-details">
+              <h3>Industrial Plots</h3>
+              <p> Jarod <strong>Coming soon</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="contact-container">
+    <h1 class="contact-header">Get In Touch</h1>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form
+  action="https://formspree.io/f/mayrangj"
+  method="POST"
+>
+      <fieldset id="fs-frm-inputs">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+        <label for="email-address">Email Address</label>
+        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+        
+        <label for="message">Message</label>
+        <textarea rows="5" name="message" id="message" placeholder="Please mention the project you are interested in and provide your contact number for inquiries." required=""></textarea>
+        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>© 2024 Relivest Partners. All Rights Reserved.</p>
+        </div>
+        <div class="col">
+          <p>Thank you for visiting our website, <a href="about.html">Our founders</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript code for slideshow -->
+ <script>
+  // Slideshow functionality
+  var projects = [
+    { name: "The Nest - Vadsar", image: "img/high-rise-image.jpg" },
+    { name: "Divine Luxuria - Jarod", image: "img/commercial-image.jpg" },
+    { name: "Nakshatra Greens - Jarod", image: "img/bungalow-image.jpg" },
+    { name: "Commercial Plots - Soon", image: "img/project-image4.jpg" }
+  ];
+
+  var currentProjectIndex = 0;
+  var projectImageElement = document.getElementById("project-image");
+  var projectNameElement = document.getElementById("project-name");
+
+  function showNextProject() {
+    currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+    var project = projects[currentProjectIndex];
+    projectImageElement.src = project.image;
+    projectNameElement.textContent = project.name;
+  }
+
+  // Show the first project initially
+  showNextProject();
+
+  // Change project every 3 seconds (3000 milliseconds)
+  setInterval(showNextProject, 3000);
+
+  // Adjust font size and style for project name
+  projectNameElement.style.fontSize = "1.5rem"; // Adjust font size
+  projectNameElement.style.color = "#D4AF37"; // Set text color to white
+  projectNameElement.style.backgroundColor = "rgba(255, 255, 255, 0.5)"; // Set background color to translucent black
+  projectNameElement.style.padding = "10px"; // Add padding for better readability
+  projectNameElement.style.position = "absolute"; // Position the element
+  projectNameElement.style.top = "10%"; // Center vertically
+  projectNameElement.style.left = "90%"; // Center horizontally
+
+</script>
+</body>
+</html>
